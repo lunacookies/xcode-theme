@@ -37,6 +37,7 @@
 "member.constant": "#78c2b3",
 "parameter.constant": "#78c2b3",
 "property.constant": "#78c2b3",
+"interface": "#dabaff"
 },
 "tokenColors": [],
 }

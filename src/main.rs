@@ -171,6 +171,8 @@ impl fmt::Display for Theme {
             writeln!(f, r#""{}.constant": {},"#, scope, self.constants)?;
         }
 
+        writeln!(f, r#""interface": {}"#, self.interfaces)?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""tokenColors": [],"#)?;
