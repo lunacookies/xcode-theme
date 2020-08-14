@@ -1,0 +1,31 @@
+// Background: #FFFFFF
+// Current Line: #ECF5FF
+// Selection: #B2D7FF
+// Cursor: #000000
+// Invisibles: #D6D6D6
+//
+// Plain text: #000000 Regular
+// Comments: #65798C Regular Italic
+// Documentation Markup: #506375 Regular
+// Documentation Markup Keywords: #506375 Bold
+// Strings: #D12F1B Regular
+// Characters: #272AD8 Regular
+// Numbers: #272AD8 Regular
+// Keywords: #AD3DA4 Semibold
+// Preprocessor Statements: #78492A Regular
+// URLs: #1337FF Regular
+// Attributes: #947100 Regular
+// Project Types and Vars: #3E8087 Regular
+// Project Functions and Constants: #2D6469 Regular
+// Other Types and Vars: #703DAA Regular
+// Other Functions and Constants: #4B21B0 Regular
+//
+// Definitions have the same colour as plain text.
+{
+	"name": "Xcode 10 Default Light",
+	"type": "light",
+	"colors": {},
+	"semanticHighlighting": true,
+	"semanticTokenColors": {},
+	"tokenColors": []
+}

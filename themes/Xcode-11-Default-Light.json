@@ -1,0 +1,31 @@
+// Background: #FFFFFF
+// Current Line: #ECF5FF
+// Selection: #B2D7FF
+// Cursor: #000000
+// Invisibles: #D6D6D6
+//
+// Plain text: #000000 Regular
+// Comments: #707F8C Regular
+// Documentation Markup: #707F8C Regular
+// Documentation Markup Keywords: #5C6873 Bold
+// Strings: #D12F1B Regular
+// Characters: #272AD8 Regular
+// Numbers: #272AD8 Regular
+// Keywords: #AD3DA4 Semibold
+// Preprocessor Statements: #78492A Regular
+// URLs: #1337FF Regular
+// Attributes: #947100 Regular
+// Type Declaractions: #02638C Regular
+// Other Declaractions: #057CB0 Regular
+// Project Types: #23575C Regular
+// Project Functions, Vars and Constants: #3E8087 Regular
+// Other Types: #4B21B0 Regular
+// Other Functions, Vars and Constants: #804FB8 Regular
+{
+	"name": "Xcode 11 Default Light",
+	"type": "light",
+	"colors": {},
+	"semanticHighlighting": true,
+	"semanticTokenColors": {},
+	"tokenColors": []
+}
