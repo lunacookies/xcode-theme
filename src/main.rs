@@ -162,6 +162,8 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""interface": {},"#, self.interfaces)?;
 
+        writeln!(f, r#""function": {},"#, self.functions)?;
+
         for scope in TYPE_SCOPES {
             let color = self.type_decls.unwrap_or(self.plain_text);
             writeln!(f, r#""{}.declaration": {},"#, scope, color)?;

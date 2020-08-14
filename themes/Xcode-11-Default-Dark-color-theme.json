@@ -29,6 +29,7 @@
 "parameter.constant": "#78c2b3",
 "property.constant": "#78c2b3",
 "interface": "#dabaff",
+"function": "#b281eb",
 "type.declaration": "#6bdfff",
 "class.declaration": "#6bdfff",
 "struct.declaration": "#6bdfff",
