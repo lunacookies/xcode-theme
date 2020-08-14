@@ -12,7 +12,7 @@ const TYPE_SCOPES: &[&str] = &[
     "union",
 ];
 
-const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"];
+const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property", "lifetime"];
 
 fn main() -> io::Result<()> {
     // Background: #292A30
