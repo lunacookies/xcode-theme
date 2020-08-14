@@ -3,6 +3,7 @@
 "type": "dark",
 "colors": {
 "editor.background": "#292a30",
+"editor.lineHighlightBackground": "#2f3239",
 "editor.foreground": "#dfdfe0",
 },
 "semanticHighlighting": true,

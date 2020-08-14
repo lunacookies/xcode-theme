@@ -121,8 +121,17 @@ impl fmt::Display for Theme {
         writeln!(f, r#""type": "{}","#, self.kind)?;
 
         writeln!(f, r#""colors": {{"#)?;
+
         writeln!(f, r#""editor.background": {},"#, self.background)?;
+
+        writeln!(
+            f,
+            r#""editor.lineHighlightBackground": {},"#,
+            self.current_line
+        )?;
+
         writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""semanticHighlighting": true,"#)?;
