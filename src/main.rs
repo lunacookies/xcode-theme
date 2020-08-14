@@ -133,6 +133,8 @@ impl fmt::Display for Theme {
             writeln!(f, "{},", self.keywords)?;
         }
 
+        writeln!(f, r#""macro": {},"#, self.preproc)?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""tokenColors": [],"#)?;

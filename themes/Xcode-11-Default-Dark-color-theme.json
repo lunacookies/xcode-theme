@@ -11,6 +11,7 @@
 "string": "#ff8170",
 "number": "#d9c97c",
 "keyword": {"bold":true,"foreground":"#ff7ab2",},
+"macro": "#ffa14f",
 },
 "tokenColors": [],
 }
