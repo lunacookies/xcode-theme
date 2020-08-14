@@ -34,6 +34,11 @@
                 "label": "Xcode 10 Default Light",
                 "uiTheme": "vs",
                 "path": "./themes/Xcode-10-Default-Light.json"
+            },
+            {
+                "label": "Xcode Civic",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Xcode-Civic.json"
             }
         ]
     }

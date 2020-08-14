@@ -1,0 +1,29 @@
+// Background: #292B36
+// Current Line: #353749
+// Selection: #445261
+// Cursor: #FFFFFF
+// Invisibles: #5F5F5F
+//
+// Plain text: #E7E8EB Regular
+// Comments: #51C34F Regular
+// Documentation Markup: #23AD68 Regular
+// Documentation Markup Keywords: #35D585 Bold
+// Strings: #DE3A3C Regular
+// Characters: #8783BE Regular
+// Numbers: #00AAA3 Regular
+// Keywords: #E12DA0 Regular
+// Preprocessor Statements: #D38D5D Regular
+// URLs: #6544E9 Regular
+// Attributes: #68878F Regular
+// Project Types, Vars, Functions, Constants: #18B5B1 Regular
+// Other Types, Vars, Functions, Constants: #29A09F Regular
+//
+// Definitions have the same colour as plain text.
+{
+	"name": "Xcode Civic",
+	"type": "dark",
+	"colors": {},
+	"semanticHighlighting": true,
+	"semanticTokenColors": {},
+	"tokenColors": []
+}
