@@ -286,6 +286,9 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""function": {},"#, self.functions)?;
 
+        writeln!(f, r#""punctuation": {},"#, self.plain_text)?;
+        writeln!(f, r#""operator": {},"#, self.plain_text)?;
+
         for scope in TYPE_SCOPES {
             let color = self.type_decls.unwrap_or(self.plain_text);
             writeln!(f, r#""{}.declaration": {},"#, scope, color)?;

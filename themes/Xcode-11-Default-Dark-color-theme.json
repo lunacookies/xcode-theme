@@ -38,6 +38,8 @@
 "lifetime.constant": "#78c2b3",
 "interface": "#dabaff",
 "function": "#b281eb",
+"punctuation": "#dfdfe0",
+"operator": "#dfdfe0",
 "type.declaration": "#6bdfff",
 "class.declaration": "#6bdfff",
 "struct.declaration": "#6bdfff",
