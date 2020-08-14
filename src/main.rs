@@ -69,8 +69,6 @@ fn main() -> io::Result<()> {
     Ok(())
 }
 
-struct Rgb(u32);
-
 struct Theme {
     name: &'static str,
     file_name: &'static str,
@@ -108,7 +106,11 @@ impl fmt::Display for Theme {
 
         write!(f, r#""name": "{}","#, self.name)?;
         write!(f, r#""type": "{}","#, self.kind)?;
-        write!(f, r#""colors": {{}},"#)?;
+
+        write!(f, r#""colors": {{"#)?;
+        write!(f, r#""editor.background": {}"#, self.background)?;
+        write!(f, "}},")?;
+
         write!(f, r#""semanticHighlighting": true,"#)?;
         write!(f, r#""semanticTokenColors": {{}},"#)?;
         write!(f, r#""tokenColors": [],"#)?;
@@ -130,5 +132,13 @@ impl fmt::Display for ThemeKind {
             Self::Light => write!(f, "light"),
             Self::Dark => write!(f, "dark"),
         }
+    }
+}
+
+struct Rgb(u32);
+
+impl fmt::Display for Rgb {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "\"#{:x}\"", self.0)
     }
 }
