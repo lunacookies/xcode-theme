@@ -15,6 +15,8 @@
 "string": "#de3a3c",
 "number": "#aaa3",
 "keyword": "#e12da0",
+"boolean": "#e12da0",
+"builtinType": "#e12da0",
 "macro": "#d38d5d",
 "type": "#18b5b1",
 "class": "#18b5b1",

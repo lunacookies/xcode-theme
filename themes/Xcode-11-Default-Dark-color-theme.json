@@ -15,6 +15,8 @@
 "string": "#ff8170",
 "number": "#d9c97c",
 "keyword": {"bold":true,"foreground":"#ff7ab2",},
+"boolean": {"bold":true,"foreground":"#ff7ab2",},
+"builtinType": {"bold":true,"foreground":"#ff7ab2",},
 "macro": "#ffa14f",
 "type": "#acf2e4",
 "class": "#acf2e4",

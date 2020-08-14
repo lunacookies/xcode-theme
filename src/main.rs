@@ -174,6 +174,8 @@ const TYPE_SCOPES: &[&str] = &[
 
 const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property", "lifetime"];
 
+const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
+
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
 
@@ -257,11 +259,13 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""number": {},"#, self.numbers)?;
 
-        write!(f, r#""keyword": "#)?;
-        if self.are_keywords_bold {
-            writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;
-        } else {
-            writeln!(f, "{},", self.keywords)?;
+        for scope in KEYWORD_SCOPES {
+            write!(f, r#""{}": "#, scope)?;
+            if self.are_keywords_bold {
+                writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;
+            } else {
+                writeln!(f, "{},", self.keywords)?;
+            }
         }
 
         writeln!(f, r#""macro": {},"#, self.preproc)?;
