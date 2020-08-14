@@ -55,6 +55,60 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     other_decls: Some(Rgb(0x4EB0CC)),
 };
 
+// Background: #292A30
+// Current Line: #2F3239
+// Selection: #646F83
+// Cursor: #FFFFFF
+// Invisibles: #53606E
+//
+// Plain text: #FFFFFF Medium
+// Comments: #7F8C98 Medium Italic
+// Documentation Markup: #7F8C98 Medium
+// Documentation Markup Keywords: #A3B1BF Bold
+// Strings: #FF8170 Medium
+// Characters: #A79DF7 Medium
+// Numbers: #A79DF7 Medium
+// Keywords: #FF7AB2 Bold
+// Preprocessor Statements: #FFA14F Medium
+// URLs: #63B6FC Medium
+// Attributes: #86BFA3 Medium
+// Project Types and Vars: #A0D975 Medium
+// Project Functions and Constants: #BAF28F Medium
+// Other Types and Vars: #8AD1C3 Medium
+// Other Functions and Constants: #A7EBDD Medium
+//
+// Definitions have the same colour as plain text.
+const XCODE_10_DEFAULT_DARK: Theme = Theme {
+    name: "Xcode 10 Default Dark",
+    file_name: "Xcode-10-Default-Dark",
+    kind: ThemeKind::Dark,
+    background: Rgb(0x292A30),
+    current_line: Rgb(0x2F3239),
+    selection: Rgb(0x646F83),
+    cursor: Rgb(0xFFFFFF),
+    invisibles: Rgb(0x53606E),
+    plain_text: Rgb(0xFFFFFF),
+    comments: Rgb(0x7F8C98),
+    are_comments_italic: true,
+    doc_markup: Rgb(0x7F8C98),
+    doc_markup_keywords: Rgb(0xA3B1BF),
+    strings: Rgb(0xFF8170),
+    chars: Rgb(0xA79DF7),
+    numbers: Rgb(0xA79DF7),
+    keywords: Rgb(0xFF7AB2),
+    are_keywords_bold: true,
+    preproc: Rgb(0xFFA14F),
+    urls: Rgb(0x63B6FC),
+    attributes: Rgb(0x86BFA3),
+    types: Rgb(0xA0D975),
+    variables: Rgb(0xBAF28F),
+    constants: Rgb(0xBAF28F),
+    interfaces: Rgb(0x8AD1C3),
+    functions: Rgb(0xA7EBDD),
+    type_decls: None,
+    other_decls: None,
+};
+
 // Background: #292B36
 // Current Line: #353749
 // Selection: #445261
@@ -121,7 +175,7 @@ const TYPE_SCOPES: &[&str] = &[
 const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property", "lifetime"];
 
 fn main() -> io::Result<()> {
-    let themes = &[XCODE_11_DEFAULT_DARK, XCODE_CIVIC];
+    let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
 
     for theme in themes {
         let json = theme.to_string();

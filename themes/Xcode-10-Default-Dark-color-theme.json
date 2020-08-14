@@ -1,31 +1,50 @@
-// Background: #292A30
-// Current Line: #2F3239
-// Selection: #646F83
-// Cursor: #FFFFFF
-// Invisibles: #53606E
-//
-// Plain text: #FFFFFF Medium
-// Comments: #7F8C98 Medium Italic
-// Documentation Markup: #7F8C98 Medium
-// Documentation Markup Keywords: #A3B1BF Bold
-// Strings: #FF8170 Medium
-// Characters: #A79DF7 Medium
-// Numbers: #A79DF7 Medium
-// Keywords: #FF7AB2 Bold
-// Preprocessor Statements: #FFA14F Medium
-// URLs: #63B6FC Medium
-// Attributes: #86BFA3 Medium
-// Project Types and Vars: #A0D975 Medium
-// Project Functions and Constants: #BAF28F Medium
-// Other Types and Vars: #8AD1C3 Medium
-// Other Functions and Constants: #A7EBDD Medium
-//
-// Definitions have the same colour as plain text.
 {
-	"name": "Xcode 10 Default Dark",
-	"type": "dark",
-	"colors": {},
-	"semanticHighlighting": true,
-	"semanticTokenColors": {},
-	"tokenColors": []
+"name": "Xcode 10 Default Dark",
+"type": "dark",
+"colors": {
+"editor.background": "#292a30",
+"editor.lineHighlightBackground": "#2f3239",
+"editor.selectionBackground": "#646f83",
+"editorCursor.foreground": "#ffffff",
+"editorWhitespace.foreground": "#53606e",
+"editor.foreground": "#ffffff",
+},
+"semanticHighlighting": true,
+"semanticTokenColors": {
+"comment": {"italic":true,"foreground":"#7f8c98",},
+"string": "#ff8170",
+"number": "#a79df7",
+"keyword": {"bold":true,"foreground":"#ff7ab2",},
+"macro": "#ffa14f",
+"type": "#a0d975",
+"class": "#a0d975",
+"struct": "#a0d975",
+"enum": "#a0d975",
+"enumMember": "#a0d975",
+"typeAlias": "#a0d975",
+"typeParameter": "#a0d975",
+"union": "#a0d975",
+"variable": "#baf28f",
+"member": "#baf28f",
+"parameter": "#baf28f",
+"property": "#baf28f",
+"lifetime": "#baf28f",
+"variable.constant": "#baf28f",
+"member.constant": "#baf28f",
+"parameter.constant": "#baf28f",
+"property.constant": "#baf28f",
+"lifetime.constant": "#baf28f",
+"interface": "#8ad1c3",
+"function": "#a7ebdd",
+"type.declaration": "#ffffff",
+"class.declaration": "#ffffff",
+"struct.declaration": "#ffffff",
+"enum.declaration": "#ffffff",
+"enumMember.declaration": "#ffffff",
+"typeAlias.declaration": "#ffffff",
+"typeParameter.declaration": "#ffffff",
+"union.declaration": "#ffffff",
+"*.declaration": "#ffffff",
+},
+"tokenColors": [],
 }
