@@ -12,6 +12,8 @@ const TYPE_SCOPES: &[&str] = &[
     "union",
 ];
 
+const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"];
+
 fn main() -> io::Result<()> {
     // Background: #292A30
     // Current Line: #2F3239
@@ -159,6 +161,10 @@ impl fmt::Display for Theme {
 
         for scope in TYPE_SCOPES {
             writeln!(f, r#""{}": {},"#, scope, self.types)?;
+        }
+
+        for scope in VARIABLE_SCOPES {
+            writeln!(f, r#""{}": {},"#, scope, self.variables)?;
         }
 
         writeln!(f, "}},")?;
