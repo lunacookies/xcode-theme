@@ -6,6 +6,7 @@
 "editor.lineHighlightBackground": "#2f3239",
 "editor.selectionBackground": "#646f83",
 "editorCursor.foreground": "#ffffff",
+"editorWhitespace.foreground": "#53606e",
 "editor.foreground": "#dfdfe0",
 },
 "semanticHighlighting": true,

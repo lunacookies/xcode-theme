@@ -134,6 +134,8 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""editorCursor.foreground": {},"#, self.cursor)?;
 
+        writeln!(f, r#""editorWhitespace.foreground": {},"#, self.invisibles)?;
+
         writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
 
         writeln!(f, "}},")?;
