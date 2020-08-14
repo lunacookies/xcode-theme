@@ -1,0 +1,25 @@
+{
+    "name": "xcode-theme",
+    "displayName": "Xcode Theme",
+    "description": "Xcode’s themes, ported to VS Code",
+    "publisher": "arzg",
+    "repository": {
+        "url": "https://github.com/arzg/xcode-theme"
+    },
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Xcode 11 Default Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Xcode-11-Default-Dark.json"
+            }
+        ]
+    }
+}
