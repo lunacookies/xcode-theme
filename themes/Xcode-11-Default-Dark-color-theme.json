@@ -20,7 +20,15 @@
 "typeAlias.declaration": "#6bdfff",
 "typeParameter.declaration": "#6bdfff",
 "union.declaration": "#6bdfff",
-"*.declaration": "#4eb0cc"
+"*.declaration": "#4eb0cc",
+"type": "#acf2e4",
+"class": "#acf2e4",
+"struct": "#acf2e4",
+"enum": "#acf2e4",
+"enumMember": "#acf2e4",
+"typeAlias": "#acf2e4",
+"typeParameter": "#acf2e4",
+"union": "#acf2e4",
 },
 "tokenColors": [],
 }

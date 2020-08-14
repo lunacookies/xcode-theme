@@ -153,9 +153,13 @@ impl fmt::Display for Theme {
 
         writeln!(
             f,
-            r#""*.declaration": {}"#,
+            r#""*.declaration": {},"#,
             self.other_decls.unwrap_or(self.plain_text)
         )?;
+
+        for scope in TYPE_SCOPES {
+            writeln!(f, r#""{}": {},"#, scope, self.types)?;
+        }
 
         writeln!(f, "}},")?;
 
