@@ -130,6 +130,8 @@ impl fmt::Display for Theme {
             self.current_line
         )?;
 
+        writeln!(f, r#""editor.selectionBackground": {},"#, self.selection)?;
+
         writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
 
         writeln!(f, "}},")?;

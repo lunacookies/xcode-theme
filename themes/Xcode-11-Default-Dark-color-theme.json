@@ -4,6 +4,7 @@
 "colors": {
 "editor.background": "#292a30",
 "editor.lineHighlightBackground": "#2f3239",
+"editor.selectionBackground": "#646f83",
 "editor.foreground": "#dfdfe0",
 },
 "semanticHighlighting": true,
