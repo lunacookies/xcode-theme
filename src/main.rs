@@ -1,6 +1,17 @@
 use std::io::{self, Write};
 use std::{fmt, fs};
 
+const TYPE_SCOPES: &[&str] = &[
+    "type",
+    "class",
+    "struct",
+    "enum",
+    "enumMember",
+    "typeAlias",
+    "typeParameter",
+    "union",
+];
+
 fn main() -> io::Result<()> {
     // Background: #292A30
     // Current Line: #2F3239
@@ -135,6 +146,11 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""macro": {},"#, self.preproc)?;
 
+        for scope in TYPE_SCOPES {
+            let color = self.type_decls.unwrap_or(self.plain_text);
+            writeln!(f, r#""{}.declaration": {},"#, scope, color)?;
+        }
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""tokenColors": [],"#)?;
@@ -159,6 +175,7 @@ impl fmt::Display for ThemeKind {
     }
 }
 
+#[derive(Copy, Clone)]
 struct Rgb(u32);
 
 impl fmt::Display for Rgb {
