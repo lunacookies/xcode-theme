@@ -32,12 +32,12 @@ fn main() -> io::Result<()> {
     // Preprocessor Statements: #FFA14F Medium
     // URLs: #6699FF Medium
     // Attributes: #CC9768 Medium
-    // Type Declaractions: #6BDFFF Medium
-    // Other Declaractions: #4EB0CC Medium
     // Project Types: #ACF2E4 Medium
     // Project Functions, Vars and Constants: #78C2B3 Medium
     // Other Types: #DABAFF Medium
     // Other Functions, Vars and Constants: #B281EB Medium
+    // Type Declaractions: #6BDFFF Medium
+    // Other Declaractions: #4EB0CC Medium
     let xcode_11_default_dark = Theme {
         name: "Xcode 11 Default Dark",
         file_name: "Xcode-11-Default-Dark",
@@ -60,13 +60,13 @@ fn main() -> io::Result<()> {
         preproc: Rgb(0xFFA14F),
         urls: Rgb(0x6699FF),
         attributes: Rgb(0xCC9768),
-        type_decls: Some(Rgb(0x6BDFFF)),
-        other_decls: Some(Rgb(0x4EB0CC)),
         types: Rgb(0xACF2E4),
         variables: Rgb(0x78C2B3),
         constants: Rgb(0x78C2B3),
         interfaces: Rgb(0xDABAFF),
         functions: Rgb(0xB281EB),
+        type_decls: Some(Rgb(0x6BDFFF)),
+        other_decls: Some(Rgb(0x4EB0CC)),
     };
 
     let json = xcode_11_default_dark.to_string();
@@ -104,13 +104,13 @@ struct Theme {
     preproc: Rgb,
     urls: Rgb,
     attributes: Rgb,
-    type_decls: Option<Rgb>,
-    other_decls: Option<Rgb>,
     types: Rgb,
     variables: Rgb,
     constants: Rgb,
     interfaces: Rgb,
     functions: Rgb,
+    type_decls: Option<Rgb>,
+    other_decls: Option<Rgb>,
 }
 
 impl fmt::Display for Theme {
@@ -149,17 +149,6 @@ impl fmt::Display for Theme {
         writeln!(f, r#""macro": {},"#, self.preproc)?;
 
         for scope in TYPE_SCOPES {
-            let color = self.type_decls.unwrap_or(self.plain_text);
-            writeln!(f, r#""{}.declaration": {},"#, scope, color)?;
-        }
-
-        writeln!(
-            f,
-            r#""*.declaration": {},"#,
-            self.other_decls.unwrap_or(self.plain_text)
-        )?;
-
-        for scope in TYPE_SCOPES {
             writeln!(f, r#""{}": {},"#, scope, self.types)?;
         }
 
@@ -171,7 +160,18 @@ impl fmt::Display for Theme {
             writeln!(f, r#""{}.constant": {},"#, scope, self.constants)?;
         }
 
-        writeln!(f, r#""interface": {}"#, self.interfaces)?;
+        writeln!(f, r#""interface": {},"#, self.interfaces)?;
+
+        for scope in TYPE_SCOPES {
+            let color = self.type_decls.unwrap_or(self.plain_text);
+            writeln!(f, r#""{}.declaration": {},"#, scope, color)?;
+        }
+
+        writeln!(
+            f,
+            r#""*.declaration": {},"#,
+            self.other_decls.unwrap_or(self.plain_text)
+        )?;
 
         writeln!(f, "}},")?;
 
