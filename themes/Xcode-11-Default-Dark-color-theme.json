@@ -6,6 +6,8 @@
 "editor.foreground": "#dfdfe0",
 },
 "semanticHighlighting": true,
-"semanticTokenColors": {},
+"semanticTokenColors": {
+"keyword": {"bold":true,"foreground":"#ff7ab2",}
+},
 "tokenColors": [],
 }

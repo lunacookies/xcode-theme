@@ -113,7 +113,17 @@ impl fmt::Display for Theme {
         writeln!(f, "}},")?;
 
         writeln!(f, r#""semanticHighlighting": true,"#)?;
-        writeln!(f, r#""semanticTokenColors": {{}},"#)?;
+        writeln!(f, r#""semanticTokenColors": {{"#)?;
+
+        write!(f, r#""keyword": "#)?;
+        if self.are_keywords_bold {
+            writeln!(f, r#"{{"bold":true,"foreground":{},}}"#, self.keywords)?;
+        } else {
+            writeln!(f, "{},", self.keywords)?;
+        }
+
+        writeln!(f, "}},")?;
+
         writeln!(f, r#""tokenColors": [],"#)?;
 
         writeln!(f, "}}")?;
