@@ -151,6 +151,12 @@ impl fmt::Display for Theme {
             writeln!(f, r#""{}.declaration": {},"#, scope, color)?;
         }
 
+        writeln!(
+            f,
+            r#""*.declaration": {}"#,
+            self.other_decls.unwrap_or(self.plain_text)
+        )?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""tokenColors": [],"#)?;

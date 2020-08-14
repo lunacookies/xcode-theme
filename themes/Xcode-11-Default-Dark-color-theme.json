@@ -20,6 +20,7 @@
 "typeAlias.declaration": "#6bdfff",
 "typeParameter.declaration": "#6bdfff",
 "union.declaration": "#6bdfff",
+"*.declaration": "#4eb0cc"
 },
 "tokenColors": [],
 }
