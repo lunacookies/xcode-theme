@@ -8,6 +8,7 @@
 "semanticHighlighting": true,
 "semanticTokenColors": {
 "comment": "#7f8c98",
+"string": "#ff8170",
 "keyword": {"bold":true,"foreground":"#ff7ab2",},
 },
 "tokenColors": [],

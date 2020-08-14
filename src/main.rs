@@ -122,6 +122,8 @@ impl fmt::Display for Theme {
             writeln!(f, "{},", self.comments)?;
         }
 
+        writeln!(f, r#""string": {},"#, self.strings)?;
+
         write!(f, r#""keyword": "#)?;
         if self.are_keywords_bold {
             writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;
