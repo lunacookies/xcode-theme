@@ -124,6 +124,8 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""string": {},"#, self.strings)?;
 
+        writeln!(f, r#""number": {},"#, self.numbers)?;
+
         write!(f, r#""keyword": "#)?;
         if self.are_keywords_bold {
             writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;

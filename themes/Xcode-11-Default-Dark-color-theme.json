@@ -9,6 +9,7 @@
 "semanticTokenColors": {
 "comment": "#7f8c98",
 "string": "#ff8170",
+"number": "#d9c97c",
 "keyword": {"bold":true,"foreground":"#ff7ab2",},
 },
 "tokenColors": [],
