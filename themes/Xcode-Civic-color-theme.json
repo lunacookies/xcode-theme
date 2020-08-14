@@ -1,29 +1,50 @@
-// Background: #292B36
-// Current Line: #353749
-// Selection: #445261
-// Cursor: #FFFFFF
-// Invisibles: #5F5F5F
-//
-// Plain text: #E7E8EB Regular
-// Comments: #51C34F Regular
-// Documentation Markup: #23AD68 Regular
-// Documentation Markup Keywords: #35D585 Bold
-// Strings: #DE3A3C Regular
-// Characters: #8783BE Regular
-// Numbers: #00AAA3 Regular
-// Keywords: #E12DA0 Regular
-// Preprocessor Statements: #D38D5D Regular
-// URLs: #6544E9 Regular
-// Attributes: #68878F Regular
-// Project Types, Vars, Functions, Constants: #18B5B1 Regular
-// Other Types, Vars, Functions, Constants: #29A09F Regular
-//
-// Definitions have the same colour as plain text.
 {
-	"name": "Xcode Civic",
-	"type": "dark",
-	"colors": {},
-	"semanticHighlighting": true,
-	"semanticTokenColors": {},
-	"tokenColors": []
+"name": "Xcode Civic",
+"type": "dark",
+"colors": {
+"editor.background": "#292b36",
+"editor.lineHighlightBackground": "#353749",
+"editor.selectionBackground": "#445261",
+"editorCursor.foreground": "#ffffff",
+"editorWhitespace.foreground": "#5f5f5f",
+"editor.foreground": "#e7e8eb",
+},
+"semanticHighlighting": true,
+"semanticTokenColors": {
+"comment": "#51c34f",
+"string": "#de3a3c",
+"number": "#aaa3",
+"keyword": "#e12da0",
+"macro": "#d38d5d",
+"type": "#18b5b1",
+"class": "#18b5b1",
+"struct": "#18b5b1",
+"enum": "#18b5b1",
+"enumMember": "#18b5b1",
+"typeAlias": "#18b5b1",
+"typeParameter": "#18b5b1",
+"union": "#18b5b1",
+"variable": "#18b5b1",
+"member": "#18b5b1",
+"parameter": "#18b5b1",
+"property": "#18b5b1",
+"lifetime": "#18b5b1",
+"variable.constant": "#18b5b1",
+"member.constant": "#18b5b1",
+"parameter.constant": "#18b5b1",
+"property.constant": "#18b5b1",
+"lifetime.constant": "#18b5b1",
+"interface": "#29a09f",
+"function": "#29a09f",
+"type.declaration": "#e7e8eb",
+"class.declaration": "#e7e8eb",
+"struct.declaration": "#e7e8eb",
+"enum.declaration": "#e7e8eb",
+"enumMember.declaration": "#e7e8eb",
+"typeAlias.declaration": "#e7e8eb",
+"typeParameter.declaration": "#e7e8eb",
+"union.declaration": "#e7e8eb",
+"*.declaration": "#e7e8eb",
+},
+"tokenColors": [],
 }

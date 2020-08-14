@@ -55,6 +55,58 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     other_decls: Some(Rgb(0x4EB0CC)),
 };
 
+// Background: #292B36
+// Current Line: #353749
+// Selection: #445261
+// Cursor: #FFFFFF
+// Invisibles: #5F5F5F
+//
+// Plain text: #E7E8EB Regular
+// Comments: #51C34F Regular
+// Documentation Markup: #23AD68 Regular
+// Documentation Markup Keywords: #35D585 Bold
+// Strings: #DE3A3C Regular
+// Characters: #8783BE Regular
+// Numbers: #00AAA3 Regular
+// Keywords: #E12DA0 Regular
+// Preprocessor Statements: #D38D5D Regular
+// URLs: #6544E9 Regular
+// Attributes: #68878F Regular
+// Project Types, Vars, Functions, Constants: #18B5B1 Regular
+// Other Types, Vars, Functions, Constants: #29A09F Regular
+//
+// Definitions have the same colour as plain text.
+const XCODE_CIVIC: Theme = Theme {
+    name: "Xcode Civic",
+    file_name: "Xcode-Civic",
+    kind: ThemeKind::Dark,
+    background: Rgb(0x292B36),
+    current_line: Rgb(0x353749),
+    selection: Rgb(0x445261),
+    cursor: Rgb(0xFFFFFF),
+    invisibles: Rgb(0x5F5F5F),
+    plain_text: Rgb(0xE7E8EB),
+    comments: Rgb(0x51C34F),
+    are_comments_italic: false,
+    doc_markup: Rgb(0x23AD68),
+    doc_markup_keywords: Rgb(0x35D585),
+    strings: Rgb(0xDE3A3C),
+    chars: Rgb(0x8783BE),
+    numbers: Rgb(0x00AAA3),
+    keywords: Rgb(0xE12DA0),
+    are_keywords_bold: false,
+    preproc: Rgb(0xD38D5D),
+    urls: Rgb(0x6544E9),
+    attributes: Rgb(0x68878F),
+    types: Rgb(0x18B5B1),
+    variables: Rgb(0x18B5B1),
+    constants: Rgb(0x18B5B1),
+    interfaces: Rgb(0x29A09F),
+    functions: Rgb(0x29A09F),
+    type_decls: None,
+    other_decls: None,
+};
+
 const TYPE_SCOPES: &[&str] = &[
     "type",
     "class",
@@ -69,7 +121,7 @@ const TYPE_SCOPES: &[&str] = &[
 const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property", "lifetime"];
 
 fn main() -> io::Result<()> {
-    let themes = &[XCODE_11_DEFAULT_DARK];
+    let themes = &[XCODE_11_DEFAULT_DARK, XCODE_CIVIC];
 
     for theme in themes {
         let json = theme.to_string();
