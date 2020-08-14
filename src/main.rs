@@ -167,6 +167,10 @@ impl fmt::Display for Theme {
             writeln!(f, r#""{}": {},"#, scope, self.variables)?;
         }
 
+        for scope in VARIABLE_SCOPES {
+            writeln!(f, r#""{}.constant": {},"#, scope, self.constants)?;
+        }
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""tokenColors": [],"#)?;

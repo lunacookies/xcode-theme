@@ -33,6 +33,10 @@
 "member": "#78c2b3",
 "parameter": "#78c2b3",
 "property": "#78c2b3",
+"variable.constant": "#78c2b3",
+"member.constant": "#78c2b3",
+"parameter.constant": "#78c2b3",
+"property.constant": "#78c2b3",
 },
 "tokenColors": [],
 }
