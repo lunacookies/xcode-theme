@@ -115,9 +115,16 @@ impl fmt::Display for Theme {
         writeln!(f, r#""semanticHighlighting": true,"#)?;
         writeln!(f, r#""semanticTokenColors": {{"#)?;
 
+        write!(f, r#""comment": "#)?;
+        if self.are_comments_italic {
+            writeln!(f, r#"{{"italic":true,"foreground":{},}},"#, self.comments)?;
+        } else {
+            writeln!(f, "{},", self.comments)?;
+        }
+
         write!(f, r#""keyword": "#)?;
         if self.are_keywords_bold {
-            writeln!(f, r#"{{"bold":true,"foreground":{},}}"#, self.keywords)?;
+            writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;
         } else {
             writeln!(f, "{},", self.keywords)?;
         }
