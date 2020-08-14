@@ -132,6 +132,8 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""editor.selectionBackground": {},"#, self.selection)?;
 
+        writeln!(f, r#""editorCursor.foreground": {},"#, self.cursor)?;
+
         writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
 
         writeln!(f, "}},")?;
