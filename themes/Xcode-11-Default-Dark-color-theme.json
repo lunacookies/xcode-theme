@@ -1,1 +1,11 @@
-{"name": "Xcode 11 Default Dark","type": "dark","colors": {"editor.background": "#292a30"},"semanticHighlighting": true,"semanticTokenColors": {},"tokenColors": [],}
+{
+"name": "Xcode 11 Default Dark",
+"type": "dark",
+"colors": {
+"editor.background": "#292a30",
+"editor.foreground": "#dfdfe0",
+},
+"semanticHighlighting": true,
+"semanticTokenColors": {},
+"tokenColors": [],
+}

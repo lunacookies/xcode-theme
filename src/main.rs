@@ -102,20 +102,21 @@ struct Theme {
 
 impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{{")?;
+        writeln!(f, "{{")?;
 
-        write!(f, r#""name": "{}","#, self.name)?;
-        write!(f, r#""type": "{}","#, self.kind)?;
+        writeln!(f, r#""name": "{}","#, self.name)?;
+        writeln!(f, r#""type": "{}","#, self.kind)?;
 
-        write!(f, r#""colors": {{"#)?;
-        write!(f, r#""editor.background": {}"#, self.background)?;
-        write!(f, "}},")?;
+        writeln!(f, r#""colors": {{"#)?;
+        writeln!(f, r#""editor.background": {},"#, self.background)?;
+        writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
+        writeln!(f, "}},")?;
 
-        write!(f, r#""semanticHighlighting": true,"#)?;
-        write!(f, r#""semanticTokenColors": {{}},"#)?;
-        write!(f, r#""tokenColors": [],"#)?;
+        writeln!(f, r#""semanticHighlighting": true,"#)?;
+        writeln!(f, r#""semanticTokenColors": {{}},"#)?;
+        writeln!(f, r#""tokenColors": [],"#)?;
 
-        write!(f, "}}")?;
+        writeln!(f, "}}")?;
 
         Ok(())
     }
