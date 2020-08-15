@@ -182,6 +182,8 @@ const DARK_TAB_INACTIVE_BG: Rgb = Rgb(0x1F1F21);
 const DARK_TAB_INACTIVE_FG: Rgb = Rgb(0x9A9C9D);
 const DARK_TAB_BORDER: Rgb = Rgb(0x5B5D5F);
 const DARK_EDITOR_GROUP_HEADER: Rgb = Rgb(0x26282B);
+const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
+const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
 const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
 
 fn main() -> io::Result<()> {
@@ -260,6 +262,9 @@ impl fmt::Display for Theme {
             "editorGroupHeader.tabsBackground",
             DARK_EDITOR_GROUP_HEADER,
         )?;
+
+        write_scope(f, "statusBar.background", DARK_STATUS_BAR_BG)?;
+        write_scope(f, "statusBar.foreground", DARK_STATUS_BAR_FG)?;
 
         write_scope(f, "activityBar.background", DARK_TAB_INACTIVE_BG)?;
 
