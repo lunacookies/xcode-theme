@@ -197,7 +197,7 @@ const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
 const DARK_CURRENT_MATCH_BG: Rgb = Rgb(0xFFFB00);
 const DARK_OTHER_MATCH_BG: Rgb = Rgb(0x545558);
 const DARK_WIDGET_BG: Rgb = Rgb(0x303030);
-const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x0157CD);
+const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x3071DB);
 const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0x0A84FF);
 const DARK_ERROR: Rgb = Rgb(0xE21514);
 const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
@@ -347,6 +347,11 @@ impl fmt::Display for Theme {
         write_scope(f, "editorWidget.background", DARK_WIDGET_BG)?;
         write_scope(f, "list.focusBackground", DARK_SELECTED_ITEM_IN_WIDGET_BG)?;
         write_scope(f, "list.highlightForeground", DARK_MATCHING_TEXT_IN_WIDGET)?;
+        write_scope(
+            f,
+            "list.activeSelectionBackground",
+            DARK_SELECTED_ITEM_IN_WIDGET_BG,
+        )?;
 
         write_scope(f, "errorForeground", DARK_ERROR)?;
         write_scope(f, "editorError.foreground", DARK_ERROR)?;
