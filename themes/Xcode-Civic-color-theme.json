@@ -26,6 +26,9 @@
 "debugIcon.breakpointForeground": "#007aff",
 "debugIcon.breakpointCurrentStackframeForeground": "#007aff",
 "editor.stackFrameHighlightBackground": "#007aff22",
+"textLink.foreground": "#6544e9",
+"textLink.activeForeground": "#6544e9",
+"editorLink.activeForeground": "#6544e9",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {

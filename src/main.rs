@@ -296,6 +296,10 @@ impl fmt::Display for Theme {
             },
         )?;
 
+        write_scope(f, "textLink.foreground", self.urls)?;
+        write_scope(f, "textLink.activeForeground", self.urls)?;
+        write_scope(f, "editorLink.activeForeground", self.urls)?;
+
         writeln!(f, "}},")?;
 
         write_scope(f, "semanticHighlighting", "true")?;
