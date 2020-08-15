@@ -54,6 +54,13 @@
 "editorGutter.addedBackground": "#4f82ce",
 "minimapGutter.addedBackground": "#4f82ce",
 "editorOverviewRuler.addedForeground": "#4f82ce",
+"gitDecoration.untrackedResourceForeground": "#dfdfdf",
+"gitDecoration.addedResourceForeground": "#dfdfdf",
+"gitDecoration.conflictingResourceForeground": "#dfdfdf",
+"gitDecoration.deletedResourceForeground": "#dfdfdf",
+"gitDecoration.ignoredResourceForeground": "#dfdfdf",
+"gitDecoration.modifiedResourceForeground": "#dfdfdf",
+"gitDecoration.submoduleResourceForeground": "#dfdfdf",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {

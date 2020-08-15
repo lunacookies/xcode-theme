@@ -356,6 +356,14 @@ impl fmt::Display for Theme {
         write_scope(f, "minimapGutter.addedBackground", DARK_GIT_CHANGE)?;
         write_scope(f, "editorOverviewRuler.addedForeground", DARK_GIT_CHANGE)?;
 
+        write_scope(f, "gitDecoration.untrackedResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.addedResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.conflictingResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.deletedResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.ignoredResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.modifiedResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.submoduleResourceForeground", DARK_FG)?;
+
         writeln!(f, "}},")?;
 
         write_scope(f, "semanticHighlighting", "true")?;
