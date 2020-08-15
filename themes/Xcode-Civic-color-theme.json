@@ -2,6 +2,7 @@
 "name": "Xcode Civic",
 "type": "dark",
 "colors": {
+"foreground": "#dfdfdf",
 "editor.background": "#292b36",
 "editor.lineHighlightBackground": "#353749",
 "editor.selectionBackground": "#445261",

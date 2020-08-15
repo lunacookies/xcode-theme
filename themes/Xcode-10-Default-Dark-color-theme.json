@@ -2,6 +2,7 @@
 "name": "Xcode 10 Default Dark",
 "type": "dark",
 "colors": {
+"foreground": "#dfdfdf",
 "editor.background": "#292a30",
 "editor.lineHighlightBackground": "#2f3239",
 "editor.selectionBackground": "#646f83",

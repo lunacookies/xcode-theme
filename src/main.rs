@@ -182,6 +182,7 @@ const INVISIBLE: Rgba = Rgba {
 };
 
 const DARK_BG: Rgb = Rgb(0x2A2C2F);
+const DARK_FG: Rgb = Rgb(0xDFDFDF);
 const DARK_PANEL_BORDER: Rgb = Rgb(0x000000);
 const DARK_TAB_ACTIVE_BG: Rgb = Rgb(0x383A3D);
 const DARK_TAB_ACTIVE_FG: Rgb = Rgb(0xFFFFFF);
@@ -258,6 +259,8 @@ impl fmt::Display for Theme {
         write_scope(f, "type", self.kind)?;
 
         writeln!(f, "\"colors\": {{")?;
+
+        write_scope(f, "foreground", DARK_FG)?;
 
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
