@@ -845,6 +845,8 @@ impl fmt::Display for Theme {
             false,
         )?;
 
+        write_textmate_rule(f, &["string"], self.strings, false, false)?;
+
         write_textmate_rule(
             f,
             &["keyword"],

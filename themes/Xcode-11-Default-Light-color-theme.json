@@ -150,6 +150,15 @@
 },
 {
 "scope": [
+"string",
+],
+"settings": {
+"foreground": "#d12f1b",
+"fontStyle": "",
+},
+},
+{
+"scope": [
 "keyword",
 ],
 "settings": {
