@@ -200,6 +200,7 @@ const DARK_WIDGET_BG: Rgb = Rgb(0x303030);
 const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x0157CD);
 const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0x0A84FF);
 const DARK_ERROR: Rgb = Rgb(0xE21514);
+const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -350,6 +351,10 @@ impl fmt::Display for Theme {
         write_scope(f, "editorError.foreground", DARK_ERROR)?;
         write_scope(f, "minimap.errorHighlight", DARK_ERROR)?;
         write_scope(f, "editorOverviewRuler.errorForeground", DARK_ERROR)?;
+
+        write_scope(f, "editorGutter.addedBackground", DARK_GIT_CHANGE)?;
+        write_scope(f, "minimapGutter.addedBackground", DARK_GIT_CHANGE)?;
+        write_scope(f, "editorOverviewRuler.addedForeground", DARK_GIT_CHANGE)?;
 
         writeln!(f, "}},")?;
 

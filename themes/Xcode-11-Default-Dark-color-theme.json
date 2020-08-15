@@ -51,6 +51,9 @@
 "editorError.foreground": "#e21514",
 "minimap.errorHighlight": "#e21514",
 "editorOverviewRuler.errorForeground": "#e21514",
+"editorGutter.addedBackground": "#4f82ce",
+"minimapGutter.addedBackground": "#4f82ce",
+"editorOverviewRuler.addedForeground": "#4f82ce",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
