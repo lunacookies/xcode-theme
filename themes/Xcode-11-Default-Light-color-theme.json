@@ -175,5 +175,17 @@
 "fontStyle": "bold",
 },
 },
+{
+"scope": [
+"entity.name.function.macro",
+"keyword.control.directive",
+"keyword.control.preprocessor",
+"punctuation.definition.preprocessor",
+],
+"settings": {
+"foreground": "#78492a",
+"fontStyle": "",
+},
+},
 ]
 }

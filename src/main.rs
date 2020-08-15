@@ -857,6 +857,19 @@ impl fmt::Display for Theme {
             self.are_keywords_bold,
         )?;
 
+        write_textmate_rule(
+            f,
+            &[
+                "entity.name.function.macro",
+                "keyword.control.directive",
+                "keyword.control.preprocessor",
+                "punctuation.definition.preprocessor",
+            ],
+            self.preproc,
+            false,
+            false,
+        )?;
+
         writeln!(f, "]")?;
 
         writeln!(f, "}}")?;
