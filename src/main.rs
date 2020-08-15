@@ -177,6 +177,7 @@ const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"
 const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 
 const DARK_TAB_ACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x383A3D);
+const DARK_TAB_ACTIVE_FOREGROUND_COLOR: Rgb = Rgb(0xFFFFFF);
 const DARK_TAB_INACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x1F1F21);
 const DARK_TAB_BORDER_COLOR: Rgb = Rgb(0x5B5D5F);
 
@@ -251,6 +252,12 @@ impl fmt::Display for Theme {
             f,
             r#""tab.activeBackground": {},"#,
             DARK_TAB_ACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(
+            f,
+            r#""tab.activeForeground": {},"#,
+            DARK_TAB_ACTIVE_FOREGROUND_COLOR
         )?;
 
         writeln!(

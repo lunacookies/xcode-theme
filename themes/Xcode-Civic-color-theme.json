@@ -9,6 +9,7 @@
 "editorWhitespace.foreground": "#5f5f5f",
 "editor.foreground": "#e7e8eb",
 "tab.activeBackground": "#383a3d",
+"tab.activeForeground": "#ffffff",
 "tab.inactiveBackground": "#1f1f21",
 "tab.border": "#5b5d5f",
 "activityBar.background": "#1f1f21",
