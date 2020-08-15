@@ -1,5 +1,4 @@
-use std::io::{self, Write};
-use std::{fmt, fs};
+use std::{fmt, fs, io};
 
 // Background: #292A30
 // Current Line: #2F3239
