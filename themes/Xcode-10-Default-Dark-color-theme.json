@@ -46,6 +46,7 @@
 "statusBar.debuggingBorder": "#000000",
 "statusBar.noFolderBorder": "#000000",
 "activityBar.background": "#2a2c2f",
+"activityBar.foreground": "#dfdfdf",
 "activityBar.border": "#000000",
 "sideBar.background": "#2a2c2f",
 "sideBar.border": "#000000",

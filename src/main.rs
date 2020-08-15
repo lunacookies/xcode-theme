@@ -616,6 +616,7 @@ impl fmt::Display for Theme {
         write_scope(f, "statusBar.noFolderBorder", panel_border())?;
 
         write_scope(f, "activityBar.background", bg())?;
+        write_scope(f, "activityBar.foreground", fg())?;
         write_scope(f, "activityBar.border", panel_border())?;
 
         write_scope(f, "sideBar.background", bg())?;
