@@ -58,9 +58,9 @@
 "gitDecoration.addedResourceForeground": "#dfdfdf",
 "gitDecoration.conflictingResourceForeground": "#e21514",
 "gitDecoration.deletedResourceForeground": "#dfdfdf",
-"gitDecoration.ignoredResourceForeground": "#dfdfdf",
 "gitDecoration.modifiedResourceForeground": "#dfdfdf",
 "gitDecoration.submoduleResourceForeground": "#dfdfdf",
+"gitDecoration.ignoredResourceForeground": "#dfdfdf55",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
