@@ -292,7 +292,7 @@ impl fmt::Display for Theme {
             f,
             "comment",
             if self.are_comments_italic {
-                format!(r#"{{"italic":true,"foreground":{},}}"#, self.comments)
+                format!(r#"{{ "italic": true, "foreground": {} }}"#, self.comments)
             } else {
                 self.comments.to_string()
             },
@@ -307,7 +307,7 @@ impl fmt::Display for Theme {
                 f,
                 scope,
                 if self.are_keywords_bold {
-                    format!(r#"{{"bold":true,"foreground":{},}}"#, self.keywords)
+                    format!(r#"{{ "bold": true, "foreground": {} }}"#, self.keywords)
                 } else {
                     self.keywords.to_string()
                 },
