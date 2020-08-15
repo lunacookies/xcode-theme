@@ -188,5 +188,15 @@
 "fontStyle": "",
 },
 },
+{
+"scope": [
+"storage.type",
+"support.type",
+],
+"settings": {
+"foreground": "#18b5b1",
+"fontStyle": "",
+},
+},
 ]
 }

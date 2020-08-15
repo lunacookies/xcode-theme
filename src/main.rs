@@ -870,6 +870,14 @@ impl fmt::Display for Theme {
             false,
         )?;
 
+        write_textmate_rule(
+            f,
+            &["storage.type", "support.type"],
+            self.types,
+            false,
+            false,
+        )?;
+
         writeln!(f, "]")?;
 
         writeln!(f, "}}")?;
