@@ -228,139 +228,137 @@ struct Theme {
 
 impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        fn write_scope(
+            f: &mut fmt::Formatter<'_>,
+            scope: impl AsRef<str>,
+            val: impl fmt::Display,
+        ) -> fmt::Result {
+            writeln!(f, "\"{}\": {},", scope.as_ref(), val)
+        }
+
         writeln!(f, "{{")?;
 
-        writeln!(f, r#""name": "{}","#, self.name)?;
-        writeln!(f, r#""type": "{}","#, self.kind)?;
+        write_scope(f, "name", format!("\"{}\"", self.name))?;
+        write_scope(f, "type", self.kind)?;
 
-        writeln!(f, r#""colors": {{"#)?;
+        writeln!(f, "\"colors\": {{")?;
 
-        writeln!(f, r#""editor.background": {},"#, self.background)?;
+        write_scope(f, "editor.background", self.background)?;
 
-        writeln!(
+        write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
+
+        write_scope(f, "editor.selectionBackground", self.selection)?;
+
+        write_scope(f, "editorCursor.foreground", self.cursor)?;
+
+        write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
+
+        write_scope(f, "editor.foreground", self.plain_text)?;
+
+        write_scope(f, "tab.activeBackground", DARK_TAB_ACTIVE_BACKGROUND_COLOR)?;
+
+        write_scope(f, "tab.activeForeground", DARK_TAB_ACTIVE_FOREGROUND_COLOR)?;
+
+        write_scope(
             f,
-            r#""editor.lineHighlightBackground": {},"#,
-            self.current_line
+            "tab.inactiveBackground",
+            DARK_TAB_INACTIVE_BACKGROUND_COLOR,
         )?;
 
-        writeln!(f, r#""editor.selectionBackground": {},"#, self.selection)?;
-
-        writeln!(f, r#""editorCursor.foreground": {},"#, self.cursor)?;
-
-        writeln!(f, r#""editorWhitespace.foreground": {},"#, self.invisibles)?;
-
-        writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
-
-        writeln!(
+        write_scope(
             f,
-            r#""tab.activeBackground": {},"#,
-            DARK_TAB_ACTIVE_BACKGROUND_COLOR
+            "tab.inactiveForeground",
+            DARK_TAB_INACTIVE_FOREGROUND_COLOR,
         )?;
 
-        writeln!(
+        write_scope(f, "tab.border", DARK_TAB_BORDER_COLOR)?;
+
+        write_scope(
             f,
-            r#""tab.activeForeground": {},"#,
-            DARK_TAB_ACTIVE_FOREGROUND_COLOR
+            "editorGroupHeader.tabsBackground",
+            DARK_EDITOR_GROUP_HEADER_COLOR,
         )?;
 
-        writeln!(
+        write_scope(
             f,
-            r#""tab.inactiveBackground": {},"#,
-            DARK_TAB_INACTIVE_BACKGROUND_COLOR
+            "activityBar.background",
+            DARK_TAB_INACTIVE_BACKGROUND_COLOR,
         )?;
 
-        writeln!(
-            f,
-            r#""tab.inactiveForeground": {},"#,
-            DARK_TAB_INACTIVE_FOREGROUND_COLOR
-        )?;
+        write_scope(f, "sideBar.background", DARK_TAB_INACTIVE_BACKGROUND_COLOR)?;
 
-        writeln!(f, r#""tab.border": {},"#, DARK_TAB_BORDER_COLOR)?;
-
-        writeln!(
+        write_scope(
             f,
-            r#""editorGroupHeader.tabsBackground": {},"#,
-            DARK_EDITOR_GROUP_HEADER_COLOR
-        )?;
-
-        writeln!(
-            f,
-            r#""activityBar.background": {},"#,
-            DARK_TAB_INACTIVE_BACKGROUND_COLOR
-        )?;
-
-        writeln!(
-            f,
-            r#""sideBar.background": {},"#,
-            DARK_TAB_INACTIVE_BACKGROUND_COLOR
-        )?;
-
-        writeln!(
-            f,
-            r#""editor.snippetTabstopHighlightBackground": {},"#,
-            DARK_SNIPPET_BACKGROUND_COLOR
+            "editor.snippetTabstopHighlightBackground",
+            DARK_SNIPPET_BACKGROUND_COLOR,
         )?;
 
         writeln!(f, "}},")?;
 
-        writeln!(f, r#""semanticHighlighting": true,"#)?;
-        writeln!(f, r#""semanticTokenColors": {{"#)?;
+        write_scope(f, "semanticHighlighting", "true")?;
+        writeln!(f, "\"semanticTokenColors\": {{")?;
 
-        write!(f, r#""comment": "#)?;
-        if self.are_comments_italic {
-            writeln!(f, r#"{{"italic":true,"foreground":{},}},"#, self.comments)?;
-        } else {
-            writeln!(f, "{},", self.comments)?;
-        }
+        write_scope(
+            f,
+            "comment",
+            if self.are_comments_italic {
+                format!(r#"{{"italic":true,"foreground":{},}}"#, self.comments)
+            } else {
+                self.comments.to_string()
+            },
+        )?;
 
-        writeln!(f, r#""string": {},"#, self.strings)?;
+        write_scope(f, "string", self.strings)?;
 
-        writeln!(f, r#""number": {},"#, self.numbers)?;
+        write_scope(f, "number", self.numbers)?;
 
         for scope in KEYWORD_SCOPES {
-            write!(f, r#""{}": "#, scope)?;
-            if self.are_keywords_bold {
-                writeln!(f, r#"{{"bold":true,"foreground":{},}},"#, self.keywords)?;
-            } else {
-                writeln!(f, "{},", self.keywords)?;
-            }
+            write_scope(
+                f,
+                scope,
+                if self.are_keywords_bold {
+                    format!(r#"{{"bold":true,"foreground":{},}}"#, self.keywords)
+                } else {
+                    self.keywords.to_string()
+                },
+            )?;
         }
 
-        writeln!(f, r#""macro": {},"#, self.preproc)?;
+        write_scope(f, "macro", self.preproc)?;
 
         for scope in TYPE_SCOPES {
-            writeln!(f, r#""{}": {},"#, scope, self.types)?;
+            write_scope(f, scope, self.types)?;
         }
 
         for scope in VARIABLE_SCOPES {
-            writeln!(f, r#""{}": {},"#, scope, self.variables)?;
+            write_scope(f, scope, self.variables)?;
         }
 
         for scope in VARIABLE_SCOPES {
-            writeln!(f, r#""{}.constant": {},"#, scope, self.constants)?;
+            write_scope(f, format!("{}.constant", scope), self.constants)?;
         }
 
-        writeln!(f, r#""interface": {},"#, self.interfaces)?;
+        write_scope(f, "interface", self.interfaces)?;
 
-        writeln!(f, r#""function": {},"#, self.functions)?;
+        write_scope(f, "function", self.functions)?;
 
-        writeln!(f, r#""punctuation": {},"#, self.plain_text)?;
-        writeln!(f, r#""operator": {},"#, self.plain_text)?;
+        write_scope(f, "punctuation", self.plain_text)?;
+        write_scope(f, "operator", self.plain_text)?;
 
         for scope in TYPE_SCOPES {
             let color = self.type_decls.unwrap_or(self.plain_text);
-            writeln!(f, r#""{}.declaration": {},"#, scope, color)?;
+            write_scope(f, format!("{}.declaration", scope), color)?;
         }
 
-        writeln!(
+        write_scope(
             f,
-            r#""*.declaration": {},"#,
-            self.other_decls.unwrap_or(self.plain_text)
+            "*.declaration",
+            self.other_decls.unwrap_or(self.plain_text),
         )?;
 
         writeln!(f, "}},")?;
 
-        writeln!(f, r#""tokenColors": [],"#)?;
+        write_scope(f, "tokenColors", "[]")?;
 
         writeln!(f, "}}")?;
 
@@ -368,6 +366,7 @@ impl fmt::Display for Theme {
     }
 }
 
+#[derive(Copy, Clone)]
 enum ThemeKind {
     Light,
     Dark,
@@ -376,8 +375,8 @@ enum ThemeKind {
 impl fmt::Display for ThemeKind {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::Light => write!(f, "light"),
-            Self::Dark => write!(f, "dark"),
+            Self::Light => write!(f, "\"light\""),
+            Self::Dark => write!(f, "\"dark\""),
         }
     }
 }
