@@ -471,6 +471,13 @@ impl fmt::Display for Theme {
                 Rgb(0x3071DB)
             }
         };
+        let selected_item_in_widget_fg = || {
+            if self.kind == ThemeKind::Light {
+                bg()
+            } else {
+                fg()
+            }
+        };
         let selected_item_in_inactive_widget_bg = || {
             if self.kind == ThemeKind::Light {
                 Rgb(0xD2D2D2)
@@ -664,11 +671,17 @@ impl fmt::Display for Theme {
 
         write_scope(f, "editorWidget.background", widget_bg())?;
         write_scope(f, "list.focusBackground", selected_item_in_widget_bg())?;
+        write_scope(f, "list.focusForeground", selected_item_in_widget_fg())?;
         write_scope(f, "list.highlightForeground", matching_text_in_widget())?;
         write_scope(
             f,
             "list.activeSelectionBackground",
             selected_item_in_widget_bg(),
+        )?;
+        write_scope(
+            f,
+            "list.activeSelectionForeground",
+            selected_item_in_widget_fg(),
         )?;
         write_scope(
             f,
