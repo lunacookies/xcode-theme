@@ -340,140 +340,140 @@ impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xECECEC)
             } else {
                 Rgb(0x2A2C2F)
             }
         };
         let fg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x272727)
             } else {
                 Rgb(0xDFDFDF)
             }
         };
         let panel_border = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xB2B2B2)
             } else {
                 Rgb(0x000000)
             }
         };
         let active_tab_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xD2D2D2)
             } else {
                 Rgb(0x383A3D)
             }
         };
         let active_tab_fg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x212121)
             } else {
                 Rgb(0xFFFFFF)
             }
         };
         let inactive_tab_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xBEBEBE)
             } else {
                 Rgb(0x1F1F21)
             }
         };
         let inactive_tab_fg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x3E3E3E)
             } else {
                 Rgb(0x9A9C9D)
             }
         };
         let tab_border = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xB0B0B0)
             } else {
                 Rgb(0x5B5D5F)
             }
         };
         let editor_group_header = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xBCBCBC)
             } else {
                 Rgb(0x26282B)
             }
         };
         let titlebar_fg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x545454)
             } else {
                 Rgb(0xB7B8BB)
             }
         };
         let status_bar_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xFFFFFF)
             } else {
                 Rgb(0x1C1F21)
             }
         };
         let status_bar_fg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x272727)
             } else {
                 Rgb(0xDCDDDD)
             }
         };
         let snippet_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x307BF7)
             } else {
                 Rgb(0x007AFF)
             }
         };
         let hover_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xB7D1FC)
             } else {
                 Rgb(0x2C5392)
             }
         };
         let breakpoint = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x307BF7)
             } else {
                 Rgb(0x007AFF)
             }
         };
         let current_match_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xFEF977)
             } else {
                 Rgb(0xFFFB00)
             }
         };
         let other_match_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xE4E4E4)
             } else {
                 Rgb(0x545558)
             }
         };
         let widget_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xFFFFFF)
             } else {
                 Rgb(0x303030)
             }
         };
         let selected_item_in_widget_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x2968DA)
             } else {
                 Rgb(0x3071DB)
             }
         };
         let selected_item_in_inactive_widget_bg = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xD2D2D2)
             } else {
                 Rgb(0x4F5153)
             }
@@ -487,42 +487,42 @@ impl fmt::Display for Theme {
         };
         let error = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xD03227)
             } else {
                 Rgb(0xE21514)
             }
         };
         let warning = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xF5C443)
             } else {
                 Rgb(0xF5C443)
             }
         };
         let git_change = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x73A5F8)
             } else {
                 Rgb(0x4F82CE)
             }
         };
         let git_add = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x1EC337)
             } else {
                 Rgb(0x3CFF55)
             }
         };
         let git_delete = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0xF53126)
             } else {
                 Rgb(0xFF5044)
             }
         };
         let focus_ring = || {
             if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
+                Rgb(0x92B4F4)
             } else {
                 Rgb(0x35628B)
             }
