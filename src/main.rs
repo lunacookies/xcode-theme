@@ -276,6 +276,7 @@ impl fmt::Display for Theme {
             "editorGroupHeader.tabsBackground",
             DARK_EDITOR_GROUP_HEADER,
         )?;
+        write_scope(f, "editorGroupHeader.noTabsBackground", DARK_TAB_ACTIVE_BG)?;
 
         write_scope(f, "breadcrumb.background", DARK_STATUS_BAR_BG)?;
         write_scope(f, "breadcrumb.foreground", DARK_STATUS_BAR_FG)?;

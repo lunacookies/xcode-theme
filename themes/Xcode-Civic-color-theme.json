@@ -14,6 +14,7 @@
 "tab.inactiveForeground": "#9a9c9d",
 "tab.border": "#5b5d5f",
 "editorGroupHeader.tabsBackground": "#26282b",
+"editorGroupHeader.noTabsBackground": "#383a3d",
 "breadcrumb.background": "#1c1f21",
 "breadcrumb.foreground": "#dcdddd",
 "breadcrumb.focusForeground": "#dcdddd",
