@@ -878,6 +878,8 @@ impl fmt::Display for Theme {
             false,
         )?;
 
+        write_textmate_rule(f, &["variable"], self.variables, false, false)?;
+
         writeln!(f, "]")?;
 
         writeln!(f, "}}")?;

@@ -198,5 +198,14 @@
 "fontStyle": "",
 },
 },
+{
+"scope": [
+"variable",
+],
+"settings": {
+"foreground": "#2d6469",
+"fontStyle": "",
+},
+},
 ]
 }
