@@ -10,6 +10,8 @@
 "editorCursor.foreground": "#ffffff",
 "editorWhitespace.foreground": "#53606e",
 "editor.foreground": "#ffffff",
+"editorLineNumber.activeForeground": "#dfdfdf",
+"editorLineNumber.foreground": "#dfdfdf55",
 "tab.activeBackground": "#383a3d",
 "tab.activeForeground": "#ffffff",
 "tab.inactiveBackground": "#1f1f21",
