@@ -19,6 +19,9 @@
 "activityBar.background": "#1f1f21",
 "sideBar.background": "#1f1f21",
 "editor.snippetTabstopHighlightBackground": "#007aff",
+"debugIcon.breakpointForeground": "#007aff",
+"debugIcon.breakpointCurrentStackframeForeground": "#007aff",
+"editor.stackFrameHighlightBackground": "#007aff22",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {

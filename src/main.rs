@@ -185,6 +185,7 @@ const DARK_EDITOR_GROUP_HEADER: Rgb = Rgb(0x26282B);
 const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
 const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
 const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
+const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -276,6 +277,21 @@ impl fmt::Display for Theme {
             DARK_SNIPPET_BG,
         )?;
 
+        write_scope(f, "debugIcon.breakpointForeground", DARK_BREAKPOINT)?;
+        write_scope(
+            f,
+            "debugIcon.breakpointCurrentStackframeForeground",
+            DARK_BREAKPOINT,
+        )?;
+        write_scope(
+            f,
+            "editor.stackFrameHighlightBackground",
+            Rgba {
+                rgb: DARK_BREAKPOINT,
+                a: 0x22,
+            },
+        )?;
+
         writeln!(f, "}},")?;
 
         write_scope(f, "semanticHighlighting", "true")?;
@@ -362,6 +378,17 @@ impl fmt::Display for ThemeKind {
             Self::Light => write!(f, "\"light\""),
             Self::Dark => write!(f, "\"dark\""),
         }
+    }
+}
+
+struct Rgba {
+    rgb: Rgb,
+    a: u8,
+}
+
+impl fmt::Display for Rgba {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "\"#{:06x}{:02x}\"", self.rgb.0, self.a)
     }
 }
 
