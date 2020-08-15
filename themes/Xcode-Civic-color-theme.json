@@ -20,7 +20,7 @@
 "semanticTokenColors": {
 "comment": "#51c34f",
 "string": "#de3a3c",
-"number": "#aaa3",
+"number": "#00aaa3",
 "keyword": "#e12da0",
 "boolean": "#e12da0",
 "builtinType": "#e12da0",

@@ -373,6 +373,6 @@ struct Rgb(u32);
 
 impl fmt::Display for Rgb {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "\"#{:x}\"", self.0)
+        write!(f, "\"#{:06x}\"", self.0)
     }
 }
