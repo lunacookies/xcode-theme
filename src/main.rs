@@ -839,6 +839,14 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
+            &["comment"],
+            self.comments,
+            self.are_comments_italic,
+            false,
+        )?;
+
+        write_textmate_rule(
+            f,
             &["keyword"],
             self.keywords,
             false,

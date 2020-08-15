@@ -141,6 +141,15 @@
 "tokenColors": [
 {
 "scope": [
+"comment",
+],
+"settings": {
+"foreground": "#51c34f",
+"fontStyle": "",
+},
+},
+{
+"scope": [
 "keyword",
 ],
 "settings": {
