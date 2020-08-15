@@ -847,6 +847,8 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(f, &["string"], self.strings, false, false)?;
 
+        write_textmate_rule(f, &["constant.numeric"], self.numbers, false, false)?;
+
         write_textmate_rule(
             f,
             &["keyword"],

@@ -159,6 +159,15 @@
 },
 {
 "scope": [
+"constant.numeric",
+],
+"settings": {
+"foreground": "#a79df7",
+"fontStyle": "",
+},
+},
+{
+"scope": [
 "keyword",
 ],
 "settings": {
