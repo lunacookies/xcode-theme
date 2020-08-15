@@ -204,6 +204,8 @@
 },
 {
 "scope": [
+"punctuation.support.type.property-name",
+"support.type.property-name",
 "variable",
 ],
 "settings": {

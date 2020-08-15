@@ -888,7 +888,17 @@ impl fmt::Display for Theme {
             false,
         )?;
 
-        write_textmate_rule(f, &["variable"], self.variables, false, false)?;
+        write_textmate_rule(
+            f,
+            &[
+                "punctuation.support.type.property-name",
+                "support.type.property-name",
+                "variable",
+            ],
+            self.variables,
+            false,
+            false,
+        )?;
 
         write_textmate_rule(
             f,
