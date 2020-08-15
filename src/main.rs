@@ -188,6 +188,8 @@ const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
 const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
 const DARK_CURRENT_MATCH_BG: Rgb = Rgb(0xFFFB00);
 const DARK_OTHER_MATCH_BG: Rgb = Rgb(0x545558);
+const DARK_WIDGET_BG: Rgb = Rgb(0x303030);
+const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x0157CD);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -315,6 +317,9 @@ impl fmt::Display for Theme {
             "editorOverviewRuler.findMatchForeground",
             DARK_CURRENT_MATCH_BG,
         )?;
+
+        write_scope(f, "editorWidget.background", DARK_WIDGET_BG)?;
+        write_scope(f, "list.focusBackground", DARK_SELECTED_ITEM_IN_WIDGET_BG)?;
 
         writeln!(f, "}},")?;
 
