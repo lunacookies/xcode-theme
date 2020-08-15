@@ -15,6 +15,7 @@
 "editorGroupHeader.tabsBackground": "#26282b",
 "activityBar.background": "#1f1f21",
 "sideBar.background": "#1f1f21",
+"editor.snippetTabstopHighlightBackground": "#007aff",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {

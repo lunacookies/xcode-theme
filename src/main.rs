@@ -181,6 +181,7 @@ const DARK_TAB_ACTIVE_FOREGROUND_COLOR: Rgb = Rgb(0xFFFFFF);
 const DARK_TAB_INACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x1F1F21);
 const DARK_TAB_BORDER_COLOR: Rgb = Rgb(0x5B5D5F);
 const DARK_EDITOR_GROUP_HEADER_COLOR: Rgb = Rgb(0x26282B);
+const DARK_SNIPPET_BACKGROUND_COLOR: Rgb = Rgb(0x007AFF);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -285,6 +286,12 @@ impl fmt::Display for Theme {
             f,
             r#""sideBar.background": {},"#,
             DARK_TAB_INACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(
+            f,
+            r#""editor.snippetTabstopHighlightBackground": {},"#,
+            DARK_SNIPPET_BACKGROUND_COLOR
         )?;
 
         writeln!(f, "}},")?;
