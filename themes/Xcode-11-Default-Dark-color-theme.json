@@ -12,6 +12,7 @@
 "tab.activeForeground": "#ffffff",
 "tab.inactiveBackground": "#1f1f21",
 "tab.border": "#5b5d5f",
+"editorGroupHeader.tabsBackground": "#26282b",
 "activityBar.background": "#1f1f21",
 "sideBar.background": "#1f1f21",
 },
