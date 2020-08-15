@@ -851,7 +851,7 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &["keyword"],
+            &["keyword", "storage.type.built-in"],
             self.keywords,
             false,
             self.are_keywords_bold,

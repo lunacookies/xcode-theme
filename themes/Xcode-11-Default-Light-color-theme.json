@@ -169,6 +169,7 @@
 {
 "scope": [
 "keyword",
+"storage.type.built-in",
 ],
 "settings": {
 "foreground": "#ad3da4",
