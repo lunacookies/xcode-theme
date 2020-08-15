@@ -193,6 +193,7 @@ const DARK_TITLEBAR_FG: Rgb = Rgb(0xB7B8BB);
 const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
 const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
 const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
+const DARK_HOVER_BG: Rgb = Rgb(0x2C5392);
 const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
 const DARK_CURRENT_MATCH_BG: Rgb = Rgb(0xFFFB00);
 const DARK_OTHER_MATCH_BG: Rgb = Rgb(0x545558);
@@ -359,6 +360,8 @@ impl fmt::Display for Theme {
             "editor.snippetTabstopHighlightBackground",
             DARK_SNIPPET_BG,
         )?;
+
+        write_scope(f, "editor.hoverHighlightBackground", DARK_HOVER_BG)?;
 
         write_scope(f, "debugIcon.breakpointForeground", DARK_BREAKPOINT)?;
         write_scope(

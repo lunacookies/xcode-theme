@@ -51,6 +51,7 @@
 "editorIndentGuide.background": "#00000000",
 "editorIndentGuide.activeBackground": "#00000000",
 "editor.snippetTabstopHighlightBackground": "#007aff",
+"editor.hoverHighlightBackground": "#2c5392",
 "debugIcon.breakpointForeground": "#007aff",
 "debugIcon.breakpointCurrentStackframeForeground": "#007aff",
 "editor.stackFrameHighlightBackground": "#007aff22",
