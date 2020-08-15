@@ -270,6 +270,10 @@ impl fmt::Display for Theme {
             DARK_EDITOR_GROUP_HEADER,
         )?;
 
+        write_scope(f, "breadcrumb.background", DARK_STATUS_BAR_BG)?;
+        write_scope(f, "breadcrumb.foreground", DARK_STATUS_BAR_FG)?;
+        write_scope(f, "breadcrumb.focusForeground", DARK_STATUS_BAR_FG)?;
+
         write_scope(f, "statusBar.background", DARK_STATUS_BAR_BG)?;
         write_scope(f, "statusBar.debuggingBackground", DARK_STATUS_BAR_BG)?;
         write_scope(f, "statusBar.noFolderBackground", DARK_STATUS_BAR_BG)?;
