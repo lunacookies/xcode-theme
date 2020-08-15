@@ -138,5 +138,15 @@
 "union.declaration": "#6bdfff",
 "*.declaration": "#4eb0cc",
 },
-"tokenColors": [],
+"tokenColors": [
+{
+"scope": [
+"keyword",
+],
+"settings": {
+"foreground": "#ff7ab2",
+"fontStyle": "bold",
+},
+},
+]
 }

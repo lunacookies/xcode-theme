@@ -544,6 +544,40 @@ impl fmt::Display for Theme {
             writeln!(f, "\"{}\": {},", scope.as_ref(), val)
         }
 
+        fn write_textmate_rule(
+            f: &mut fmt::Formatter<'_>,
+            scopes: &[&str],
+            color: impl fmt::Display,
+            is_italic: bool,
+            is_bold: bool,
+        ) -> fmt::Result {
+            writeln!(f, "{{")?;
+
+            writeln!(f, "\"scope\": [")?;
+            for scope in scopes {
+                writeln!(f, "\"{}\",", scope)?;
+            }
+            writeln!(f, "],")?;
+
+            writeln!(f, "\"settings\": {{")?;
+
+            writeln!(f, "\"foreground\": {},", color)?;
+
+            write!(f, "\"fontStyle\": \"")?;
+            match (is_italic, is_bold) {
+                (true, true) => write!(f, "italic bold")?,
+                (true, _) => write!(f, "italic")?,
+                (_, true) => write!(f, "bold")?,
+                _ => {}
+            }
+            writeln!(f, "\",")?;
+            writeln!(f, "}},")?;
+
+            writeln!(f, "}},")?;
+
+            Ok(())
+        }
+
         writeln!(f, "{{")?;
 
         write_scope(f, "name", format!("\"{}\"", self.name))?;
@@ -801,7 +835,17 @@ impl fmt::Display for Theme {
 
         writeln!(f, "}},")?;
 
-        write_scope(f, "tokenColors", "[]")?;
+        writeln!(f, "\"tokenColors\": [")?;
+
+        write_textmate_rule(
+            f,
+            &["keyword"],
+            self.keywords,
+            false,
+            self.are_keywords_bold,
+        )?;
+
+        writeln!(f, "]")?;
 
         writeln!(f, "}}")?;
 
