@@ -150,6 +150,7 @@
 },
 {
 "scope": [
+"punctuation.definition.string",
 "string",
 ],
 "settings": {

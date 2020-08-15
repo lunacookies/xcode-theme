@@ -845,7 +845,13 @@ impl fmt::Display for Theme {
             false,
         )?;
 
-        write_textmate_rule(f, &["string"], self.strings, false, false)?;
+        write_textmate_rule(
+            f,
+            &["punctuation.definition.string", "string"],
+            self.strings,
+            false,
+            false,
+        )?;
 
         write_textmate_rule(f, &["constant.numeric"], self.numbers, false, false)?;
 
