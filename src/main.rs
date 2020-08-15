@@ -298,6 +298,7 @@ impl fmt::Display for Theme {
 
         write_scope(f, "sideBar.background", DARK_BG)?;
         write_scope(f, "sideBar.border", DARK_PANEL_BORDER)?;
+        write_scope(f, "sideBarSectionHeader.background", INVISIBLE)?;
 
         write_scope(f, "panel.border", DARK_PANEL_BORDER)?;
 

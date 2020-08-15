@@ -29,6 +29,7 @@
 "activityBar.border": "#000000",
 "sideBar.background": "#2a2c2f",
 "sideBar.border": "#000000",
+"sideBarSectionHeader.background": "#00000000",
 "panel.border": "#000000",
 "editorIndentGuide.background": "#00000000",
 "editorIndentGuide.activeBackground": "#00000000",
