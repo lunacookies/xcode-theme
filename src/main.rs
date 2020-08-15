@@ -179,6 +179,7 @@ const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 const DARK_TAB_ACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x383A3D);
 const DARK_TAB_ACTIVE_FOREGROUND_COLOR: Rgb = Rgb(0xFFFFFF);
 const DARK_TAB_INACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x1F1F21);
+const DARK_TAB_INACTIVE_FOREGROUND_COLOR: Rgb = Rgb(0x9A9C9D);
 const DARK_TAB_BORDER_COLOR: Rgb = Rgb(0x5B5D5F);
 const DARK_EDITOR_GROUP_HEADER_COLOR: Rgb = Rgb(0x26282B);
 const DARK_SNIPPET_BACKGROUND_COLOR: Rgb = Rgb(0x007AFF);
@@ -266,6 +267,12 @@ impl fmt::Display for Theme {
             f,
             r#""tab.inactiveBackground": {},"#,
             DARK_TAB_INACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(
+            f,
+            r#""tab.inactiveForeground": {},"#,
+            DARK_TAB_INACTIVE_FOREGROUND_COLOR
         )?;
 
         writeln!(f, r#""tab.border": {},"#, DARK_TAB_BORDER_COLOR)?;
