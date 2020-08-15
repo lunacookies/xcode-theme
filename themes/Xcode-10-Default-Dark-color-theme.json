@@ -169,7 +169,10 @@
 {
 "scope": [
 "keyword",
-"storage.type.built-in",
+"storage.modifier",
+"storage.type",
+"support.type.primitive",
+"variable.language",
 ],
 "settings": {
 "foreground": "#ff7ab2",
@@ -190,7 +193,8 @@
 },
 {
 "scope": [
-"storage.type",
+"entity.name.type.class.std.rust",
+"storage.type.cs",
 "support.type",
 ],
 "settings": {
@@ -214,6 +218,19 @@
 ],
 "settings": {
 "foreground": "#a7ebdd",
+"fontStyle": "",
+},
+},
+{
+"scope": [
+"entity.name.type.class",
+"entity.name.type.enum",
+"entity.name.type.go",
+"entity.name.type.rust",
+"entity.name.type.struct",
+],
+"settings": {
+"foreground": "#ffffff",
 "fontStyle": "",
 },
 },

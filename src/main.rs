@@ -851,7 +851,13 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &["keyword", "storage.type.built-in"],
+            &[
+                "keyword",
+                "storage.modifier",
+                "storage.type",
+                "support.type.primitive",
+                "variable.language",
+            ],
             self.keywords,
             false,
             self.are_keywords_bold,
@@ -872,7 +878,11 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &["storage.type", "support.type"],
+            &[
+                "entity.name.type.class.std.rust",
+                "storage.type.cs",
+                "support.type",
+            ],
             self.types,
             false,
             false,
@@ -884,6 +894,20 @@ impl fmt::Display for Theme {
             f,
             &["entity.name.function", "support.function"],
             self.functions,
+            false,
+            false,
+        )?;
+
+        write_textmate_rule(
+            f,
+            &[
+                "entity.name.type.class",
+                "entity.name.type.enum",
+                "entity.name.type.go",
+                "entity.name.type.rust",
+                "entity.name.type.struct",
+            ],
+            self.type_decls.unwrap_or(self.plain_text),
             false,
             false,
         )?;
