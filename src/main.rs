@@ -500,6 +500,7 @@ impl fmt::Display for Theme {
             }
         };
         let warning = || {
+            #[allow(clippy::if_same_then_else)]
             if self.kind == ThemeKind::Light {
                 Rgb(0xF5C443)
             } else {
