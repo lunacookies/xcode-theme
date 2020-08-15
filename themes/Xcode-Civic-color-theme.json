@@ -87,6 +87,8 @@
 "gitDecoration.modifiedResourceForeground": "#dfdfdf",
 "gitDecoration.submoduleResourceForeground": "#dfdfdf",
 "gitDecoration.ignoredResourceForeground": "#dfdfdf55",
+"diffEditor.insertedTextBackground": "#3cff550a",
+"diffEditor.removedTextBackground": "#ff50440a",
 "focusBorder": "#35628b",
 },
 "semanticHighlighting": true,

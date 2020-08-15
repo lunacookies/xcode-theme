@@ -204,6 +204,8 @@ const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0xF5C443);
 const DARK_ERROR: Rgb = Rgb(0xE21514);
 const DARK_WARNING: Rgb = Rgb(0xF5C443);
 const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
+const DARK_GIT_ADD: Rgb = Rgb(0x3CFF55);
+const DARK_GIT_DELETE: Rgb = Rgb(0xFF5044);
 const DARK_FOCUS_RING: Rgb = Rgb(0x35628B);
 
 fn main() -> io::Result<()> {
@@ -445,6 +447,23 @@ impl fmt::Display for Theme {
             Rgba {
                 rgb: DARK_FG,
                 a: 0x55,
+            },
+        )?;
+
+        write_scope(
+            f,
+            "diffEditor.insertedTextBackground",
+            Rgba {
+                rgb: DARK_GIT_ADD,
+                a: 0x0A,
+            },
+        )?;
+        write_scope(
+            f,
+            "diffEditor.removedTextBackground",
+            Rgba {
+                rgb: DARK_GIT_DELETE,
+                a: 0x0A,
             },
         )?;
 
