@@ -54,6 +54,60 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     other_decls: Some(Rgb(0x4EB0CC)),
 };
 
+// Background: #FFFFFF
+// Current Line: #ECF5FF
+// Selection: #B2D7FF
+// Cursor: #000000
+// Invisibles: #D6D6D6
+//
+// Plain text: #000000 Regular
+// Comments: #707F8C Regular
+// Documentation Markup: #707F8C Regular
+// Documentation Markup Keywords: #5C6873 Bold
+// Strings: #D12F1B Regular
+// Characters: #272AD8 Regular
+// Numbers: #272AD8 Regular
+// Keywords: #AD3DA4 Semibold
+// Preprocessor Statements: #78492A Regular
+// URLs: #1337FF Regular
+// Attributes: #947100 Regular
+// Project Types: #23575C Regular
+// Project Functions, Vars and Constants: #3E8087 Regular
+// Other Types: #4B21B0 Regular
+// Other Functions, Vars and Constants: #804FB8 Regular
+// Type Declaractions: #02638C Regular
+// Other Declaractions: #057CB0 Regular
+const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
+    name: "Xcode 11 Default Light",
+    file_name: "Xcode-11-Default-Light",
+    kind: ThemeKind::Light,
+    background: Rgb(0xFFFFFF),
+    current_line: Rgb(0xECF5FF),
+    selection: Rgb(0xB2D7FF),
+    cursor: Rgb(0x000000),
+    invisibles: Rgb(0xD6D6D6),
+    plain_text: Rgb(0x000000),
+    comments: Rgb(0x707F8C),
+    are_comments_italic: false,
+    doc_markup: Rgb(0x707F8C),
+    doc_markup_keywords: Rgb(0x5C6873),
+    strings: Rgb(0xD12F1B),
+    chars: Rgb(0x272AD8),
+    numbers: Rgb(0x272AD8),
+    keywords: Rgb(0xAD3DA4),
+    are_keywords_bold: true,
+    preproc: Rgb(0x78492A),
+    urls: Rgb(0x1337FF),
+    attributes: Rgb(0x947100),
+    types: Rgb(0x23575C),
+    variables: Rgb(0x3E8087),
+    constants: Rgb(0x3E8087),
+    interfaces: Rgb(0x4B21B0),
+    functions: Rgb(0x804FB8),
+    type_decls: Some(Rgb(0x02638C)),
+    other_decls: Some(Rgb(0x057CB0)),
+};
+
 // Background: #292A30
 // Current Line: #2F3239
 // Selection: #646F83
@@ -104,6 +158,60 @@ const XCODE_10_DEFAULT_DARK: Theme = Theme {
     constants: Rgb(0xBAF28F),
     interfaces: Rgb(0x8AD1C3),
     functions: Rgb(0xA7EBDD),
+    type_decls: None,
+    other_decls: None,
+};
+
+// Background: #FFFFFF
+// Current Line: #ECF5FF
+// Selection: #B2D7FF
+// Cursor: #000000
+// Invisibles: #D6D6D6
+//
+// Plain text: #000000 Regular
+// Comments: #65798C Regular Italic
+// Documentation Markup: #506375 Regular
+// Documentation Markup Keywords: #506375 Bold
+// Strings: #D12F1B Regular
+// Characters: #272AD8 Regular
+// Numbers: #272AD8 Regular
+// Keywords: #AD3DA4 Semibold
+// Preprocessor Statements: #78492A Regular
+// URLs: #1337FF Regular
+// Attributes: #947100 Regular
+// Project Types and Vars: #3E8087 Regular
+// Project Functions and Constants: #2D6469 Regular
+// Other Types and Vars: #703DAA Regular
+// Other Functions and Constants: #4B21B0 Regular
+//
+// Definitions have the same colour as plain text.
+const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
+    name: "Xcode 10 Default Light",
+    file_name: "Xcode-10-Default-Light",
+    kind: ThemeKind::Light,
+    background: Rgb(0xFFFFFF),
+    current_line: Rgb(0xECF5FF),
+    selection: Rgb(0xB2D7FF),
+    cursor: Rgb(0x000000),
+    invisibles: Rgb(0xD6D6D6),
+    plain_text: Rgb(0x000000),
+    comments: Rgb(0x65798C),
+    are_comments_italic: true,
+    doc_markup: Rgb(0x506375),
+    doc_markup_keywords: Rgb(0x506375),
+    strings: Rgb(0xD12F1B),
+    chars: Rgb(0x272AD8),
+    numbers: Rgb(0x272AD8),
+    keywords: Rgb(0xAD3DA4),
+    are_keywords_bold: true,
+    preproc: Rgb(0x78492A),
+    urls: Rgb(0x1337FF),
+    attributes: Rgb(0x947100),
+    types: Rgb(0x3E8087),
+    variables: Rgb(0x2D6469),
+    constants: Rgb(0x2D6469),
+    interfaces: Rgb(0x703DAA),
+    functions: Rgb(0x4B21B0),
     type_decls: None,
     other_decls: None,
 };
@@ -181,7 +289,13 @@ const INVISIBLE: Rgba = Rgba {
 };
 
 fn main() -> io::Result<()> {
-    let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
+    let themes = &[
+        XCODE_11_DEFAULT_DARK,
+        XCODE_11_DEFAULT_LIGHT,
+        XCODE_10_DEFAULT_DARK,
+        XCODE_10_DEFAULT_LIGHT,
+        XCODE_CIVIC,
+    ];
 
     for theme in themes {
         let json = theme.to_string();
