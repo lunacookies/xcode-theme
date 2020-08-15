@@ -268,6 +268,7 @@ impl fmt::Display for Theme {
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
         write_scope(f, "editor.selectionBackground", self.selection)?;
+        write_scope(f, "minimap.selectionHighlight", self.selection)?;
         write_scope(f, "editorCursor.foreground", self.cursor)?;
         write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
         write_scope(f, "editor.foreground", self.plain_text)?;
