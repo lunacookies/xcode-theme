@@ -207,5 +207,15 @@
 "fontStyle": "",
 },
 },
+{
+"scope": [
+"entity.name.function",
+"support.function",
+],
+"settings": {
+"foreground": "#4b21b0",
+"fontStyle": "",
+},
+},
 ]
 }

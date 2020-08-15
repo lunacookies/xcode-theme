@@ -880,6 +880,14 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(f, &["variable"], self.variables, false, false)?;
 
+        write_textmate_rule(
+            f,
+            &["entity.name.function", "support.function"],
+            self.functions,
+            false,
+            false,
+        )?;
+
         writeln!(f, "]")?;
 
         writeln!(f, "}}")?;
