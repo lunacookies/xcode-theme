@@ -50,7 +50,7 @@
 "editorOverviewRuler.findMatchForeground": "#fffb00",
 "editorWidget.background": "#303030",
 "list.focusBackground": "#3071db",
-"list.highlightForeground": "#0a84ff",
+"list.highlightForeground": "#f5c443",
 "list.activeSelectionBackground": "#3071db",
 "list.inactiveSelectionBackground": "#4f5153",
 "errorForeground": "#e21514",
