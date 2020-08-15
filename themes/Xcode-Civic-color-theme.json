@@ -244,5 +244,15 @@
 "fontStyle": "",
 },
 },
+{
+"scope": [
+"punctuation",
+"keyword.operator",
+],
+"settings": {
+"foreground": "#e7e8eb",
+"fontStyle": "",
+},
+},
 ]
 }

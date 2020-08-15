@@ -921,6 +921,14 @@ impl fmt::Display for Theme {
             false,
         )?;
 
+        write_textmate_rule(
+            f,
+            &["punctuation", "keyword.operator"],
+            self.plain_text,
+            false,
+            false,
+        )?;
+
         writeln!(f, "]")?;
 
         writeln!(f, "}}")?;
