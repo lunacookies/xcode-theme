@@ -189,6 +189,7 @@ const DARK_TAB_INACTIVE_BG: Rgb = Rgb(0x1F1F21);
 const DARK_TAB_INACTIVE_FG: Rgb = Rgb(0x9A9C9D);
 const DARK_TAB_BORDER: Rgb = Rgb(0x5B5D5F);
 const DARK_EDITOR_GROUP_HEADER: Rgb = Rgb(0x26282B);
+const DARK_TITLEBAR_FG: Rgb = Rgb(0xB7B8BB);
 const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
 const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
 const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
@@ -325,6 +326,10 @@ impl fmt::Display for Theme {
             DARK_EDITOR_GROUP_HEADER,
         )?;
         write_scope(f, "editorGroupHeader.noTabsBackground", DARK_TAB_ACTIVE_BG)?;
+
+        write_scope(f, "titleBar.activeBackground", DARK_TAB_ACTIVE_BG)?;
+        write_scope(f, "titleBar.activeForeground", DARK_TITLEBAR_FG)?;
+        write_scope(f, "titleBar.border", DARK_TAB_BORDER)?;
 
         write_scope(f, "breadcrumb.background", DARK_STATUS_BAR_BG)?;
         write_scope(f, "breadcrumb.foreground", DARK_STATUS_BAR_FG)?;
