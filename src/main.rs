@@ -176,6 +176,11 @@ const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"
 
 const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 
+const INVISIBLE: Rgba = Rgba {
+    rgb: Rgb(0x000000),
+    a: 0x00,
+};
+
 const DARK_BG: Rgb = Rgb(0x2A2C2F);
 const DARK_PANEL_BORDER: Rgb = Rgb(0x000000);
 const DARK_TAB_ACTIVE_BG: Rgb = Rgb(0x383A3D);
@@ -290,6 +295,9 @@ impl fmt::Display for Theme {
         write_scope(f, "sideBar.border", DARK_PANEL_BORDER)?;
 
         write_scope(f, "panel.border", DARK_PANEL_BORDER)?;
+
+        write_scope(f, "editorIndentGuide.background", INVISIBLE)?;
+        write_scope(f, "editorIndentGuide.activeBackground", INVISIBLE)?;
 
         write_scope(
             f,
