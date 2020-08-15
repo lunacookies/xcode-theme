@@ -200,6 +200,7 @@ const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x3071DB);
 const DARK_SELECTED_ITEM_IN_INACTIVE_WIDGET_BG: Rgb = Rgb(0x4F5153);
 const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0x0A84FF);
 const DARK_ERROR: Rgb = Rgb(0xE21514);
+const DARK_WARNING: Rgb = Rgb(0xF5C443);
 const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
 const DARK_FOCUS_RING: Rgb = Rgb(0x35628B);
 
@@ -374,6 +375,10 @@ impl fmt::Display for Theme {
         write_scope(f, "editorError.foreground", DARK_ERROR)?;
         write_scope(f, "minimap.errorHighlight", DARK_ERROR)?;
         write_scope(f, "editorOverviewRuler.errorForeground", DARK_ERROR)?;
+
+        write_scope(f, "editorWarning.foreground", DARK_WARNING)?;
+        write_scope(f, "minimap.warningHighlight", DARK_WARNING)?;
+        write_scope(f, "editorOverviewRuler.warningForeground", DARK_WARNING)?;
 
         write_scope(f, "editorGutter.addedBackground", DARK_GIT_CHANGE)?;
         write_scope(f, "minimapGutter.addedBackground", DARK_GIT_CHANGE)?;
