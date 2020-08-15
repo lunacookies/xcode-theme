@@ -261,6 +261,18 @@ impl fmt::Display for Theme {
 
         writeln!(f, r#""tab.border": {},"#, DARK_TAB_BORDER_COLOR)?;
 
+        writeln!(
+            f,
+            r#""activityBar.background": {},"#,
+            DARK_TAB_INACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(
+            f,
+            r#""sideBar.background": {},"#,
+            DARK_TAB_INACTIVE_BACKGROUND_COLOR
+        )?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, r#""semanticHighlighting": true,"#)?;

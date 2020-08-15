@@ -11,6 +11,8 @@
 "tab.activeBackground": "#383a3d",
 "tab.inactiveBackground": "#1f1f21",
 "tab.border": "#5b5d5f",
+"activityBar.background": "#1f1f21",
+"sideBar.background": "#1f1f21",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
