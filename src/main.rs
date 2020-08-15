@@ -176,6 +176,7 @@ const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"
 
 const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 
+const DARK_BG: Rgb = Rgb(0x2A2C2F);
 const DARK_TAB_ACTIVE_BG: Rgb = Rgb(0x383A3D);
 const DARK_TAB_ACTIVE_FG: Rgb = Rgb(0xFFFFFF);
 const DARK_TAB_INACTIVE_BG: Rgb = Rgb(0x1F1F21);
@@ -281,9 +282,9 @@ impl fmt::Display for Theme {
         write_scope(f, "statusBar.debuggingForeground", DARK_STATUS_BAR_FG)?;
         write_scope(f, "statusBar.noFolderForeground", DARK_STATUS_BAR_FG)?;
 
-        write_scope(f, "activityBar.background", DARK_TAB_INACTIVE_BG)?;
+        write_scope(f, "activityBar.background", DARK_BG)?;
 
-        write_scope(f, "sideBar.background", DARK_TAB_INACTIVE_BG)?;
+        write_scope(f, "sideBar.background", DARK_BG)?;
 
         write_scope(
             f,
