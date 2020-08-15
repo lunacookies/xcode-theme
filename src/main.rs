@@ -265,7 +265,11 @@ impl fmt::Display for Theme {
         )?;
 
         write_scope(f, "statusBar.background", DARK_STATUS_BAR_BG)?;
+        write_scope(f, "statusBar.debuggingBackground", DARK_STATUS_BAR_BG)?;
+        write_scope(f, "statusBar.noFolderBackground", DARK_STATUS_BAR_BG)?;
         write_scope(f, "statusBar.foreground", DARK_STATUS_BAR_FG)?;
+        write_scope(f, "statusBar.debuggingForeground", DARK_STATUS_BAR_FG)?;
+        write_scope(f, "statusBar.noFolderForeground", DARK_STATUS_BAR_FG)?;
 
         write_scope(f, "activityBar.background", DARK_TAB_INACTIVE_BG)?;
 
