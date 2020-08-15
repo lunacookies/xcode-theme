@@ -202,6 +202,7 @@ const DARK_SELECTED_ITEM_IN_INACTIVE_WIDGET_BG: Rgb = Rgb(0x4F5153);
 const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0x0A84FF);
 const DARK_ERROR: Rgb = Rgb(0xE21514);
 const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
+const DARK_FOCUS_RING: Rgb = Rgb(0x35628B);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -382,6 +383,8 @@ impl fmt::Display for Theme {
                 a: 0x55,
             },
         )?;
+
+        write_scope(f, "focusBorder", DARK_FOCUS_RING)?;
 
         writeln!(f, "}},")?;
 

@@ -64,6 +64,7 @@
 "gitDecoration.modifiedResourceForeground": "#dfdfdf",
 "gitDecoration.submoduleResourceForeground": "#dfdfdf",
 "gitDecoration.ignoredResourceForeground": "#dfdfdf55",
+"focusBorder": "#35628b",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
