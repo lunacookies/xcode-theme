@@ -180,34 +180,6 @@ const INVISIBLE: Rgba = Rgba {
     a: 0x00,
 };
 
-const DARK_BG: Rgb = Rgb(0x2A2C2F);
-const DARK_FG: Rgb = Rgb(0xDFDFDF);
-const DARK_PANEL_BORDER: Rgb = Rgb(0x000000);
-const DARK_TAB_ACTIVE_BG: Rgb = Rgb(0x383A3D);
-const DARK_TAB_ACTIVE_FG: Rgb = Rgb(0xFFFFFF);
-const DARK_TAB_INACTIVE_BG: Rgb = Rgb(0x1F1F21);
-const DARK_TAB_INACTIVE_FG: Rgb = Rgb(0x9A9C9D);
-const DARK_TAB_BORDER: Rgb = Rgb(0x5B5D5F);
-const DARK_EDITOR_GROUP_HEADER: Rgb = Rgb(0x26282B);
-const DARK_TITLEBAR_FG: Rgb = Rgb(0xB7B8BB);
-const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
-const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
-const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
-const DARK_HOVER_BG: Rgb = Rgb(0x2C5392);
-const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
-const DARK_CURRENT_MATCH_BG: Rgb = Rgb(0xFFFB00);
-const DARK_OTHER_MATCH_BG: Rgb = Rgb(0x545558);
-const DARK_WIDGET_BG: Rgb = Rgb(0x303030);
-const DARK_SELECTED_ITEM_IN_WIDGET_BG: Rgb = Rgb(0x3071DB);
-const DARK_SELECTED_ITEM_IN_INACTIVE_WIDGET_BG: Rgb = Rgb(0x4F5153);
-const DARK_MATCHING_TEXT_IN_WIDGET: Rgb = Rgb(0xF5C443);
-const DARK_ERROR: Rgb = Rgb(0xE21514);
-const DARK_WARNING: Rgb = Rgb(0xF5C443);
-const DARK_GIT_CHANGE: Rgb = Rgb(0x4F82CE);
-const DARK_GIT_ADD: Rgb = Rgb(0x3CFF55);
-const DARK_GIT_DELETE: Rgb = Rgb(0xFF5044);
-const DARK_FOCUS_RING: Rgb = Rgb(0x35628B);
-
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
 
@@ -252,6 +224,196 @@ struct Theme {
 
 impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x2A2C2F)
+            }
+        };
+        let fg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xDFDFDF)
+            }
+        };
+        let panel_border = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x000000)
+            }
+        };
+        let active_tab_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x383A3D)
+            }
+        };
+        let active_tab_fg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xFFFFFF)
+            }
+        };
+        let inactive_tab_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x1F1F21)
+            }
+        };
+        let inactive_tab_fg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x9A9C9D)
+            }
+        };
+        let tab_border = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x5B5D5F)
+            }
+        };
+        let editor_group_header = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x26282B)
+            }
+        };
+        let titlebar_fg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xB7B8BB)
+            }
+        };
+        let status_bar_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x1C1F21)
+            }
+        };
+        let status_bar_fg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xDCDDDD)
+            }
+        };
+        let snippet_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x007AFF)
+            }
+        };
+        let hover_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x2C5392)
+            }
+        };
+        let breakpoint = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x007AFF)
+            }
+        };
+        let current_match_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xFFFB00)
+            }
+        };
+        let other_match_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x545558)
+            }
+        };
+        let widget_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x303030)
+            }
+        };
+        let selected_item_in_widget_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x3071DB)
+            }
+        };
+        let selected_item_in_inactive_widget_bg = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x4F5153)
+            }
+        };
+        let matching_text_in_widget = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xF5C443)
+            }
+        };
+        let error = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xE21514)
+            }
+        };
+        let warning = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xF5C443)
+            }
+        };
+        let git_change = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x4F82CE)
+            }
+        };
+        let git_add = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x3CFF55)
+            }
+        };
+        let git_delete = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0xFF5044)
+            }
+        };
+        let focus_ring = || {
+            if self.kind == ThemeKind::Light {
+                Rgb(0x000000)
+            } else {
+                Rgb(0x35628B)
+            }
+        };
+
         fn write_scope(
             f: &mut fmt::Formatter<'_>,
             scope: impl AsRef<str>,
@@ -267,7 +429,7 @@ impl fmt::Display for Theme {
 
         writeln!(f, "\"colors\": {{")?;
 
-        write_scope(f, "foreground", DARK_FG)?;
+        write_scope(f, "foreground", fg())?;
 
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
@@ -277,105 +439,84 @@ impl fmt::Display for Theme {
         write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
         write_scope(f, "editor.foreground", self.plain_text)?;
 
-        write_scope(
-            f,
-            "editorCodeLens.foreground",
-            Rgba {
-                rgb: DARK_FG,
-                a: 0x77,
-            },
-        )?;
+        write_scope(f, "editorCodeLens.foreground", Rgba { rgb: fg(), a: 0x77 })?;
 
-        write_scope(f, "editorLineNumber.activeForeground", DARK_FG)?;
+        write_scope(f, "editorLineNumber.activeForeground", fg())?;
         write_scope(
             f,
             "editorLineNumber.foreground",
-            Rgba {
-                rgb: DARK_FG,
-                a: 0x55,
-            },
+            Rgba { rgb: fg(), a: 0x55 },
         )?;
 
-        write_scope(f, "peekView.border", DARK_SELECTED_ITEM_IN_WIDGET_BG)?;
-        write_scope(f, "peekViewTitle.background", DARK_BG)?;
+        write_scope(f, "peekView.border", selected_item_in_widget_bg())?;
+        write_scope(f, "peekViewTitle.background", bg())?;
         write_scope(f, "peekViewEditor.background", self.background)?;
-        write_scope(f, "peekViewResult.background", DARK_BG)?;
+        write_scope(f, "peekViewResult.background", bg())?;
         write_scope(
             f,
             "peekViewResult.selectionBackground",
-            DARK_SELECTED_ITEM_IN_WIDGET_BG,
+            selected_item_in_widget_bg(),
         )?;
-        write_scope(f, "peekViewResult.selectionForeground", DARK_FG)?;
-        write_scope(f, "peekViewResult.fileForeground", DARK_FG)?;
+        write_scope(f, "peekViewResult.selectionForeground", fg())?;
+        write_scope(f, "peekViewResult.fileForeground", fg())?;
         write_scope(
             f,
             "peekViewResult.lineForeground",
-            Rgba {
-                rgb: DARK_FG,
-                a: 0x99,
-            },
+            Rgba { rgb: fg(), a: 0x99 },
         )?;
         write_scope(f, "peekViewTitleDescription.foreground", self.urls)?;
-        write_scope(f, "peekViewTitleLabel.foreground", DARK_FG)?;
+        write_scope(f, "peekViewTitleLabel.foreground", fg())?;
 
-        write_scope(f, "tab.activeBackground", DARK_TAB_ACTIVE_BG)?;
-        write_scope(f, "tab.activeForeground", DARK_TAB_ACTIVE_FG)?;
-        write_scope(f, "tab.inactiveBackground", DARK_TAB_INACTIVE_BG)?;
-        write_scope(f, "tab.inactiveForeground", DARK_TAB_INACTIVE_FG)?;
-        write_scope(f, "tab.border", DARK_TAB_BORDER)?;
-        write_scope(
-            f,
-            "editorGroupHeader.tabsBackground",
-            DARK_EDITOR_GROUP_HEADER,
-        )?;
-        write_scope(f, "editorGroupHeader.noTabsBackground", DARK_TAB_ACTIVE_BG)?;
+        write_scope(f, "tab.activeBackground", active_tab_bg())?;
+        write_scope(f, "tab.activeForeground", active_tab_fg())?;
+        write_scope(f, "tab.inactiveBackground", inactive_tab_bg())?;
+        write_scope(f, "tab.inactiveForeground", inactive_tab_fg())?;
+        write_scope(f, "tab.border", tab_border())?;
+        write_scope(f, "editorGroupHeader.tabsBackground", editor_group_header())?;
+        write_scope(f, "editorGroupHeader.noTabsBackground", active_tab_bg())?;
 
-        write_scope(f, "titleBar.activeBackground", DARK_TAB_ACTIVE_BG)?;
-        write_scope(f, "titleBar.activeForeground", DARK_TITLEBAR_FG)?;
-        write_scope(f, "titleBar.border", DARK_TAB_BORDER)?;
+        write_scope(f, "titleBar.activeBackground", active_tab_bg())?;
+        write_scope(f, "titleBar.activeForeground", titlebar_fg())?;
+        write_scope(f, "titleBar.border", tab_border())?;
 
-        write_scope(f, "breadcrumb.background", DARK_STATUS_BAR_BG)?;
-        write_scope(f, "breadcrumb.foreground", DARK_STATUS_BAR_FG)?;
-        write_scope(f, "breadcrumb.focusForeground", DARK_STATUS_BAR_FG)?;
+        write_scope(f, "breadcrumb.background", status_bar_bg())?;
+        write_scope(f, "breadcrumb.foreground", status_bar_fg())?;
+        write_scope(f, "breadcrumb.focusForeground", status_bar_fg())?;
 
-        write_scope(f, "statusBar.background", DARK_STATUS_BAR_BG)?;
-        write_scope(f, "statusBar.debuggingBackground", DARK_STATUS_BAR_BG)?;
-        write_scope(f, "statusBar.noFolderBackground", DARK_STATUS_BAR_BG)?;
-        write_scope(f, "statusBar.foreground", DARK_STATUS_BAR_FG)?;
-        write_scope(f, "statusBar.debuggingForeground", DARK_STATUS_BAR_FG)?;
-        write_scope(f, "statusBar.noFolderForeground", DARK_STATUS_BAR_FG)?;
+        write_scope(f, "statusBar.background", status_bar_bg())?;
+        write_scope(f, "statusBar.debuggingBackground", status_bar_bg())?;
+        write_scope(f, "statusBar.noFolderBackground", status_bar_bg())?;
+        write_scope(f, "statusBar.foreground", status_bar_fg())?;
+        write_scope(f, "statusBar.debuggingForeground", status_bar_fg())?;
+        write_scope(f, "statusBar.noFolderForeground", status_bar_fg())?;
 
-        write_scope(f, "activityBar.background", DARK_BG)?;
-        write_scope(f, "activityBar.border", DARK_PANEL_BORDER)?;
+        write_scope(f, "activityBar.background", bg())?;
+        write_scope(f, "activityBar.border", panel_border())?;
 
-        write_scope(f, "sideBar.background", DARK_BG)?;
-        write_scope(f, "sideBar.border", DARK_PANEL_BORDER)?;
+        write_scope(f, "sideBar.background", bg())?;
+        write_scope(f, "sideBar.border", panel_border())?;
         write_scope(f, "sideBarSectionHeader.background", INVISIBLE)?;
 
-        write_scope(f, "panel.border", DARK_PANEL_BORDER)?;
+        write_scope(f, "panel.border", panel_border())?;
 
         write_scope(f, "editorIndentGuide.background", INVISIBLE)?;
         write_scope(f, "editorIndentGuide.activeBackground", INVISIBLE)?;
 
-        write_scope(
-            f,
-            "editor.snippetTabstopHighlightBackground",
-            DARK_SNIPPET_BG,
-        )?;
+        write_scope(f, "editor.snippetTabstopHighlightBackground", snippet_bg())?;
 
-        write_scope(f, "editor.hoverHighlightBackground", DARK_HOVER_BG)?;
+        write_scope(f, "editor.hoverHighlightBackground", hover_bg())?;
 
-        write_scope(f, "debugIcon.breakpointForeground", DARK_BREAKPOINT)?;
+        write_scope(f, "debugIcon.breakpointForeground", breakpoint())?;
         write_scope(
             f,
             "debugIcon.breakpointCurrentStackframeForeground",
-            DARK_BREAKPOINT,
+            breakpoint(),
         )?;
         write_scope(
             f,
             "editor.stackFrameHighlightBackground",
             Rgba {
-                rgb: DARK_BREAKPOINT,
+                rgb: breakpoint(),
                 a: 0x22,
             },
         )?;
@@ -384,77 +525,70 @@ impl fmt::Display for Theme {
         write_scope(f, "textLink.activeForeground", self.urls)?;
         write_scope(f, "editorLink.activeForeground", self.urls)?;
 
-        write_scope(f, "editor.findMatchBackground", DARK_CURRENT_MATCH_BG)?;
-        write_scope(f, "searchEditor.findMatchBackground", DARK_CURRENT_MATCH_BG)?;
-        write_scope(
-            f,
-            "editor.findMatchHighlightBackground",
-            DARK_OTHER_MATCH_BG,
-        )?;
+        write_scope(f, "editor.findMatchBackground", current_match_bg())?;
+        write_scope(f, "searchEditor.findMatchBackground", current_match_bg())?;
+        write_scope(f, "editor.findMatchHighlightBackground", other_match_bg())?;
         write_scope(
             f,
             "peekViewEditor.matchHighlightBackground",
-            DARK_OTHER_MATCH_BG,
+            other_match_bg(),
         )?;
         write_scope(
             f,
             "peekViewResult.matchHighlightBackground",
-            DARK_OTHER_MATCH_BG,
+            other_match_bg(),
         )?;
-        write_scope(f, "minimap.findMatchHighlight", DARK_CURRENT_MATCH_BG)?;
+        write_scope(f, "minimap.findMatchHighlight", current_match_bg())?;
         write_scope(
             f,
             "editorOverviewRuler.findMatchForeground",
-            DARK_CURRENT_MATCH_BG,
+            current_match_bg(),
         )?;
 
-        write_scope(f, "editorWidget.background", DARK_WIDGET_BG)?;
-        write_scope(f, "list.focusBackground", DARK_SELECTED_ITEM_IN_WIDGET_BG)?;
-        write_scope(f, "list.highlightForeground", DARK_MATCHING_TEXT_IN_WIDGET)?;
+        write_scope(f, "editorWidget.background", widget_bg())?;
+        write_scope(f, "list.focusBackground", selected_item_in_widget_bg())?;
+        write_scope(f, "list.highlightForeground", matching_text_in_widget())?;
         write_scope(
             f,
             "list.activeSelectionBackground",
-            DARK_SELECTED_ITEM_IN_WIDGET_BG,
+            selected_item_in_widget_bg(),
         )?;
         write_scope(
             f,
             "list.inactiveSelectionBackground",
-            DARK_SELECTED_ITEM_IN_INACTIVE_WIDGET_BG,
+            selected_item_in_inactive_widget_bg(),
         )?;
 
-        write_scope(f, "errorForeground", DARK_ERROR)?;
-        write_scope(f, "editorError.foreground", DARK_ERROR)?;
-        write_scope(f, "minimap.errorHighlight", DARK_ERROR)?;
-        write_scope(f, "editorOverviewRuler.errorForeground", DARK_ERROR)?;
+        write_scope(f, "errorForeground", error())?;
+        write_scope(f, "editorError.foreground", error())?;
+        write_scope(f, "minimap.errorHighlight", error())?;
+        write_scope(f, "editorOverviewRuler.errorForeground", error())?;
 
-        write_scope(f, "editorWarning.foreground", DARK_WARNING)?;
-        write_scope(f, "minimap.warningHighlight", DARK_WARNING)?;
-        write_scope(f, "editorOverviewRuler.warningForeground", DARK_WARNING)?;
+        write_scope(f, "editorWarning.foreground", warning())?;
+        write_scope(f, "minimap.warningHighlight", warning())?;
+        write_scope(f, "editorOverviewRuler.warningForeground", warning())?;
 
-        write_scope(f, "editorGutter.addedBackground", DARK_GIT_CHANGE)?;
-        write_scope(f, "minimapGutter.addedBackground", DARK_GIT_CHANGE)?;
-        write_scope(f, "editorOverviewRuler.addedForeground", DARK_GIT_CHANGE)?;
+        write_scope(f, "editorGutter.addedBackground", git_change())?;
+        write_scope(f, "minimapGutter.addedBackground", git_change())?;
+        write_scope(f, "editorOverviewRuler.addedForeground", git_change())?;
 
-        write_scope(f, "gitDecoration.untrackedResourceForeground", DARK_FG)?;
-        write_scope(f, "gitDecoration.addedResourceForeground", DARK_FG)?;
-        write_scope(f, "gitDecoration.conflictingResourceForeground", DARK_ERROR)?;
-        write_scope(f, "gitDecoration.deletedResourceForeground", DARK_FG)?;
-        write_scope(f, "gitDecoration.modifiedResourceForeground", DARK_FG)?;
-        write_scope(f, "gitDecoration.submoduleResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.untrackedResourceForeground", fg())?;
+        write_scope(f, "gitDecoration.addedResourceForeground", fg())?;
+        write_scope(f, "gitDecoration.conflictingResourceForeground", error())?;
+        write_scope(f, "gitDecoration.deletedResourceForeground", fg())?;
+        write_scope(f, "gitDecoration.modifiedResourceForeground", fg())?;
+        write_scope(f, "gitDecoration.submoduleResourceForeground", fg())?;
         write_scope(
             f,
             "gitDecoration.ignoredResourceForeground",
-            Rgba {
-                rgb: DARK_FG,
-                a: 0x55,
-            },
+            Rgba { rgb: fg(), a: 0x55 },
         )?;
 
         write_scope(
             f,
             "diffEditor.insertedTextBackground",
             Rgba {
-                rgb: DARK_GIT_ADD,
+                rgb: git_add(),
                 a: 0x0A,
             },
         )?;
@@ -462,12 +596,12 @@ impl fmt::Display for Theme {
             f,
             "diffEditor.removedTextBackground",
             Rgba {
-                rgb: DARK_GIT_DELETE,
+                rgb: git_delete(),
                 a: 0x0A,
             },
         )?;
 
-        write_scope(f, "focusBorder", DARK_FOCUS_RING)?;
+        write_scope(f, "focusBorder", focus_ring())?;
 
         writeln!(f, "}},")?;
 
@@ -543,7 +677,7 @@ impl fmt::Display for Theme {
     }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialEq)]
 enum ThemeKind {
     Light,
     Dark,
