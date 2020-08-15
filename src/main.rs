@@ -176,6 +176,10 @@ const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property"
 
 const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 
+const DARK_TAB_ACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x383A3D);
+const DARK_TAB_INACTIVE_BACKGROUND_COLOR: Rgb = Rgb(0x1F1F21);
+const DARK_TAB_BORDER_COLOR: Rgb = Rgb(0x5B5D5F);
+
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
 
@@ -242,6 +246,20 @@ impl fmt::Display for Theme {
         writeln!(f, r#""editorWhitespace.foreground": {},"#, self.invisibles)?;
 
         writeln!(f, r#""editor.foreground": {},"#, self.plain_text)?;
+
+        writeln!(
+            f,
+            r#""tab.activeBackground": {},"#,
+            DARK_TAB_ACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(
+            f,
+            r#""tab.inactiveBackground": {},"#,
+            DARK_TAB_INACTIVE_BACKGROUND_COLOR
+        )?;
+
+        writeln!(f, r#""tab.border": {},"#, DARK_TAB_BORDER_COLOR)?;
 
         writeln!(f, "}},")?;
 
