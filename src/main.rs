@@ -358,7 +358,7 @@ impl fmt::Display for Theme {
 
         write_scope(f, "gitDecoration.untrackedResourceForeground", DARK_FG)?;
         write_scope(f, "gitDecoration.addedResourceForeground", DARK_FG)?;
-        write_scope(f, "gitDecoration.conflictingResourceForeground", DARK_FG)?;
+        write_scope(f, "gitDecoration.conflictingResourceForeground", DARK_ERROR)?;
         write_scope(f, "gitDecoration.deletedResourceForeground", DARK_FG)?;
         write_scope(f, "gitDecoration.ignoredResourceForeground", DARK_FG)?;
         write_scope(f, "gitDecoration.modifiedResourceForeground", DARK_FG)?;
