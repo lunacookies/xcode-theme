@@ -186,6 +186,8 @@ const DARK_STATUS_BAR_BG: Rgb = Rgb(0x1C1F21);
 const DARK_STATUS_BAR_FG: Rgb = Rgb(0xDCDDDD);
 const DARK_SNIPPET_BG: Rgb = Rgb(0x007AFF);
 const DARK_BREAKPOINT: Rgb = Rgb(0x007AFF);
+const DARK_CURRENT_MATCH_BG: Rgb = Rgb(0xFFFB00);
+const DARK_OTHER_MATCH_BG: Rgb = Rgb(0x545558);
 
 fn main() -> io::Result<()> {
     let themes = &[XCODE_11_DEFAULT_DARK, XCODE_10_DEFAULT_DARK, XCODE_CIVIC];
@@ -299,6 +301,20 @@ impl fmt::Display for Theme {
         write_scope(f, "textLink.foreground", self.urls)?;
         write_scope(f, "textLink.activeForeground", self.urls)?;
         write_scope(f, "editorLink.activeForeground", self.urls)?;
+
+        write_scope(f, "editor.findMatchBackground", DARK_CURRENT_MATCH_BG)?;
+        write_scope(f, "searchEditor.findMatchBackground", DARK_CURRENT_MATCH_BG)?;
+        write_scope(
+            f,
+            "editor.findMatchHighlightBackground",
+            DARK_OTHER_MATCH_BG,
+        )?;
+        write_scope(f, "minimap.findMatchHighlight", DARK_CURRENT_MATCH_BG)?;
+        write_scope(
+            f,
+            "editorOverviewRuler.findMatchForeground",
+            DARK_CURRENT_MATCH_BG,
+        )?;
 
         writeln!(f, "}},")?;
 

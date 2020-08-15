@@ -29,6 +29,11 @@
 "textLink.foreground": "#6544e9",
 "textLink.activeForeground": "#6544e9",
 "editorLink.activeForeground": "#6544e9",
+"editor.findMatchBackground": "#fffb00",
+"searchEditor.findMatchBackground": "#fffb00",
+"editor.findMatchHighlightBackground": "#545558",
+"minimap.findMatchHighlight": "#fffb00",
+"editorOverviewRuler.findMatchForeground": "#fffb00",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
