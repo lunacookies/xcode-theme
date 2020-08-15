@@ -223,11 +223,21 @@
 },
 {
 "scope": [
-"entity.name.type.class",
-"entity.name.type.enum",
-"entity.name.type.go",
-"entity.name.type.rust",
-"entity.name.type.struct",
+"entity.name.type",
+],
+"settings": {
+"foreground": "#ffffff",
+"fontStyle": "",
+},
+},
+{
+"scope": [
+"entity.name.function.definition",
+"entity.name.function.go",
+"entity.name.type.interface",
+"entity.name.type.namespace",
+"entity.name.variable",
+"variable.other.assignment",
 ],
 "settings": {
 "foreground": "#ffffff",

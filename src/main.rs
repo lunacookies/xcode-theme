@@ -900,14 +900,23 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &[
-                "entity.name.type.class",
-                "entity.name.type.enum",
-                "entity.name.type.go",
-                "entity.name.type.rust",
-                "entity.name.type.struct",
-            ],
+            &["entity.name.type"],
             self.type_decls.unwrap_or(self.plain_text),
+            false,
+            false,
+        )?;
+
+        write_textmate_rule(
+            f,
+            &[
+                "entity.name.function.definition",
+                "entity.name.function.go",
+                "entity.name.type.interface",
+                "entity.name.type.namespace",
+                "entity.name.variable",
+                "variable.other.assignment",
+            ],
+            self.other_decls.unwrap_or(self.plain_text),
             false,
             false,
         )?;
