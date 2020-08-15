@@ -244,35 +244,25 @@ impl fmt::Display for Theme {
         writeln!(f, "\"colors\": {{")?;
 
         write_scope(f, "editor.background", self.background)?;
-
         write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
-
         write_scope(f, "editor.selectionBackground", self.selection)?;
-
         write_scope(f, "editorCursor.foreground", self.cursor)?;
-
         write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
-
         write_scope(f, "editor.foreground", self.plain_text)?;
 
         write_scope(f, "tab.activeBackground", DARK_TAB_ACTIVE_BACKGROUND_COLOR)?;
-
         write_scope(f, "tab.activeForeground", DARK_TAB_ACTIVE_FOREGROUND_COLOR)?;
-
         write_scope(
             f,
             "tab.inactiveBackground",
             DARK_TAB_INACTIVE_BACKGROUND_COLOR,
         )?;
-
         write_scope(
             f,
             "tab.inactiveForeground",
             DARK_TAB_INACTIVE_FOREGROUND_COLOR,
         )?;
-
         write_scope(f, "tab.border", DARK_TAB_BORDER_COLOR)?;
-
         write_scope(
             f,
             "editorGroupHeader.tabsBackground",
@@ -343,6 +333,7 @@ impl fmt::Display for Theme {
         write_scope(f, "function", self.functions)?;
 
         write_scope(f, "punctuation", self.plain_text)?;
+
         write_scope(f, "operator", self.plain_text)?;
 
         for scope in TYPE_SCOPES {
