@@ -34,6 +34,9 @@
 "editor.findMatchHighlightBackground": "#545558",
 "minimap.findMatchHighlight": "#fffb00",
 "editorOverviewRuler.findMatchForeground": "#fffb00",
+"editorWidget.background": "#303030",
+"list.focusBackground": "#0157cd",
+"list.highlightForeground": "#0a84ff",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
