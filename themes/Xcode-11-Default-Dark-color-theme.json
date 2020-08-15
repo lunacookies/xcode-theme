@@ -37,6 +37,10 @@
 "editorWidget.background": "#303030",
 "list.focusBackground": "#0157cd",
 "list.highlightForeground": "#0a84ff",
+"errorForeground": "#e21514",
+"editorError.foreground": "#e21514",
+"minimap.errorHighlight": "#e21514",
+"editorOverviewRuler.errorForeground": "#e21514",
 },
 "semanticHighlighting": true,
 "semanticTokenColors": {
