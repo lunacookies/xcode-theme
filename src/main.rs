@@ -292,6 +292,28 @@ impl fmt::Display for Theme {
             },
         )?;
 
+        write_scope(f, "peekView.border", DARK_SELECTED_ITEM_IN_WIDGET_BG)?;
+        write_scope(f, "peekViewTitle.background", DARK_BG)?;
+        write_scope(f, "peekViewEditor.background", self.background)?;
+        write_scope(f, "peekViewResult.background", DARK_BG)?;
+        write_scope(
+            f,
+            "peekViewResult.selectionBackground",
+            DARK_SELECTED_ITEM_IN_WIDGET_BG,
+        )?;
+        write_scope(f, "peekViewResult.selectionForeground", DARK_FG)?;
+        write_scope(f, "peekViewResult.fileForeground", DARK_FG)?;
+        write_scope(
+            f,
+            "peekViewResult.lineForeground",
+            Rgba {
+                rgb: DARK_FG,
+                a: 0x99,
+            },
+        )?;
+        write_scope(f, "peekViewTitleDescription.foreground", self.urls)?;
+        write_scope(f, "peekViewTitleLabel.foreground", DARK_FG)?;
+
         write_scope(f, "tab.activeBackground", DARK_TAB_ACTIVE_BG)?;
         write_scope(f, "tab.activeForeground", DARK_TAB_ACTIVE_FG)?;
         write_scope(f, "tab.inactiveBackground", DARK_TAB_INACTIVE_BG)?;
