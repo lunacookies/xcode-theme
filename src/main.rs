@@ -273,6 +273,15 @@ impl fmt::Display for Theme {
         write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
         write_scope(f, "editor.foreground", self.plain_text)?;
 
+        write_scope(
+            f,
+            "editorCodeLens.foreground",
+            Rgba {
+                rgb: DARK_FG,
+                a: 0x77,
+            },
+        )?;
+
         write_scope(f, "editorLineNumber.activeForeground", DARK_FG)?;
         write_scope(
             f,
