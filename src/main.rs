@@ -597,6 +597,8 @@ impl fmt::Display for Theme {
 
         write_scope(f, "editorCodeLens.foreground", Rgba { rgb: fg(), a: 0x77 })?;
 
+        write_scope(f, "rust_analyzer.inlayHint", Rgba { rgb: fg(), a: 0x55 })?;
+
         write_scope(f, "editorLineNumber.activeForeground", fg())?;
         write_scope(
             f,

@@ -11,6 +11,7 @@
 "editorWhitespace.foreground": "#5f5f5f",
 "editor.foreground": "#e7e8eb",
 "editorCodeLens.foreground": "#dfdfdf77",
+"rust_analyzer.inlayHint": "#dfdfdf55",
 "editorLineNumber.activeForeground": "#dfdfdf",
 "editorLineNumber.foreground": "#dfdfdf55",
 "peekView.border": "#3071db",
