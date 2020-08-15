@@ -57,6 +57,8 @@
 "editor.findMatchBackground": "#fffb00",
 "searchEditor.findMatchBackground": "#fffb00",
 "editor.findMatchHighlightBackground": "#545558",
+"peekViewEditor.matchHighlightBackground": "#545558",
+"peekViewResult.matchHighlightBackground": "#545558",
 "minimap.findMatchHighlight": "#fffb00",
 "editorOverviewRuler.findMatchForeground": "#fffb00",
 "editorWidget.background": "#303030",

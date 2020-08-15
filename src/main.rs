@@ -381,6 +381,16 @@ impl fmt::Display for Theme {
             "editor.findMatchHighlightBackground",
             DARK_OTHER_MATCH_BG,
         )?;
+        write_scope(
+            f,
+            "peekViewEditor.matchHighlightBackground",
+            DARK_OTHER_MATCH_BG,
+        )?;
+        write_scope(
+            f,
+            "peekViewResult.matchHighlightBackground",
+            DARK_OTHER_MATCH_BG,
+        )?;
         write_scope(f, "minimap.findMatchHighlight", DARK_CURRENT_MATCH_BG)?;
         write_scope(
             f,
