@@ -841,7 +841,7 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &["comment"],
+            &["comment", "punctuation.definition.comment"],
             self.comments,
             self.are_comments_italic,
             false,
