@@ -171,6 +171,7 @@
 },
 {
 "scope": [
+"constant.language",
 "keyword",
 "storage.modifier",
 "storage.type",

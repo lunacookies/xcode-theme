@@ -864,6 +864,7 @@ impl fmt::Display for Theme {
         write_textmate_rule(
             f,
             &[
+                "constant.language",
                 "keyword",
                 "storage.modifier",
                 "storage.type",
