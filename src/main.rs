@@ -338,202 +338,173 @@ struct Theme {
 
 impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xECECEC)
-            } else {
-                Rgb(0x2A2C2F)
-            }
+        let bg = if self.kind == ThemeKind::Light {
+            Rgb(0xECECEC)
+        } else {
+            Rgb(0x2A2C2F)
         };
-        let fg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x272727)
-            } else {
-                Rgb(0xDFDFDF)
-            }
+
+        let fg = if self.kind == ThemeKind::Light {
+            Rgb(0x272727)
+        } else {
+            Rgb(0xDFDFDF)
         };
-        let panel_border = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xB2B2B2)
-            } else {
-                Rgb(0x000000)
-            }
+
+        let panel_border = if self.kind == ThemeKind::Light {
+            Rgb(0xB2B2B2)
+        } else {
+            Rgb(0x000000)
         };
-        let active_tab_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xD2D2D2)
-            } else {
-                Rgb(0x383A3D)
-            }
+
+        let active_tab_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xD2D2D2)
+        } else {
+            Rgb(0x383A3D)
         };
-        let active_tab_fg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x212121)
-            } else {
-                Rgb(0xFFFFFF)
-            }
+
+        let active_tab_fg = if self.kind == ThemeKind::Light {
+            Rgb(0x212121)
+        } else {
+            Rgb(0xFFFFFF)
         };
-        let inactive_tab_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xBEBEBE)
-            } else {
-                Rgb(0x1F1F21)
-            }
+
+        let inactive_tab_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xBEBEBE)
+        } else {
+            Rgb(0x1F1F21)
         };
-        let inactive_tab_fg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x3E3E3E)
-            } else {
-                Rgb(0x9A9C9D)
-            }
+
+        let inactive_tab_fg = if self.kind == ThemeKind::Light {
+            Rgb(0x3E3E3E)
+        } else {
+            Rgb(0x9A9C9D)
         };
-        let tab_border = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xB0B0B0)
-            } else {
-                Rgb(0x5B5D5F)
-            }
+
+        let tab_border = if self.kind == ThemeKind::Light {
+            Rgb(0xB0B0B0)
+        } else {
+            Rgb(0x5B5D5F)
         };
-        let editor_group_header = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xBCBCBC)
-            } else {
-                Rgb(0x26282B)
-            }
+
+        let editor_group_header = if self.kind == ThemeKind::Light {
+            Rgb(0xBCBCBC)
+        } else {
+            Rgb(0x26282B)
         };
-        let titlebar_fg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x545454)
-            } else {
-                Rgb(0xB7B8BB)
-            }
+
+        let titlebar_fg = if self.kind == ThemeKind::Light {
+            Rgb(0x545454)
+        } else {
+            Rgb(0xB7B8BB)
         };
-        let status_bar_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xFFFFFF)
-            } else {
-                Rgb(0x1C1F21)
-            }
+
+        let status_bar_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xFFFFFF)
+        } else {
+            Rgb(0x1C1F21)
         };
-        let status_bar_fg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x272727)
-            } else {
-                Rgb(0xDCDDDD)
-            }
+
+        let status_bar_fg = if self.kind == ThemeKind::Light {
+            Rgb(0x272727)
+        } else {
+            Rgb(0xDCDDDD)
         };
-        let snippet_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x307BF7)
-            } else {
-                Rgb(0x007AFF)
-            }
+
+        let snippet_bg = if self.kind == ThemeKind::Light {
+            Rgb(0x307BF7)
+        } else {
+            Rgb(0x007AFF)
         };
-        let hover_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xB7D1FC)
-            } else {
-                Rgb(0x2C5392)
-            }
+
+        let hover_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xB7D1FC)
+        } else {
+            Rgb(0x2C5392)
         };
-        let breakpoint = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x307BF7)
-            } else {
-                Rgb(0x007AFF)
-            }
+
+        let breakpoint = if self.kind == ThemeKind::Light {
+            Rgb(0x307BF7)
+        } else {
+            Rgb(0x007AFF)
         };
-        let current_match_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xFEF977)
-            } else {
-                Rgb(0xFFFB00)
-            }
+
+        let current_match_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xFEF977)
+        } else {
+            Rgb(0xFFFB00)
         };
-        let other_match_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xE4E4E4)
-            } else {
-                Rgb(0x545558)
-            }
+
+        let other_match_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xE4E4E4)
+        } else {
+            Rgb(0x545558)
         };
-        let widget_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xFFFFFF)
-            } else {
-                Rgb(0x303030)
-            }
+
+        let widget_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xFFFFFF)
+        } else {
+            Rgb(0x303030)
         };
-        let selected_item_in_widget_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x2968DA)
-            } else {
-                Rgb(0x3071DB)
-            }
+
+        let selected_item_in_widget_bg = if self.kind == ThemeKind::Light {
+            Rgb(0x2968DA)
+        } else {
+            Rgb(0x3071DB)
         };
-        let selected_item_in_widget_fg = || {
-            if self.kind == ThemeKind::Light {
-                bg()
-            } else {
-                fg()
-            }
+
+        let selected_item_in_widget_fg = if self.kind == ThemeKind::Light {
+            bg
+        } else {
+            fg
         };
-        let selected_item_in_inactive_widget_bg = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xD2D2D2)
-            } else {
-                Rgb(0x4F5153)
-            }
+
+        let selected_item_in_inactive_widget_bg = if self.kind == ThemeKind::Light {
+            Rgb(0xD2D2D2)
+        } else {
+            Rgb(0x4F5153)
         };
-        let matching_text_in_widget = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x000000)
-            } else {
-                Rgb(0xF5C443)
-            }
+
+        let matching_text_in_widget = if self.kind == ThemeKind::Light {
+            Rgb(0x000000)
+        } else {
+            Rgb(0xF5C443)
         };
-        let error = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xD03227)
-            } else {
-                Rgb(0xE21514)
-            }
+
+        let error = if self.kind == ThemeKind::Light {
+            Rgb(0xD03227)
+        } else {
+            Rgb(0xE21514)
         };
-        let warning = || {
-            #[allow(clippy::if_same_then_else)]
-            if self.kind == ThemeKind::Light {
-                Rgb(0xF5C443)
-            } else {
-                Rgb(0xF5C443)
-            }
+
+        #[allow(clippy::if_same_then_else)]
+        let warning = if self.kind == ThemeKind::Light {
+            Rgb(0xF5C443)
+        } else {
+            Rgb(0xF5C443)
         };
-        let git_change = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x73A5F8)
-            } else {
-                Rgb(0x4F82CE)
-            }
+
+        let git_change = if self.kind == ThemeKind::Light {
+            Rgb(0x73A5F8)
+        } else {
+            Rgb(0x4F82CE)
         };
-        let git_add = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x1EC337)
-            } else {
-                Rgb(0x3CFF55)
-            }
+
+        let git_add = if self.kind == ThemeKind::Light {
+            Rgb(0x1EC337)
+        } else {
+            Rgb(0x3CFF55)
         };
-        let git_delete = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0xF53126)
-            } else {
-                Rgb(0xFF5044)
-            }
+
+        let git_delete = if self.kind == ThemeKind::Light {
+            Rgb(0xF53126)
+        } else {
+            Rgb(0xFF5044)
         };
-        let focus_ring = || {
-            if self.kind == ThemeKind::Light {
-                Rgb(0x92B4F4)
-            } else {
-                Rgb(0x35628B)
-            }
+
+        let focus_ring = if self.kind == ThemeKind::Light {
+            Rgb(0x92B4F4)
+        } else {
+            Rgb(0x35628B)
         };
 
         fn write_scope(
@@ -585,7 +556,7 @@ impl fmt::Display for Theme {
 
         writeln!(f, "\"colors\": {{")?;
 
-        write_scope(f, "foreground", fg())?;
+        write_scope(f, "foreground", fg)?;
 
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.lineHighlightBackground", self.current_line)?;
@@ -595,94 +566,90 @@ impl fmt::Display for Theme {
         write_scope(f, "editorWhitespace.foreground", self.invisibles)?;
         write_scope(f, "editor.foreground", self.plain_text)?;
 
-        write_scope(f, "editorCodeLens.foreground", Rgba { rgb: fg(), a: 0x77 })?;
+        write_scope(f, "editorCodeLens.foreground", Rgba { rgb: fg, a: 0x77 })?;
 
         write_scope(
             f,
             "rust_analyzer.inlayHints.foreground",
-            Rgba { rgb: fg(), a: 0x55 },
+            Rgba { rgb: fg, a: 0x55 },
         )?;
 
-        write_scope(f, "editorLineNumber.activeForeground", fg())?;
-        write_scope(
-            f,
-            "editorLineNumber.foreground",
-            Rgba { rgb: fg(), a: 0x55 },
-        )?;
+        write_scope(f, "editorLineNumber.activeForeground", fg)?;
+        write_scope(f, "editorLineNumber.foreground", Rgba { rgb: fg, a: 0x55 })?;
 
-        write_scope(f, "peekView.border", selected_item_in_widget_bg())?;
-        write_scope(f, "peekViewTitle.background", bg())?;
+        write_scope(f, "peekView.border", selected_item_in_widget_bg)?;
+        write_scope(f, "peekViewTitle.background", bg)?;
         write_scope(f, "peekViewEditor.background", self.background)?;
-        write_scope(f, "peekViewResult.background", bg())?;
+        write_scope(f, "peekViewResult.background", bg)?;
         write_scope(
             f,
             "peekViewResult.selectionBackground",
-            selected_item_in_widget_bg(),
+            selected_item_in_widget_bg,
         )?;
-        write_scope(f, "peekViewResult.selectionForeground", fg())?;
-        write_scope(f, "peekViewResult.fileForeground", fg())?;
+        write_scope(f, "peekViewResult.selectionForeground", fg)?;
+        write_scope(f, "peekViewResult.fileForeground", fg)?;
         write_scope(
             f,
             "peekViewResult.lineForeground",
-            Rgba { rgb: fg(), a: 0x99 },
+            Rgba { rgb: fg, a: 0x99 },
         )?;
         write_scope(f, "peekViewTitleDescription.foreground", self.urls)?;
-        write_scope(f, "peekViewTitleLabel.foreground", fg())?;
+        write_scope(f, "peekViewTitleLabel.foreground", fg)?;
 
-        write_scope(f, "tab.activeBackground", active_tab_bg())?;
-        write_scope(f, "tab.activeForeground", active_tab_fg())?;
-        write_scope(f, "tab.inactiveBackground", inactive_tab_bg())?;
-        write_scope(f, "tab.inactiveForeground", inactive_tab_fg())?;
-        write_scope(f, "tab.border", tab_border())?;
-        write_scope(f, "editorGroupHeader.tabsBackground", editor_group_header())?;
-        write_scope(f, "editorGroupHeader.noTabsBackground", active_tab_bg())?;
+        write_scope(f, "tab.activeBackground", active_tab_bg)?;
+        write_scope(f, "tab.activeForeground", active_tab_fg)?;
+        write_scope(f, "tab.inactiveBackground", inactive_tab_bg)?;
+        write_scope(f, "tab.inactiveForeground", inactive_tab_fg)?;
+        write_scope(f, "tab.border", tab_border)?;
+        write_scope(f, "editorGroupHeader.tabsBackground", editor_group_header)?;
+        write_scope(f, "editorGroupHeader.noTabsBackground", active_tab_bg)?;
 
-        write_scope(f, "titleBar.activeBackground", active_tab_bg())?;
-        write_scope(f, "titleBar.activeForeground", titlebar_fg())?;
-        write_scope(f, "titleBar.border", tab_border())?;
+        write_scope(f, "titleBar.activeBackground", active_tab_bg)?;
+        write_scope(f, "titleBar.activeForeground", titlebar_fg)?;
+        write_scope(f, "titleBar.border", tab_border)?;
 
-        write_scope(f, "breadcrumb.background", status_bar_bg())?;
-        write_scope(f, "breadcrumb.foreground", status_bar_fg())?;
-        write_scope(f, "breadcrumb.focusForeground", status_bar_fg())?;
+        write_scope(f, "breadcrumb.background", status_bar_bg)?;
+        write_scope(f, "breadcrumb.foreground", status_bar_fg)?;
+        write_scope(f, "breadcrumb.focusForeground", status_bar_fg)?;
 
-        write_scope(f, "statusBar.background", status_bar_bg())?;
-        write_scope(f, "statusBar.debuggingBackground", status_bar_bg())?;
-        write_scope(f, "statusBar.noFolderBackground", status_bar_bg())?;
-        write_scope(f, "statusBar.foreground", status_bar_fg())?;
-        write_scope(f, "statusBar.debuggingForeground", status_bar_fg())?;
-        write_scope(f, "statusBar.noFolderForeground", status_bar_fg())?;
-        write_scope(f, "statusBar.border", panel_border())?;
-        write_scope(f, "statusBar.debuggingBorder", panel_border())?;
-        write_scope(f, "statusBar.noFolderBorder", panel_border())?;
+        write_scope(f, "statusBar.background", status_bar_bg)?;
+        write_scope(f, "statusBar.debuggingBackground", status_bar_bg)?;
+        write_scope(f, "statusBar.noFolderBackground", status_bar_bg)?;
+        write_scope(f, "statusBar.foreground", status_bar_fg)?;
+        write_scope(f, "statusBar.debuggingForeground", status_bar_fg)?;
+        write_scope(f, "statusBar.noFolderForeground", status_bar_fg)?;
+        write_scope(f, "statusBar.border", panel_border)?;
+        write_scope(f, "statusBar.debuggingBorder", panel_border)?;
+        write_scope(f, "statusBar.noFolderBorder", panel_border)?;
 
-        write_scope(f, "activityBar.background", bg())?;
-        write_scope(f, "activityBar.foreground", fg())?;
-        write_scope(f, "activityBar.border", panel_border())?;
+        write_scope(f, "activityBar.background", bg)?;
+        write_scope(f, "activityBar.foreground", fg)?;
+        write_scope(f, "activityBar.border", panel_border)?;
 
-        write_scope(f, "sideBar.background", bg())?;
-        write_scope(f, "sideBar.border", panel_border())?;
+        write_scope(f, "sideBar.background", bg)?;
+        write_scope(f, "sideBar.border", panel_border)?;
         write_scope(f, "sideBarSectionHeader.background", INVISIBLE)?;
 
-        write_scope(f, "panel.border", panel_border())?;
+        write_scope(f, "panel.border", panel_border)?;
 
         write_scope(f, "editorIndentGuide.background", INVISIBLE)?;
         write_scope(f, "editorIndentGuide.activeBackground", INVISIBLE)?;
 
-        write_scope(f, "editor.snippetTabstopHighlightBackground", snippet_bg())?;
+        write_scope(f, "editor.snippetTabstopHighlightBackground", snippet_bg)?;
 
-        write_scope(f, "editor.hoverHighlightBackground", hover_bg())?;
+        write_scope(f, "editor.hoverHighlightBackground", hover_bg)?;
 
-        write_scope(f, "debugIcon.breakpointForeground", breakpoint())?;
+        write_scope(f, "debugIcon.breakpointForeground", breakpoint)?;
         write_scope(
             f,
             "debugIcon.breakpointCurrentStackframeForeground",
-            breakpoint(),
+            breakpoint,
         )?;
         write_scope(
             f,
             "editor.stackFrameHighlightBackground",
             Rgba {
-                rgb: breakpoint(),
+                rgb: breakpoint,
                 a: 0x22,
             },
         )?;
@@ -691,76 +658,68 @@ impl fmt::Display for Theme {
         write_scope(f, "textLink.activeForeground", self.urls)?;
         write_scope(f, "editorLink.activeForeground", self.urls)?;
 
-        write_scope(f, "editor.findMatchBackground", current_match_bg())?;
-        write_scope(f, "searchEditor.findMatchBackground", current_match_bg())?;
-        write_scope(f, "editor.findMatchHighlightBackground", other_match_bg())?;
-        write_scope(
-            f,
-            "peekViewEditor.matchHighlightBackground",
-            other_match_bg(),
-        )?;
-        write_scope(
-            f,
-            "peekViewResult.matchHighlightBackground",
-            other_match_bg(),
-        )?;
-        write_scope(f, "minimap.findMatchHighlight", current_match_bg())?;
+        write_scope(f, "editor.findMatchBackground", current_match_bg)?;
+        write_scope(f, "searchEditor.findMatchBackground", current_match_bg)?;
+        write_scope(f, "editor.findMatchHighlightBackground", other_match_bg)?;
+        write_scope(f, "peekViewEditor.matchHighlightBackground", other_match_bg)?;
+        write_scope(f, "peekViewResult.matchHighlightBackground", other_match_bg)?;
+        write_scope(f, "minimap.findMatchHighlight", current_match_bg)?;
         write_scope(
             f,
             "editorOverviewRuler.findMatchForeground",
-            current_match_bg(),
+            current_match_bg,
         )?;
 
-        write_scope(f, "editorWidget.background", widget_bg())?;
-        write_scope(f, "list.focusBackground", selected_item_in_widget_bg())?;
-        write_scope(f, "list.focusForeground", selected_item_in_widget_fg())?;
-        write_scope(f, "list.highlightForeground", matching_text_in_widget())?;
+        write_scope(f, "editorWidget.background", widget_bg)?;
+        write_scope(f, "list.focusBackground", selected_item_in_widget_bg)?;
+        write_scope(f, "list.focusForeground", selected_item_in_widget_fg)?;
+        write_scope(f, "list.highlightForeground", matching_text_in_widget)?;
         write_scope(
             f,
             "list.activeSelectionBackground",
-            selected_item_in_widget_bg(),
+            selected_item_in_widget_bg,
         )?;
         write_scope(
             f,
             "list.activeSelectionForeground",
-            selected_item_in_widget_fg(),
+            selected_item_in_widget_fg,
         )?;
         write_scope(
             f,
             "list.inactiveSelectionBackground",
-            selected_item_in_inactive_widget_bg(),
+            selected_item_in_inactive_widget_bg,
         )?;
 
-        write_scope(f, "errorForeground", error())?;
-        write_scope(f, "editorError.foreground", error())?;
-        write_scope(f, "minimap.errorHighlight", error())?;
-        write_scope(f, "editorOverviewRuler.errorForeground", error())?;
+        write_scope(f, "errorForeground", error)?;
+        write_scope(f, "editorError.foreground", error)?;
+        write_scope(f, "minimap.errorHighlight", error)?;
+        write_scope(f, "editorOverviewRuler.errorForeground", error)?;
 
-        write_scope(f, "editorWarning.foreground", warning())?;
-        write_scope(f, "minimap.warningHighlight", warning())?;
-        write_scope(f, "editorOverviewRuler.warningForeground", warning())?;
+        write_scope(f, "editorWarning.foreground", warning)?;
+        write_scope(f, "minimap.warningHighlight", warning)?;
+        write_scope(f, "editorOverviewRuler.warningForeground", warning)?;
 
-        write_scope(f, "editorGutter.addedBackground", git_change())?;
-        write_scope(f, "minimapGutter.addedBackground", git_change())?;
-        write_scope(f, "editorOverviewRuler.addedForeground", git_change())?;
+        write_scope(f, "editorGutter.addedBackground", git_change)?;
+        write_scope(f, "editorOverviewRuler.addedForeground", git_change)?;
+        write_scope(f, "minimapGutter.addedBackground", git_change)?;
 
-        write_scope(f, "gitDecoration.untrackedResourceForeground", fg())?;
-        write_scope(f, "gitDecoration.addedResourceForeground", fg())?;
-        write_scope(f, "gitDecoration.conflictingResourceForeground", error())?;
-        write_scope(f, "gitDecoration.deletedResourceForeground", fg())?;
-        write_scope(f, "gitDecoration.modifiedResourceForeground", fg())?;
-        write_scope(f, "gitDecoration.submoduleResourceForeground", fg())?;
+        write_scope(f, "gitDecoration.untrackedResourceForeground", fg)?;
+        write_scope(f, "gitDecoration.addedResourceForeground", fg)?;
+        write_scope(f, "gitDecoration.conflictingResourceForeground", error)?;
+        write_scope(f, "gitDecoration.deletedResourceForeground", fg)?;
+        write_scope(f, "gitDecoration.modifiedResourceForeground", fg)?;
+        write_scope(f, "gitDecoration.submoduleResourceForeground", fg)?;
         write_scope(
             f,
             "gitDecoration.ignoredResourceForeground",
-            Rgba { rgb: fg(), a: 0x55 },
+            Rgba { rgb: fg, a: 0x55 },
         )?;
 
         write_scope(
             f,
             "diffEditor.insertedTextBackground",
             Rgba {
-                rgb: git_add(),
+                rgb: git_add,
                 a: 0x0A,
             },
         )?;
@@ -768,12 +727,12 @@ impl fmt::Display for Theme {
             f,
             "diffEditor.removedTextBackground",
             Rgba {
-                rgb: git_delete(),
+                rgb: git_delete,
                 a: 0x0A,
             },
         )?;
 
-        write_scope(f, "focusBorder", focus_ring())?;
+        write_scope(f, "focusBorder", focus_ring)?;
 
         writeln!(f, "}},")?;
 
