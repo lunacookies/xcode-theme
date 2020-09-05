@@ -700,8 +700,14 @@ impl fmt::Display for Theme {
         write_scope(f, "editorOverviewRuler.warningForeground", warning)?;
 
         write_scope(f, "editorGutter.addedBackground", git_change)?;
+        write_scope(f, "editorGutter.deletedBackground", git_change)?;
+        write_scope(f, "editorGutter.modifiedBackground", git_change)?;
         write_scope(f, "editorOverviewRuler.addedForeground", git_change)?;
+        write_scope(f, "editorOverviewRuler.deletedForeground", git_change)?;
+        write_scope(f, "editorOverviewRuler.modifiedForeground", git_change)?;
         write_scope(f, "minimapGutter.addedBackground", git_change)?;
+        write_scope(f, "minimapGutter.deletedBackground", git_change)?;
+        write_scope(f, "minimapGutter.modifiedBackground", git_change)?;
 
         write_scope(f, "gitDecoration.untrackedResourceForeground", fg)?;
         write_scope(f, "gitDecoration.addedResourceForeground", fg)?;
