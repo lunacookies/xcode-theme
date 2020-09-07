@@ -73,6 +73,7 @@
 "editorWidget.background": "#ffffff",
 "list.focusBackground": "#2968da",
 "list.focusForeground": "#ececec",
+"list.hoverBackground": "#00000000",
 "list.highlightForeground": "#000000",
 "list.activeSelectionBackground": "#2968da",
 "list.activeSelectionForeground": "#ececec",

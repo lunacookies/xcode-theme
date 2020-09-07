@@ -673,6 +673,7 @@ impl fmt::Display for Theme {
         write_scope(f, "editorWidget.background", widget_bg)?;
         write_scope(f, "list.focusBackground", selected_item_in_widget_bg)?;
         write_scope(f, "list.focusForeground", selected_item_in_widget_fg)?;
+        write_scope(f, "list.hoverBackground", INVISIBLE)?;
         write_scope(f, "list.highlightForeground", matching_text_in_widget)?;
         write_scope(
             f,
