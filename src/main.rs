@@ -824,12 +824,19 @@ impl fmt::Display for Theme {
             false,
         )?;
 
-        write_textmate_rule(f, &["constant.numeric"], self.numbers, false, false)?;
+        write_textmate_rule(
+            f,
+            &["constant.numeric", "keyword.other.unit"],
+            self.numbers,
+            false,
+            false,
+        )?;
 
         write_textmate_rule(
             f,
             &[
                 "constant.language",
+                "entity.name.tag",
                 "keyword",
                 "storage.modifier",
                 "storage.type",

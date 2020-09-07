@@ -169,6 +169,7 @@
 {
 "scope": [
 "constant.numeric",
+"keyword.other.unit",
 ],
 "settings": {
 "foreground": "#d9c97c",
@@ -178,6 +179,7 @@
 {
 "scope": [
 "constant.language",
+"entity.name.tag",
 "keyword",
 "storage.modifier",
 "storage.type",
