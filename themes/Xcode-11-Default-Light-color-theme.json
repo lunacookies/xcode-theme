@@ -170,6 +170,7 @@
 "scope": [
 "constant.numeric",
 "keyword.other.unit",
+"support.constant",
 ],
 "settings": {
 "foreground": "#272ad8",

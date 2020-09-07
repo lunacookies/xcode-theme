@@ -826,7 +826,7 @@ impl fmt::Display for Theme {
 
         write_textmate_rule(
             f,
-            &["constant.numeric", "keyword.other.unit"],
+            &["constant.numeric", "keyword.other.unit", "support.constant"],
             self.numbers,
             false,
             false,
