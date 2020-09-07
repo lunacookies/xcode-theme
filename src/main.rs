@@ -726,7 +726,7 @@ impl fmt::Display for Theme {
             "diffEditor.insertedTextBackground",
             Rgba {
                 rgb: git_add,
-                a: 0x0A,
+                a: 0x18,
             },
         )?;
         write_scope(
@@ -734,7 +734,7 @@ impl fmt::Display for Theme {
             "diffEditor.removedTextBackground",
             Rgba {
                 rgb: git_delete,
-                a: 0x0A,
+                a: 0x18,
             },
         )?;
 
