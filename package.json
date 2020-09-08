@@ -39,6 +39,11 @@
                 "label": "Xcode Civic",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Xcode-Civic-color-theme.json"
+            },
+            {
+                "label": "Xcode WWDC",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Xcode-WWDC-color-theme.json"
             }
         ]
     }

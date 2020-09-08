@@ -258,6 +258,35 @@ const XCODE_CIVIC: Theme = Theme {
     other_decls: None,
 };
 
+const XCODE_WWDC: Theme = Theme {
+    name: "Xcode WWDC",
+    file_name: "Xcode-WWDC",
+    kind: ThemeKind::Dark,
+    background: Rgb(0x282B35),
+    current_line: Rgb(0x333949),
+    selection: Rgb(0x69718B),
+    cursor: Rgb(0xFFFFFF),
+    invisibles: Rgb(0x5D5E66),
+    plain_text: Rgb(0xFEFEFE),
+    comments: Rgb(0x0BCE7C),
+    are_comments_italic: false,
+    strings: Rgb(0xEC0044),
+    chars: Rgb(0x8C84D6),
+    numbers: Rgb(0x4F869F),
+    keywords: Rgb(0xB5008D),
+    are_keywords_bold: false,
+    preproc: Rgb(0xE57E3D),
+    urls: Rgb(0x0071CD),
+    attributes: Rgb(0x4F869F),
+    types: Rgb(0x00ADBB),
+    variables: Rgb(0xFEFEFE),
+    constants: Rgb(0x00ADBB),
+    interfaces: Rgb(0xA3D783),
+    functions: Rgb(0xA3D783),
+    type_decls: None,
+    other_decls: None,
+};
+
 const TYPE_SCOPES: &[&str] = &[
     "type",
     "class",
@@ -285,6 +314,7 @@ fn main() -> io::Result<()> {
         XCODE_10_DEFAULT_DARK,
         XCODE_10_DEFAULT_LIGHT,
         XCODE_CIVIC,
+        XCODE_WWDC,
     ];
 
     for theme in themes {
