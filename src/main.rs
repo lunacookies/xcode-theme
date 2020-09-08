@@ -1,28 +1,5 @@
 use std::{fmt, fs, io};
 
-// Background: #292A30
-// Current Line: #2F3239
-// Selection: #646F83
-// Cursor: #FFFFFF
-// Invisibles: #53606E
-//
-// Plain text: #DFDFE0 Medium
-// Comments: #7F8C98 Medium
-// Documentation Markup: #7F8C98 Medium
-// Documentation Markup Keywords: #A3B1BF Bold
-// Strings: #FF8170 Medium
-// Characters: #D9C97C Medium
-// Numbers: #D9C97C Medium
-// Keywords: #FF7AB2 Bold
-// Preprocessor Statements: #FFA14F Medium
-// URLs: #6699FF Medium
-// Attributes: #CC9768 Medium
-// Project Types: #ACF2E4 Medium
-// Project Functions, Vars and Constants: #78C2B3 Medium
-// Other Types: #DABAFF Medium
-// Other Functions, Vars and Constants: #B281EB Medium
-// Type Declaractions: #6BDFFF Medium
-// Other Declaractions: #4EB0CC Medium
 const XCODE_11_DEFAULT_DARK: Theme = Theme {
     name: "Xcode 11 Default Dark",
     file_name: "Xcode-11-Default-Dark",
@@ -52,29 +29,6 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     other_decls: Some(Rgb(0x4EB0CC)),
 };
 
-// Background: #FFFFFF
-// Current Line: #ECF5FF
-// Selection: #B2D7FF
-// Cursor: #000000
-// Invisibles: #D6D6D6
-//
-// Plain text: #000000 Regular
-// Comments: #707F8C Regular
-// Documentation Markup: #707F8C Regular
-// Documentation Markup Keywords: #5C6873 Bold
-// Strings: #D12F1B Regular
-// Characters: #272AD8 Regular
-// Numbers: #272AD8 Regular
-// Keywords: #AD3DA4 Semibold
-// Preprocessor Statements: #78492A Regular
-// URLs: #1337FF Regular
-// Attributes: #947100 Regular
-// Project Types: #23575C Regular
-// Project Functions, Vars and Constants: #3E8087 Regular
-// Other Types: #4B21B0 Regular
-// Other Functions, Vars and Constants: #804FB8 Regular
-// Type Declaractions: #02638C Regular
-// Other Declaractions: #057CB0 Regular
 const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
     name: "Xcode 11 Default Light",
     file_name: "Xcode-11-Default-Light",
@@ -104,29 +58,6 @@ const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
     other_decls: Some(Rgb(0x057CB0)),
 };
 
-// Background: #292A30
-// Current Line: #2F3239
-// Selection: #646F83
-// Cursor: #FFFFFF
-// Invisibles: #53606E
-//
-// Plain text: #FFFFFF Medium
-// Comments: #7F8C98 Medium Italic
-// Documentation Markup: #7F8C98 Medium
-// Documentation Markup Keywords: #A3B1BF Bold
-// Strings: #FF8170 Medium
-// Characters: #A79DF7 Medium
-// Numbers: #A79DF7 Medium
-// Keywords: #FF7AB2 Bold
-// Preprocessor Statements: #FFA14F Medium
-// URLs: #63B6FC Medium
-// Attributes: #86BFA3 Medium
-// Project Types and Vars: #A0D975 Medium
-// Project Functions and Constants: #BAF28F Medium
-// Other Types and Vars: #8AD1C3 Medium
-// Other Functions and Constants: #A7EBDD Medium
-//
-// Definitions have the same colour as plain text.
 const XCODE_10_DEFAULT_DARK: Theme = Theme {
     name: "Xcode 10 Default Dark",
     file_name: "Xcode-10-Default-Dark",
@@ -156,29 +87,6 @@ const XCODE_10_DEFAULT_DARK: Theme = Theme {
     other_decls: None,
 };
 
-// Background: #FFFFFF
-// Current Line: #ECF5FF
-// Selection: #B2D7FF
-// Cursor: #000000
-// Invisibles: #D6D6D6
-//
-// Plain text: #000000 Regular
-// Comments: #65798C Regular Italic
-// Documentation Markup: #506375 Regular
-// Documentation Markup Keywords: #506375 Bold
-// Strings: #D12F1B Regular
-// Characters: #272AD8 Regular
-// Numbers: #272AD8 Regular
-// Keywords: #AD3DA4 Semibold
-// Preprocessor Statements: #78492A Regular
-// URLs: #1337FF Regular
-// Attributes: #947100 Regular
-// Project Types and Vars: #3E8087 Regular
-// Project Functions and Constants: #2D6469 Regular
-// Other Types and Vars: #703DAA Regular
-// Other Functions and Constants: #4B21B0 Regular
-//
-// Definitions have the same colour as plain text.
 const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
     name: "Xcode 10 Default Light",
     file_name: "Xcode-10-Default-Light",
@@ -208,27 +116,6 @@ const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
     other_decls: None,
 };
 
-// Background: #292B36
-// Current Line: #353749
-// Selection: #445261
-// Cursor: #FFFFFF
-// Invisibles: #5F5F5F
-//
-// Plain text: #E7E8EB Regular
-// Comments: #51C34F Regular
-// Documentation Markup: #23AD68 Regular
-// Documentation Markup Keywords: #35D585 Bold
-// Strings: #DE3A3C Regular
-// Characters: #8783BE Regular
-// Numbers: #00AAA3 Regular
-// Keywords: #E12DA0 Regular
-// Preprocessor Statements: #D38D5D Regular
-// URLs: #6544E9 Regular
-// Attributes: #68878F Regular
-// Project Types, Vars, Functions, Constants: #18B5B1 Regular
-// Other Types, Vars, Functions, Constants: #29A09F Regular
-//
-// Definitions have the same colour as plain text.
 const XCODE_CIVIC: Theme = Theme {
     name: "Xcode Civic",
     file_name: "Xcode-Civic",
