@@ -783,6 +783,7 @@ impl fmt::Display for Theme {
             f,
             &[
                 "punctuation.support.type.property-name",
+                "storage.modifier.lifetime",
                 "support.type.property-name",
                 "variable",
             ],
