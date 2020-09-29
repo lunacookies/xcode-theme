@@ -27,6 +27,7 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     functions: Rgb(0xB281EB),
     type_decls: Some(Rgb(0x6BDFFF)),
     other_decls: Some(Rgb(0x4EB0CC)),
+    markdown_punctuation: Rgb(0x78C2B3),
 };
 
 const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
@@ -56,6 +57,7 @@ const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
     functions: Rgb(0x804FB8),
     type_decls: Some(Rgb(0x02638C)),
     other_decls: Some(Rgb(0x057CB0)),
+    markdown_punctuation: Rgb(0x3E8087),
 };
 
 const XCODE_10_DEFAULT_DARK: Theme = Theme {
@@ -85,6 +87,7 @@ const XCODE_10_DEFAULT_DARK: Theme = Theme {
     functions: Rgb(0xA7EBDD),
     type_decls: None,
     other_decls: None,
+    markdown_punctuation: Rgb(0xA0D975),
 };
 
 const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
@@ -114,6 +117,7 @@ const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
     functions: Rgb(0x4B21B0),
     type_decls: None,
     other_decls: None,
+    markdown_punctuation: Rgb(0x3E8087),
 };
 
 const XCODE_CIVIC: Theme = Theme {
@@ -143,6 +147,7 @@ const XCODE_CIVIC: Theme = Theme {
     functions: Rgb(0x29A09F),
     type_decls: None,
     other_decls: None,
+    markdown_punctuation: Rgb(0x68878F),
 };
 
 const XCODE_WWDC: Theme = Theme {
@@ -172,6 +177,7 @@ const XCODE_WWDC: Theme = Theme {
     functions: Rgb(0xA3D783),
     type_decls: None,
     other_decls: None,
+    markdown_punctuation: Rgb(0x4F869F),
 };
 
 const TYPE_SCOPES: &[&str] = &[
@@ -239,6 +245,7 @@ struct Theme {
     functions: Rgb,
     type_decls: Option<Rgb>,
     other_decls: Option<Rgb>,
+    markdown_punctuation: Rgb,
 }
 
 impl fmt::Display for Theme {
@@ -767,6 +774,8 @@ impl fmt::Display for Theme {
             false,
         )?;
 
+        write_textmate_rule(f, &["markup.underline.link"], self.urls, false, false)?;
+
         write_textmate_rule(
             f,
             &[
@@ -822,6 +831,38 @@ impl fmt::Display for Theme {
             false,
             false,
         )?;
+
+        write_textmate_rule(
+            f,
+            &[
+                "punctuation.definition.heading.markdown",
+                "punctuation.definition.list.begin.markdown",
+                "punctuation.definition.markdown",
+                "fenced_code.block.language",
+                "punctuation.definition.quote.begin.markdown",
+                "punctuation.definition.string.begin.markdown",
+                "punctuation.definition.string.end.markdown",
+                "punctuation.definition.metadata.markdown",
+                "punctuation.definition.bold.markdown",
+                "punctuation.definition.italic.markdown",
+            ],
+            self.markdown_punctuation,
+            false,
+            false,
+        )?;
+
+        write_textmate_rule(
+            f,
+            &["string.other.link.title.markdown"],
+            self.plain_text,
+            false,
+            false,
+        )?;
+
+        write_textmate_rule(f, &["entity.name.section"], self.plain_text, false, true)?;
+
+        write_textmate_rule(f, &["markup.bold"], self.plain_text, false, true)?;
+        write_textmate_rule(f, &["markup.italic"], self.plain_text, true, false)?;
 
         write_textmate_rule(
             f,
