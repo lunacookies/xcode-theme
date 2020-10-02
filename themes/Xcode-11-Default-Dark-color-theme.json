@@ -227,6 +227,7 @@
 },
 {
 "scope": [
+"punctuation.definition.variable",
 "punctuation.support.type.property-name",
 "storage.modifier.lifetime",
 "support.type.property-name",

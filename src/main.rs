@@ -791,6 +791,7 @@ impl fmt::Display for Theme {
         write_textmate_rule(
             f,
             &[
+                "punctuation.definition.variable",
                 "punctuation.support.type.property-name",
                 "storage.modifier.lifetime",
                 "support.type.property-name",
