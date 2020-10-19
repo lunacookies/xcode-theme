@@ -2,6 +2,7 @@
     "name": "xcode-theme",
     "displayName": "Xcode Theme",
     "description": "Xcode’s themes, ported to VS Code",
+    "license": "MIT",
     "publisher": "arzg",
     "repository": {
         "url": "https://github.com/arzg/xcode-theme"
