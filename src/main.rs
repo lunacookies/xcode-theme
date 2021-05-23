@@ -701,6 +701,10 @@ impl fmt::Display for Theme {
         write_scope(f, "interface", self.interfaces)?;
 
         write_scope(f, "function", self.functions)?;
+        write_scope(f, "arithmetic", self.functions)?;
+        write_scope(f, "logical", self.functions)?;
+        write_scope(f, "bitwise", self.functions)?;
+        write_scope(f, "comparison", self.functions)?;
 
         write_scope(f, "punctuation", self.plain_text)?;
 
