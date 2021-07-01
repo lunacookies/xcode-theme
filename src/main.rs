@@ -20,11 +20,10 @@ const XCODE_11_DEFAULT_DARK: Theme = Theme {
     preproc: Rgb(0xFFA14F),
     urls: Rgb(0x6699FF),
     attributes: Rgb(0xCC9768),
-    types: Rgb(0xACF2E4),
-    variables: Rgb(0x78C2B3),
-    constants: Rgb(0x78C2B3),
-    interfaces: Rgb(0xDABAFF),
-    functions: Rgb(0xB281EB),
+    user_types: Rgb(0xACF2E4),
+    user_idents: Rgb(0x78C2B3),
+    library_types: Rgb(0xDABAFF),
+    library_idents: Rgb(0xB281EB),
     type_decls: Some(Rgb(0x6BDFFF)),
     other_decls: Some(Rgb(0x4EB0CC)),
     markdown_punctuation: Rgb(0x78C2B3),
@@ -50,11 +49,10 @@ const XCODE_11_DEFAULT_LIGHT: Theme = Theme {
     preproc: Rgb(0x78492A),
     urls: Rgb(0x1337FF),
     attributes: Rgb(0x947100),
-    types: Rgb(0x23575C),
-    variables: Rgb(0x3E8087),
-    constants: Rgb(0x3E8087),
-    interfaces: Rgb(0x4B21B0),
-    functions: Rgb(0x804FB8),
+    user_types: Rgb(0x23575C),
+    user_idents: Rgb(0x3E8087),
+    library_types: Rgb(0x4B21B0),
+    library_idents: Rgb(0x804FB8),
     type_decls: Some(Rgb(0x02638C)),
     other_decls: Some(Rgb(0x057CB0)),
     markdown_punctuation: Rgb(0x3E8087),
@@ -80,11 +78,10 @@ const XCODE_10_DEFAULT_DARK: Theme = Theme {
     preproc: Rgb(0xFFA14F),
     urls: Rgb(0x63B6FC),
     attributes: Rgb(0x86BFA3),
-    types: Rgb(0xA0D975),
-    variables: Rgb(0xBAF28F),
-    constants: Rgb(0xBAF28F),
-    interfaces: Rgb(0x8AD1C3),
-    functions: Rgb(0xA7EBDD),
+    user_types: Rgb(0xA0D975),
+    user_idents: Rgb(0xBAF28F),
+    library_types: Rgb(0x8AD1C3),
+    library_idents: Rgb(0xA7EBDD),
     type_decls: None,
     other_decls: None,
     markdown_punctuation: Rgb(0xA0D975),
@@ -110,11 +107,10 @@ const XCODE_10_DEFAULT_LIGHT: Theme = Theme {
     preproc: Rgb(0x78492A),
     urls: Rgb(0x1337FF),
     attributes: Rgb(0x947100),
-    types: Rgb(0x3E8087),
-    variables: Rgb(0x2D6469),
-    constants: Rgb(0x2D6469),
-    interfaces: Rgb(0x703DAA),
-    functions: Rgb(0x4B21B0),
+    user_types: Rgb(0x3E8087),
+    user_idents: Rgb(0x2D6469),
+    library_types: Rgb(0x703DAA),
+    library_idents: Rgb(0x4B21B0),
     type_decls: None,
     other_decls: None,
     markdown_punctuation: Rgb(0x3E8087),
@@ -140,11 +136,10 @@ const XCODE_CIVIC: Theme = Theme {
     preproc: Rgb(0xD38D5D),
     urls: Rgb(0x6544E9),
     attributes: Rgb(0x68878F),
-    types: Rgb(0x18B5B1),
-    variables: Rgb(0x18B5B1),
-    constants: Rgb(0x18B5B1),
-    interfaces: Rgb(0x29A09F),
-    functions: Rgb(0x29A09F),
+    user_types: Rgb(0x18B5B1),
+    user_idents: Rgb(0x18B5B1),
+    library_types: Rgb(0x29A09F),
+    library_idents: Rgb(0x29A09F),
     type_decls: None,
     other_decls: None,
     markdown_punctuation: Rgb(0x68878F),
@@ -170,11 +165,10 @@ const XCODE_WWDC: Theme = Theme {
     preproc: Rgb(0xE57E3D),
     urls: Rgb(0x0071CD),
     attributes: Rgb(0x4F869F),
-    types: Rgb(0x00ADBB),
-    variables: Rgb(0xFEFEFE),
-    constants: Rgb(0x00ADBB),
-    interfaces: Rgb(0xA3D783),
-    functions: Rgb(0xA3D783),
+    user_types: Rgb(0x00ADBB),
+    user_idents: Rgb(0xFEFEFE),
+    library_types: Rgb(0xA3D783),
+    library_idents: Rgb(0xA3D783),
     type_decls: None,
     other_decls: None,
     markdown_punctuation: Rgb(0x4F869F),
@@ -185,13 +179,30 @@ const TYPE_SCOPES: &[&str] = &[
     "class",
     "struct",
     "enum",
-    "enumMember",
     "typeAlias",
     "typeParameter",
     "union",
+    "interface",
 ];
 
-const VARIABLE_SCOPES: &[&str] = &["variable", "member", "parameter", "property", "lifetime"];
+const IDENT_SCOPES: &[&str] = &[
+    "variable",
+    "member",
+    "parameter",
+    "property",
+    "enumMember",
+    "lifetime",
+    "function",
+    "method",
+];
+
+const OVERRIDABLE_OPERATOR_SCOPES: &[&str] = &[
+    "arithmetic",
+    "logical",
+    "bitwise",
+    "comparison",
+    "operator.controlFlow", // try operator
+];
 
 const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
 
@@ -238,11 +249,10 @@ struct Theme {
     preproc: Rgb,
     urls: Rgb,
     attributes: Rgb,
-    types: Rgb,
-    variables: Rgb,
-    constants: Rgb,
-    interfaces: Rgb,
-    functions: Rgb,
+    user_types: Rgb,
+    user_idents: Rgb,
+    library_types: Rgb,
+    library_idents: Rgb,
     type_decls: Option<Rgb>,
     other_decls: Option<Rgb>,
     markdown_punctuation: Rgb,
@@ -687,24 +697,20 @@ impl fmt::Display for Theme {
         write_scope(f, "macro", self.preproc)?;
 
         for scope in TYPE_SCOPES {
-            write_scope(f, scope, self.types)?;
+            write_scope(f, scope, self.user_types)?;
+            write_scope(f, format!("{}.library", scope), self.library_types)?;
         }
 
-        for scope in VARIABLE_SCOPES {
-            write_scope(f, scope, self.variables)?;
+        for scope in IDENT_SCOPES {
+            write_scope(f, scope, self.user_idents)?;
+            write_scope(f, format!("{}.library", scope), self.library_idents)?;
         }
 
-        for scope in VARIABLE_SCOPES {
-            write_scope(f, format!("{}.constant", scope), self.constants)?;
+        for scope in OVERRIDABLE_OPERATOR_SCOPES {
+            write_scope(f, scope, self.library_idents)?;
         }
 
-        write_scope(f, "interface", self.interfaces)?;
-
-        write_scope(f, "function", self.functions)?;
-        write_scope(f, "arithmetic", self.functions)?;
-        write_scope(f, "logical", self.functions)?;
-        write_scope(f, "bitwise", self.functions)?;
-        write_scope(f, "comparison", self.functions)?;
+        write_scope(f, "namespace", self.plain_text)?;
 
         write_scope(f, "punctuation", self.plain_text)?;
 
@@ -787,7 +793,7 @@ impl fmt::Display for Theme {
                 "storage.type.cs",
                 "support.type",
             ],
-            self.types,
+            self.user_types,
             false,
             false,
         )?;
@@ -800,16 +806,10 @@ impl fmt::Display for Theme {
                 "storage.modifier.lifetime",
                 "support.type.property-name",
                 "variable",
+                "entity.name.function",
+                "support.function",
             ],
-            self.variables,
-            false,
-            false,
-        )?;
-
-        write_textmate_rule(
-            f,
-            &["entity.name.function", "support.function"],
-            self.functions,
+            self.user_idents,
             false,
             false,
         )?;
