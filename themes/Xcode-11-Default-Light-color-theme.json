@@ -113,6 +113,7 @@
 "keyword": { "bold": true, "foreground": "#ad3da4" },
 "boolean": { "bold": true, "foreground": "#ad3da4" },
 "builtinType": { "bold": true, "foreground": "#ad3da4" },
+"selfKeyword.declaration": { "bold": true, "foreground": "#ad3da4" },
 "macro": "#78492a",
 "type": "#23575c",
 "type.library": "#4b21b0",

@@ -204,7 +204,12 @@ const OVERRIDABLE_OPERATOR_SCOPES: &[&str] = &[
     "operator.controlFlow", // try operator
 ];
 
-const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "builtinType"];
+const KEYWORD_SCOPES: &[&str] = &[
+    "keyword",
+    "boolean",
+    "builtinType",
+    "selfKeyword.declaration",
+];
 
 const INVISIBLE: Rgba = Rgba {
     rgb: Rgb(0x000000),

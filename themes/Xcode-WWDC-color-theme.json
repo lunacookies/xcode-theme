@@ -113,6 +113,7 @@
 "keyword": "#b5008d",
 "boolean": "#b5008d",
 "builtinType": "#b5008d",
+"selfKeyword.declaration": "#b5008d",
 "macro": "#e57e3d",
 "type": "#00adbb",
 "type.library": "#a3d783",
