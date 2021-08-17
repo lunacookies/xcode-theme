@@ -112,7 +112,6 @@
 "number": "#d9c97c",
 "keyword": { "bold": true, "foreground": "#ff7ab2" },
 "boolean": { "bold": true, "foreground": "#ff7ab2" },
-"builtinType": { "bold": true, "foreground": "#ff7ab2" },
 "selfKeyword.declaration": { "bold": true, "foreground": "#ff7ab2" },
 "macro": "#ffa14f",
 "type": "#acf2e4",
@@ -131,6 +130,7 @@
 "union.library": "#dabaff",
 "interface": "#acf2e4",
 "interface.library": "#dabaff",
+"builtinType": "#dabaff",
 "variable": "#78c2b3",
 "variable.library": "#b281eb",
 "member": "#78c2b3",
@@ -208,8 +208,8 @@
 "variable.language",
 ],
 "settings": {
-"foreground": "#ff7ab2",
-"fontStyle": "bold",
+"foreground": "#dabaff",
+"fontStyle": "",
 },
 },
 {

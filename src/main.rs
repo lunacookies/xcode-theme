@@ -204,12 +204,7 @@ const OVERRIDABLE_OPERATOR_SCOPES: &[&str] = &[
     "operator.controlFlow", // try operator
 ];
 
-const KEYWORD_SCOPES: &[&str] = &[
-    "keyword",
-    "boolean",
-    "builtinType",
-    "selfKeyword.declaration",
-];
+const KEYWORD_SCOPES: &[&str] = &["keyword", "boolean", "selfKeyword.declaration"];
 
 const INVISIBLE: Rgba = Rgba {
     rgb: Rgb(0x000000),
@@ -705,6 +700,7 @@ impl fmt::Display for Theme {
             write_scope(f, scope, self.user_types)?;
             write_scope(f, format!("{}.library", scope), self.library_types)?;
         }
+        write_scope(f, "builtinType", self.library_types)?;
 
         for scope in IDENT_SCOPES {
             write_scope(f, scope, self.user_idents)?;
@@ -771,9 +767,9 @@ impl fmt::Display for Theme {
                 "support.type.primitive",
                 "variable.language",
             ],
-            self.keywords,
+            self.library_types,
             false,
-            self.are_keywords_bold,
+            false,
         )?;
 
         write_textmate_rule(
