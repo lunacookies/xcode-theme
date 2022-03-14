@@ -1,51 +1,51 @@
 {
-    "name": "xcode-theme",
-    "displayName": "Xcode Theme",
-    "description": "Xcode’s themes, ported to VS Code",
-    "license": "MIT",
-    "publisher": "arzg",
-    "repository": {
-        "url": "https://github.com/arzg/xcode-theme"
-    },
-    "version": "0.6.2",
-    "engines": {
-        "vscode": "^1.47.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Xcode 11 Default Dark",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Xcode-11-Default-Dark-color-theme.json"
-            },
-            {
-                "label": "Xcode 11 Default Light",
-                "uiTheme": "vs",
-                "path": "./themes/Xcode-11-Default-Light-color-theme.json"
-            },
-            {
-                "label": "Xcode 10 Default Dark",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Xcode-10-Default-Dark-color-theme.json"
-            },
-            {
-                "label": "Xcode 10 Default Light",
-                "uiTheme": "vs",
-                "path": "./themes/Xcode-10-Default-Light-color-theme.json"
-            },
-            {
-                "label": "Xcode Civic",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Xcode-Civic-color-theme.json"
-            },
-            {
-                "label": "Xcode WWDC",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Xcode-WWDC-color-theme.json"
-            }
-        ]
-    }
+  "name": "xcode-theme",
+  "displayName": "Xcode Theme",
+  "description": "Xcode’s themes, ported to VS Code",
+  "license": "MIT",
+  "publisher": "arzg",
+  "repository": {
+    "url": "https://github.com/arzg/xcode-theme"
+  },
+  "version": "0.6.3",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Xcode 11 Default Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Xcode-11-Default-Dark-color-theme.json"
+      },
+      {
+        "label": "Xcode 11 Default Light",
+        "uiTheme": "vs",
+        "path": "./themes/Xcode-11-Default-Light-color-theme.json"
+      },
+      {
+        "label": "Xcode 10 Default Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Xcode-10-Default-Dark-color-theme.json"
+      },
+      {
+        "label": "Xcode 10 Default Light",
+        "uiTheme": "vs",
+        "path": "./themes/Xcode-10-Default-Light-color-theme.json"
+      },
+      {
+        "label": "Xcode Civic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Xcode-Civic-color-theme.json"
+      },
+      {
+        "label": "Xcode WWDC",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Xcode-WWDC-color-theme.json"
+      }
+    ]
+  }
 }
