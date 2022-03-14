@@ -728,6 +728,8 @@ impl fmt::Display for Theme {
             self.other_decls.unwrap_or(self.plain_text),
         )?;
 
+        write_scope(f, "*.mutable", r#"{ "underline": true }"#)?;
+
         writeln!(f, "}},")?;
 
         writeln!(f, "\"tokenColors\": [")?;

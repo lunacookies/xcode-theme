@@ -164,6 +164,7 @@
 "union.declaration": "#ffffff",
 "interface.declaration": "#ffffff",
 "*.declaration": "#ffffff",
+"*.mutable": { "underline": true },
 },
 "tokenColors": [
 {
