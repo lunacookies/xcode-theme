@@ -10,18 +10,25 @@ fn main() -> anyhow::Result<()> {
 }
 
 fn workbench(t: &mut ThemeBuilder, p: &Palette) {
-    t.w(["editor.background"], p.bg);
     t.w(["editor.foreground"], p.fg);
+    t.w(["editor.background"], p.bg);
+
+    t.w(["statusBar.foreground"], p.status_fg);
+    t.w(["statusBar.background"], p.status_bg);
 }
 
 struct Palette {
-    bg: u32,
     fg: (u32, u8),
+    bg: u32,
+    status_fg: u32,
+    status_bg: u32,
 }
 
 impl Palette {
     const XCODE_11_DEFAULT_DARK: Self = Self {
-        bg: 0x292A30,
         fg: (0xFFFFFF, (0.85 * 255.0) as u8), // Xcode uses a foreground of white with 85% opacity
+        bg: 0x292A30,
+        status_fg: 0x9A9A9C,
+        status_bg: 0x202124,
     };
 }

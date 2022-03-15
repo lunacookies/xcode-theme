@@ -5,7 +5,9 @@
     "semanticHighlighting": true,
     "semanticTokenColors": {},
     "colors": {
+        "editor.foreground": "#FFFFFFD8",
         "editor.background": "#292A30",
-        "editor.foreground": "#FFFFFFD8"
+        "statusBar.foreground": "#9A9A9C",
+        "statusBar.background": "#202124"
     }
 }
