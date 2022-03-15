@@ -19,32 +19,7 @@
       {
         "label": "Xcode 11 Default Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/Xcode-11-Default-Dark-color-theme.json"
-      },
-      {
-        "label": "Xcode 11 Default Light",
-        "uiTheme": "vs",
-        "path": "./themes/Xcode-11-Default-Light-color-theme.json"
-      },
-      {
-        "label": "Xcode 10 Default Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Xcode-10-Default-Dark-color-theme.json"
-      },
-      {
-        "label": "Xcode 10 Default Light",
-        "uiTheme": "vs",
-        "path": "./themes/Xcode-10-Default-Light-color-theme.json"
-      },
-      {
-        "label": "Xcode Civic",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Xcode-Civic-color-theme.json"
-      },
-      {
-        "label": "Xcode WWDC",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Xcode-WWDC-color-theme.json"
+        "path": "./themes/Xcode 11 Default Dark-color-theme.json"
       }
     ]
   }

@@ -1,0 +1,11 @@
+// Do not edit directly; this file is generated.
+{
+    "name": "Xcode 11 Default Dark",
+    "tokenColors": [],
+    "semanticHighlighting": true,
+    "semanticTokenColors": {},
+    "colors": {
+        "editor.background": "#292A30",
+        "editor.foreground": "#FFFFFFD8"
+    }
+}
