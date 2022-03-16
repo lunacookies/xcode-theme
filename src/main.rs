@@ -78,9 +78,15 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
     t.w(["list.highlightForeground"], p.filtered_list_fg);
     t.w(["list.focusHighlightForeground"], p.active_filtered_list_fg);
 
-    t.w(["editorSuggestWidget.foreground"], p.suggest_fg);
     t.w(
-        ["editorSuggestWidget.selectedForeground"],
+        ["editorSuggestWidget.foreground", "quickInput.foreground"],
+        p.suggest_fg,
+    );
+    t.w(
+        [
+            "editorSuggestWidget.selectedForeground",
+            "quickInputList.focusForeground",
+        ],
         p.active_suggest_fg,
     );
     t.w(["editorWidget.background"], p.suggest_bg);
