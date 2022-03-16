@@ -357,10 +357,16 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         p.removed,
     );
 
+    t.a([s("*.mutable")], FontStyle::Underline);
+
+    // prevent TextMate highlighting from covering up unresolved references
+    t.a([s("unresolvedReference")], (p.fg, FontStyle::Clear));
+
     t.a(
         [
             s("variable"),
             s("parameter"),
+            s("macroBang"),
             tm("keyword.operator"),
             tm("punctuation"),
             tm("storage.modifier.pointer"),

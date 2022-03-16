@@ -492,6 +492,15 @@
         "magit-remote-ref-name": {
             "foreground": "#ACF2E4"
         },
+        "*.mutable": {
+            "underline": true
+        },
+        "unresolvedReference": {
+            "foreground": "#FFFFFFD8",
+            "bold": false,
+            "italic": false,
+            "underline": false
+        },
         "variable": {
             "foreground": "#FFFFFFD8",
             "bold": false,
@@ -499,6 +508,12 @@
             "underline": false
         },
         "parameter": {
+            "foreground": "#FFFFFFD8",
+            "bold": false,
+            "italic": false,
+            "underline": false
+        },
+        "macroBang": {
             "foreground": "#FFFFFFD8",
             "bold": false,
             "italic": false,
