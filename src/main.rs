@@ -1,4 +1,4 @@
-use mottle::dsl::{s, FontStyle, ThemeBuilder};
+use mottle::dsl::{s, tm, FontStyle, ThemeBuilder};
 
 fn main() -> anyhow::Result<()> {
     let mut theme_builder = ThemeBuilder::default();
@@ -107,12 +107,48 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     t.w(["editor.lineHighlightBackground"], p.current_line_bg);
     t.w(["editorWhitespace.foreground"], p.invisibles);
 
-    t.a([s("comment")], p.comments);
-    t.a([s("string")], p.strings);
+    t.a(
+        [
+            s("comment"),
+            tm("comment"),
+            tm("punctuation.definition.comment"),
+        ],
+        p.comments,
+    );
+    t.a(
+        [
+            s("string"),
+            tm("string"),
+            tm("punctuation.definition.string"),
+            tm("punctuation.support.type.property-name.begin.json"),
+            tm("punctuation.support.type.property-name.end.json"),
+        ],
+        p.strings,
+    );
     t.a([s("character")], p.characters);
-    t.a([s("number")], p.numbers);
-    t.a([s("keyword")], (p.keywords, FontStyle::Bold));
-    t.a([], p.preprocessor_statements); // TODO
+    t.a([s("number"), tm("constant.numeric")], p.numbers);
+
+    t.a(
+        [
+            s("keyword"),
+            tm("keyword"),
+            tm("keyword.operator.new"),
+            tm("keyword.operator.wordlike"),
+            tm("keyword.operator.logical.and"),
+            tm("storage"),
+            tm("variable.language"),
+            tm("constant.language"),
+        ],
+        (p.keywords, FontStyle::Bold),
+    );
+
+    t.a(
+        [
+            tm("keyword.control.directive"),
+            tm("punctuation.definition.directive"),
+        ],
+        (p.preprocessor_statements, FontStyle::Clear),
+    );
 
     // Xcode doesn’t have specific styling for namespaces (it highlights them like types)
     // and enum members (it highlights them like constants)
@@ -140,6 +176,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("function.declaration"),
             s("method.declaration"),
             s("constParameter.declaration"),
+            tm("variable.parameter"),
         ],
         p.other_declarations,
     );
@@ -155,6 +192,8 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("typeParameter"),
             s("typeAlias"),
             s("namespace"),
+            tm("entity.name.type"),
+            tm("entity.other.inherited-class"),
         ],
         p.project_types,
     );
@@ -170,11 +209,27 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("typeAlias.library"),
             s("namespace"),
             s("builtinType"),
+            tm("keyword.type.cs"),
+            tm("storage.type.numeric.go"),
+            tm("storage.type.byte.go"),
+            tm("storage.type.boolean.go"),
+            tm("storage.type.string.go"),
+            tm("storage.type.uintptr.go"),
+            tm("storage.type.error.go"),
+            tm("storage.type.rune.go"),
         ],
-        p.library_types,
+        (p.library_types, FontStyle::Clear),
     );
 
-    t.a([s("function"), s("method")], p.project_functions);
+    t.a(
+        [
+            s("function"),
+            s("method"),
+            tm("entity.name.function"),
+            tm("support.function"),
+        ],
+        p.project_functions,
+    );
     t.a(
         [
             s("function.library"),
@@ -184,6 +239,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("bitwise"),
             s("logical"),
             s("comparison"),
+            tm("support.function.builtin"),
         ],
         p.library_functions,
     );
@@ -205,11 +261,89 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         p.library_constants,
     );
 
-    t.a([s("property")], p.project_properties);
+    t.a(
+        [
+            s("property"),
+            tm("variable.other.property"),
+            tm("variable.other.object.property"),
+            tm("entity.name.variable.field"),
+        ],
+        p.project_properties,
+    );
     t.a([s("property.library")], p.library_properties);
 
-    t.a([s("macro"), s("derive")], p.project_macros);
+    t.a(
+        [
+            s("macro"),
+            s("derive"),
+            tm("entity.name.function.preprocessor"),
+        ],
+        p.project_macros,
+    );
     t.a([s("macro.library"), s("derive.library")], p.library_macros);
+
+    // what follows is some HTML and CSS highlighting designed to look good,
+    // but not necessarily follow what Xcode does or the logic of the theme
+    t.a([tm("entity.name.tag")], p.library_types);
+    t.a(
+        [
+            tm("entity.other.attribute-name"),
+            tm("support.type.property-name.css"),
+            tm("support.type.property-name.media.css"),
+        ],
+        p.library_properties,
+    );
+    t.a(
+        [
+            tm("constant.other.color"),
+            tm("support.constant.color"),
+            tm("punctuation.definition.constant.css"),
+            tm("keyword.other.unit"),
+        ],
+        p.numbers,
+    );
+    t.a(
+        [
+            tm("support.constant.property-value"),
+            tm("support.constant.font-name"),
+        ],
+        (p.keywords, FontStyle::Bold),
+    );
+    t.a([tm("support.constant.media.css")], p.project_constants);
+
+    t.a(
+        [
+            tm("punctuation.definition.heading.markdown"),
+            tm("meta.separator.markdown"),
+            tm("punctuation.definition.markdown"),
+            tm("punctuation.definition.list.begin.markdown"),
+            tm("punctuation.definition.italic.markdown"),
+            tm("punctuation.definition.bold.markdown"),
+            tm("punctuation.definition.quote.begin.markdown"),
+            tm("punctuation.definition.raw.markdown"),
+            tm("fenced_code.block.language.markdown"),
+            tm("markup.heading.marker.asciidoc"),
+            tm("markup.heading.block-attribute.asciidoc"),
+            tm("punctuation.separator.asciidoc"),
+            tm("constant.asciidoc"),
+            tm("punctuation.definition.asciidoc"),
+        ],
+        (p.project_functions, FontStyle::Clear),
+    );
+    t.a([tm("markup.heading")], FontStyle::Bold);
+    t.a([tm("markup.bold")], FontStyle::Bold);
+    t.a([tm("markup.italic")], FontStyle::Italic);
+
+    t.a(
+        [
+            s("variable"),
+            s("parameter"),
+            tm("keyword.operator"),
+            tm("punctuation"),
+            tm("storage.modifier.pointer"),
+        ],
+        (p.fg, FontStyle::Clear),
+    );
 }
 
 struct UiPalette {
