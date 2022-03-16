@@ -136,7 +136,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("method.declaration"),
             s("constParameter.declaration"),
         ],
-        p.library_declarations,
+        p.other_declarations,
     );
 
     t.a(
@@ -281,7 +281,7 @@ struct EditorPalette {
     keywords: u32,
     preprocessor_statements: u32,
     type_declarations: u32,
-    library_declarations: u32,
+    other_declarations: u32,
     project_types: u32,
     library_types: u32,
     project_functions: u32,
@@ -309,7 +309,7 @@ impl EditorPalette {
         keywords: 0xFF7AB2,
         preprocessor_statements: 0xFFA14F,
         type_declarations: 0x6BDFFF,
-        library_declarations: 0x4EB0CC,
+        other_declarations: 0x4EB0CC,
         project_types: 0xACF2E4,
         library_types: 0xDABAFF,
         project_functions: 0x78C2B3,
