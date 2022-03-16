@@ -3,7 +3,183 @@
     "name": "Xcode 11 Default Dark",
     "tokenColors": [],
     "semanticHighlighting": true,
-    "semanticTokenColors": {},
+    "semanticTokenColors": {
+        "comment": {
+            "foreground": "#7F8C98"
+        },
+        "string": {
+            "foreground": "#FF8170"
+        },
+        "character": {
+            "foreground": "#D9C97C"
+        },
+        "number": {
+            "foreground": "#D9C97C"
+        },
+        "keyword": {
+            "foreground": "#FF7AB2",
+            "bold": true
+        },
+        "type.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "class.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "struct.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "enum.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "union.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "interface.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "typeParameter.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "typeAlias.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "namespace.declaration": {
+            "foreground": "#6BDFFF"
+        },
+        "variable.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "parameter.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "property.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "function.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "method.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "constParameter.declaration": {
+            "foreground": "#4EB0CC"
+        },
+        "type": {
+            "foreground": "#ACF2E4"
+        },
+        "class": {
+            "foreground": "#ACF2E4"
+        },
+        "struct": {
+            "foreground": "#ACF2E4"
+        },
+        "enum": {
+            "foreground": "#ACF2E4"
+        },
+        "union": {
+            "foreground": "#ACF2E4"
+        },
+        "interface": {
+            "foreground": "#ACF2E4"
+        },
+        "typeParameter": {
+            "foreground": "#ACF2E4"
+        },
+        "typeAlias": {
+            "foreground": "#ACF2E4"
+        },
+        "namespace": {
+            "foreground": "#DABAFF"
+        },
+        "type.library": {
+            "foreground": "#DABAFF"
+        },
+        "class.library": {
+            "foreground": "#DABAFF"
+        },
+        "struct.library": {
+            "foreground": "#DABAFF"
+        },
+        "enum.library": {
+            "foreground": "#DABAFF"
+        },
+        "union.library": {
+            "foreground": "#DABAFF"
+        },
+        "interface.library": {
+            "foreground": "#DABAFF"
+        },
+        "typeParameter.library": {
+            "foreground": "#DABAFF"
+        },
+        "typeAlias.library": {
+            "foreground": "#DABAFF"
+        },
+        "builtinType": {
+            "foreground": "#DABAFF"
+        },
+        "function": {
+            "foreground": "#78C2B3"
+        },
+        "method": {
+            "foreground": "#78C2B3"
+        },
+        "function.library": {
+            "foreground": "#B281EB"
+        },
+        "method.library": {
+            "foreground": "#B281EB"
+        },
+        "arithmetic": {
+            "foreground": "#B281EB"
+        },
+        "bitwise": {
+            "foreground": "#B281EB"
+        },
+        "logical": {
+            "foreground": "#B281EB"
+        },
+        "comparison": {
+            "foreground": "#B281EB"
+        },
+        "variable.constant": {
+            "foreground": "#78C2B3"
+        },
+        "variable.static": {
+            "foreground": "#78C2B3"
+        },
+        "enumMember": {
+            "foreground": "#78C2B3"
+        },
+        "variable.constant.library": {
+            "foreground": "#B281EB"
+        },
+        "variable.static.library": {
+            "foreground": "#B281EB"
+        },
+        "enumMember.library": {
+            "foreground": "#B281EB"
+        },
+        "property": {
+            "foreground": "#78C2B3"
+        },
+        "property.library": {
+            "foreground": "#B281EB"
+        },
+        "macro": {
+            "foreground": "#FFA14F"
+        },
+        "derive": {
+            "foreground": "#FFA14F"
+        },
+        "macro.library": {
+            "foreground": "#FFA14F"
+        },
+        "derive.library": {
+            "foreground": "#FFA14F"
+        }
+    },
     "colors": {
         "foreground": "#DDDDDE",
         "editor.foreground": "#FFFFFFD8",

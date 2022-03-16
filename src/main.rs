@@ -1,8 +1,9 @@
-use mottle::dsl::ThemeBuilder;
+use mottle::dsl::{s, FontStyle, ThemeBuilder};
 
 fn main() -> anyhow::Result<()> {
     let mut theme_builder = ThemeBuilder::default();
     workbench(&mut theme_builder, &Palette::XCODE_11_DEFAULT_DARK);
+    syntax(&mut theme_builder, &Palette::XCODE_11_DEFAULT_DARK);
     let theme = theme_builder.build("Xcode 11 Default Dark");
     mottle::save_theme(&theme)?;
 
@@ -99,6 +100,112 @@ fn workbench(t: &mut ThemeBuilder, p: &Palette) {
     t.w(["scrollbar.shadow"], (0x000000, 0x00));
 }
 
+fn syntax(t: &mut ThemeBuilder, p: &Palette) {
+    t.a([s("comment")], p.comments);
+    t.a([s("string")], p.strings);
+    t.a([s("character")], p.characters);
+    t.a([s("number")], p.numbers);
+    t.a([s("keyword")], (p.keywords, FontStyle::Bold));
+    t.a([], p.preprocessor_statements); // TODO
+
+    // Xcode doesn’t have specific styling for namespaces (it highlights them like types)
+    // and enum members (it highlights them like constants)
+
+    t.a(
+        [
+            s("type.declaration"),
+            s("class.declaration"),
+            s("struct.declaration"),
+            s("enum.declaration"),
+            s("union.declaration"),
+            s("interface.declaration"),
+            s("typeParameter.declaration"),
+            s("typeAlias.declaration"),
+            s("namespace.declaration"),
+        ],
+        p.type_declarations,
+    );
+
+    t.a(
+        [
+            s("variable.declaration"),
+            s("parameter.declaration"),
+            s("property.declaration"),
+            s("function.declaration"),
+            s("method.declaration"),
+            s("constParameter.declaration"),
+        ],
+        p.library_declarations,
+    );
+
+    t.a(
+        [
+            s("type"),
+            s("class"),
+            s("struct"),
+            s("enum"),
+            s("union"),
+            s("interface"),
+            s("typeParameter"),
+            s("typeAlias"),
+            s("namespace"),
+        ],
+        p.project_types,
+    );
+    t.a(
+        [
+            s("type.library"),
+            s("class.library"),
+            s("struct.library"),
+            s("enum.library"),
+            s("union.library"),
+            s("interface.library"),
+            s("typeParameter.library"),
+            s("typeAlias.library"),
+            s("namespace"),
+            s("builtinType"),
+        ],
+        p.library_types,
+    );
+
+    t.a([s("function"), s("method")], p.project_functions);
+    t.a(
+        [
+            s("function.library"),
+            s("method.library"),
+            // Xcode highlights overloadable operators as library functions
+            s("arithmetic"),
+            s("bitwise"),
+            s("logical"),
+            s("comparison"),
+        ],
+        p.library_functions,
+    );
+
+    t.a(
+        [
+            s("variable.constant"),
+            s("variable.static"),
+            s("enumMember"),
+        ],
+        p.project_constants,
+    );
+    t.a(
+        [
+            s("variable.constant.library"),
+            s("variable.static.library"),
+            s("enumMember.library"),
+        ],
+        p.library_constants,
+    );
+
+    t.a([s("property")], p.project_properties);
+    t.a([s("property.library")], p.library_properties);
+
+    t.a([s("macro"), s("derive")], p.project_macros);
+    t.a([s("macro.library"), s("derive.library")], p.library_macros);
+}
+
 struct Palette {
     ui_fg: u32,
     light_ui_fg: u32,
@@ -131,6 +238,25 @@ struct Palette {
     suggest_bg: u32,
     text_field_bg: u32,
     text_field_placeholder_fg: u32,
+
+    comments: u32,
+    strings: u32,
+    characters: u32,
+    numbers: u32,
+    keywords: u32,
+    preprocessor_statements: u32,
+    type_declarations: u32,
+    library_declarations: u32,
+    project_types: u32,
+    library_types: u32,
+    project_functions: u32,
+    library_functions: u32,
+    project_constants: u32,
+    library_constants: u32,
+    project_properties: u32,
+    library_properties: u32,
+    project_macros: u32,
+    library_macros: u32,
 }
 
 impl Palette {
@@ -166,5 +292,24 @@ impl Palette {
         suggest_bg: 0x1E2023,
         text_field_bg: 0x1E1E1E,
         text_field_placeholder_fg: 0x727272,
+
+        comments: 0x7F8C98,
+        strings: 0xFF8170,
+        characters: 0xD9C97C,
+        numbers: 0xD9C97C,
+        keywords: 0xFF7AB2,
+        preprocessor_statements: 0xFFA14F,
+        type_declarations: 0x6BDFFF,
+        library_declarations: 0x4EB0CC,
+        project_types: 0xACF2E4,
+        library_types: 0xDABAFF,
+        project_functions: 0x78C2B3,
+        library_functions: 0xB281EB,
+        project_constants: 0x78C2B3,
+        library_constants: 0xB281EB,
+        project_properties: 0x78C2B3,
+        library_properties: 0xB281EB,
+        project_macros: 0xFFA14F,
+        library_macros: 0xFFA14F,
     };
 }
