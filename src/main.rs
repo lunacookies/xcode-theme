@@ -283,8 +283,9 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     );
     t.a([s("macro.library"), s("derive.library")], p.library_macros);
 
-    // what follows is some HTML and CSS highlighting designed to look good,
+    // what follows is some language-specific highlighting designed to look good,
     // but not necessarily follow what Xcode does or the logic of the theme
+
     t.a([tm("entity.name.tag")], p.library_types);
     t.a(
         [
@@ -334,6 +335,27 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     t.a([tm("markup.heading")], FontStyle::Bold);
     t.a([tm("markup.bold")], FontStyle::Bold);
     t.a([tm("markup.italic")], FontStyle::Italic);
+
+    t.a([tm("magit.header")], p.library_types);
+    t.a([tm("magit.subheader")], p.library_functions);
+    t.a([s("magit-ref-name")], p.project_functions);
+    t.a([s("magit-remote-ref-name")], p.project_types);
+    t.a([tm("magit.entity")], p.numbers);
+    t.a(
+        [
+            tm("meta.diff.range.unified"),
+            tm("punctuation.definition.range.diff"),
+        ],
+        p.comments,
+    );
+    t.a(
+        [tm("markup.inserted"), tm("punctuation.definition.inserted")],
+        p.added,
+    );
+    t.a(
+        [tm("markup.deleted"), tm("punctuation.definition.deleted")],
+        p.removed,
+    );
 
     t.a(
         [
@@ -473,6 +495,8 @@ struct EditorPalette {
     library_properties: u32,
     project_macros: u32,
     library_macros: u32,
+    added: u32,
+    removed: u32,
 }
 
 impl EditorPalette {
@@ -501,6 +525,8 @@ impl EditorPalette {
         library_properties: 0xB281EB,
         project_macros: 0xFFA14F,
         library_macros: 0xFFA14F,
+        added: 0xACF2E4,
+        removed: 0xFF8170,
     };
 
     const XCODE_11_DEFAULT_LIGHT: Self = Self {
@@ -528,5 +554,7 @@ impl EditorPalette {
         library_properties: 0x804FB8,
         project_macros: 0x78492A,
         library_macros: 0x78492A,
+        added: 0x3E8087,
+        removed: 0xD12F1B,
     };
 }

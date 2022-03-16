@@ -218,6 +218,57 @@
         },
         {
             "scope": [
+                "magit.header"
+            ],
+            "settings": {
+                "foreground": "#DABAFF"
+            }
+        },
+        {
+            "scope": [
+                "magit.subheader"
+            ],
+            "settings": {
+                "foreground": "#B281EB"
+            }
+        },
+        {
+            "scope": [
+                "magit.entity"
+            ],
+            "settings": {
+                "foreground": "#D9C97C"
+            }
+        },
+        {
+            "scope": [
+                "meta.diff.range.unified",
+                "punctuation.definition.range.diff"
+            ],
+            "settings": {
+                "foreground": "#7F8C98"
+            }
+        },
+        {
+            "scope": [
+                "markup.inserted",
+                "punctuation.definition.inserted"
+            ],
+            "settings": {
+                "foreground": "#ACF2E4"
+            }
+        },
+        {
+            "scope": [
+                "markup.deleted",
+                "punctuation.definition.deleted"
+            ],
+            "settings": {
+                "foreground": "#FF8170"
+            }
+        },
+        {
+            "scope": [
                 "keyword.operator",
                 "punctuation",
                 "storage.modifier.pointer"
@@ -434,6 +485,12 @@
         },
         "derive.library": {
             "foreground": "#FFA14F"
+        },
+        "magit-ref-name": {
+            "foreground": "#78C2B3"
+        },
+        "magit-remote-ref-name": {
+            "foreground": "#ACF2E4"
         },
         "variable": {
             "foreground": "#FFFFFFD8",
