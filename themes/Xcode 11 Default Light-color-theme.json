@@ -574,6 +574,8 @@
         "editorCursor.background": "#FFFFFF",
         "terminalCursor.background": "#FFFFFF",
         "editor.lineHighlightBackground": "#ECF5FF",
-        "editorWhitespace.foreground": "#D6D6D6"
+        "editorWhitespace.foreground": "#D6D6D6",
+        "editorInlayHint.foreground": "#707F8C",
+        "editorInlayHint.background": "#00000011"
     }
 }

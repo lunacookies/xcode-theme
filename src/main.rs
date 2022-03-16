@@ -107,6 +107,8 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     );
     t.w(["editor.lineHighlightBackground"], p.current_line_bg);
     t.w(["editorWhitespace.foreground"], p.invisibles);
+    t.w(["editorInlayHint.foreground"], p.comments);
+    t.w(["editorInlayHint.background"], (p.fg.0, 0x11));
 
     t.a(
         [
