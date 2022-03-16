@@ -7,6 +7,12 @@ fn main() -> anyhow::Result<()> {
     let theme = theme_builder.build("Xcode 11 Default Dark");
     mottle::save_theme(&theme)?;
 
+    let mut theme_builder = ThemeBuilder::default();
+    ui(&mut theme_builder, &UiPalette::LIGHT);
+    editor(&mut theme_builder, &EditorPalette::XCODE_11_DEFAULT_LIGHT);
+    let theme = theme_builder.build("Xcode 11 Default Light");
+    mottle::save_theme(&theme)?;
+
     Ok(())
 }
 
@@ -69,13 +75,12 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
     t.w(["list.activeSelectionBackground"], p.active_list_bg);
     t.w(["list.hoverBackground"], (0x000000, 0x00));
     t.w(["list.highlightForeground"], p.filtered_list_fg);
+    t.w(["list.focusHighlightForeground"], p.active_filtered_list_fg);
 
+    t.w(["editorSuggestWidget.foreground"], p.suggest_fg);
     t.w(
-        [
-            "editorSuggestWidget.foreground",
-            "editorSuggestWidget.selectedForeground",
-        ],
-        p.suggest_fg,
+        ["editorSuggestWidget.selectedForeground"],
+        p.active_suggest_fg,
     );
     t.w(["editorWidget.background"], p.suggest_bg);
     t.w(["editorWidget.border"], p.light_border);
@@ -230,7 +235,9 @@ struct UiPalette {
     selection: u32,
     active_list_bg: u32,
     filtered_list_fg: u32,
+    active_filtered_list_fg: u32,
     suggest_fg: (u32, u8),
+    active_suggest_fg: (u32, u8),
     suggest_bg: u32,
     text_field_bg: u32,
     text_field_placeholder_fg: u32,
@@ -260,10 +267,43 @@ impl UiPalette {
         selection: 0x3F638B,
         active_list_bg: 0x1658BE,
         filtered_list_fg: 0xFFFFFF,
+        active_filtered_list_fg: 0xFFFFFF,
         suggest_fg: (0xFFFFFF, 0xBB),
+        active_suggest_fg: (0xFFFFFF, 0xBB),
         suggest_bg: 0x1E2023,
         text_field_bg: 0x1E1E1E,
         text_field_placeholder_fg: 0x727272,
+    };
+
+    const LIGHT: Self = Self {
+        fg: 0x272727,
+        light_fg: 0x363636,
+        dark_border: 0xDEDEDE,
+        light_border: 0xE6E6E6,
+        focus_border: 0x8DB4FC,
+        status_fg: 0x808080,
+        status_bg: 0xFFFFFF,
+        sidebar_bg: 0xE2E1E2,
+        panel_bg: 0xEEEEEE,
+        inactive_activitybar_fg: 0x636263,
+        active_activitybar_fg: 0x0070F5,
+        inactive_titlebar_fg: 0xA8A8A8,
+        active_titlebar_fg: 0x4A4A4A,
+        inactive_titlebar_bg: 0xE8E8E8,
+        active_titlebar_bg: 0xF5F4F4,
+        toolbar_bg: 0xFFFFFF,
+        active_tab_bg: 0xD2E7FF,
+        line_numbers: 0xA6A6A6,
+        active_line_number: 0x232426,
+        selection: 0xB3D7FF,
+        active_list_bg: 0x59A2FF,
+        filtered_list_fg: 0x000000,
+        active_filtered_list_fg: 0xFFFFFF,
+        suggest_fg: (0x3F3F3F, 0xFF),
+        active_suggest_fg: (0xFFFFFF, 0xCC),
+        suggest_bg: 0xE9E8E8,
+        text_field_bg: 0xFFFFFF,
+        text_field_placeholder_fg: 0xC0C0C0,
     };
 }
 
@@ -320,5 +360,32 @@ impl EditorPalette {
         library_properties: 0xB281EB,
         project_macros: 0xFFA14F,
         library_macros: 0xFFA14F,
+    };
+
+    const XCODE_11_DEFAULT_LIGHT: Self = Self {
+        fg: (0x000000, u8::MAX),
+        bg: 0xFFFFFF,
+        selection: 0xB2D7FF,
+        cursor: 0x000000,
+        current_line_bg: 0xECF5FF,
+        invisibles: 0xD6D6D6,
+        comments: 0xD6D6D6,
+        strings: 0xD12F1B,
+        characters: 0x272AD8,
+        numbers: 0x272AD8,
+        keywords: 0xAD3DA4,
+        preprocessor_statements: 0x78492A,
+        type_declarations: 0x02638C,
+        other_declarations: 0x057CB0,
+        project_types: 0x23575C,
+        library_types: 0x4B21B0,
+        project_functions: 0x3E8087,
+        library_functions: 0x804FB8,
+        project_constants: 0x3E8087,
+        library_constants: 0x804FB8,
+        project_properties: 0x3E8087,
+        library_properties: 0x804FB8,
+        project_macros: 0x78492A,
+        library_macros: 0x78492A,
     };
 }

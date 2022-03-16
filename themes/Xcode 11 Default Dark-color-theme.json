@@ -216,6 +216,7 @@
         "list.activeSelectionBackground": "#1658BE",
         "list.hoverBackground": "#00000000",
         "list.highlightForeground": "#FFFFFF",
+        "list.focusHighlightForeground": "#FFFFFF",
         "editorSuggestWidget.foreground": "#FFFFFFBB",
         "editorSuggestWidget.selectedForeground": "#FFFFFFBB",
         "editorWidget.background": "#1E2023",

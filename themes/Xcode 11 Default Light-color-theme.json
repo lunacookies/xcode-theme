@@ -1,0 +1,238 @@
+// Do not edit directly; this file is generated.
+{
+    "name": "Xcode 11 Default Light",
+    "tokenColors": [],
+    "semanticHighlighting": true,
+    "semanticTokenColors": {
+        "comment": {
+            "foreground": "#D6D6D6"
+        },
+        "string": {
+            "foreground": "#D12F1B"
+        },
+        "character": {
+            "foreground": "#272AD8"
+        },
+        "number": {
+            "foreground": "#272AD8"
+        },
+        "keyword": {
+            "foreground": "#AD3DA4",
+            "bold": true
+        },
+        "type.declaration": {
+            "foreground": "#02638C"
+        },
+        "class.declaration": {
+            "foreground": "#02638C"
+        },
+        "struct.declaration": {
+            "foreground": "#02638C"
+        },
+        "enum.declaration": {
+            "foreground": "#02638C"
+        },
+        "union.declaration": {
+            "foreground": "#02638C"
+        },
+        "interface.declaration": {
+            "foreground": "#02638C"
+        },
+        "typeParameter.declaration": {
+            "foreground": "#02638C"
+        },
+        "typeAlias.declaration": {
+            "foreground": "#02638C"
+        },
+        "namespace.declaration": {
+            "foreground": "#02638C"
+        },
+        "variable.declaration": {
+            "foreground": "#057CB0"
+        },
+        "parameter.declaration": {
+            "foreground": "#057CB0"
+        },
+        "property.declaration": {
+            "foreground": "#057CB0"
+        },
+        "function.declaration": {
+            "foreground": "#057CB0"
+        },
+        "method.declaration": {
+            "foreground": "#057CB0"
+        },
+        "constParameter.declaration": {
+            "foreground": "#057CB0"
+        },
+        "type": {
+            "foreground": "#23575C"
+        },
+        "class": {
+            "foreground": "#23575C"
+        },
+        "struct": {
+            "foreground": "#23575C"
+        },
+        "enum": {
+            "foreground": "#23575C"
+        },
+        "union": {
+            "foreground": "#23575C"
+        },
+        "interface": {
+            "foreground": "#23575C"
+        },
+        "typeParameter": {
+            "foreground": "#23575C"
+        },
+        "typeAlias": {
+            "foreground": "#23575C"
+        },
+        "namespace": {
+            "foreground": "#4B21B0"
+        },
+        "type.library": {
+            "foreground": "#4B21B0"
+        },
+        "class.library": {
+            "foreground": "#4B21B0"
+        },
+        "struct.library": {
+            "foreground": "#4B21B0"
+        },
+        "enum.library": {
+            "foreground": "#4B21B0"
+        },
+        "union.library": {
+            "foreground": "#4B21B0"
+        },
+        "interface.library": {
+            "foreground": "#4B21B0"
+        },
+        "typeParameter.library": {
+            "foreground": "#4B21B0"
+        },
+        "typeAlias.library": {
+            "foreground": "#4B21B0"
+        },
+        "builtinType": {
+            "foreground": "#4B21B0"
+        },
+        "function": {
+            "foreground": "#3E8087"
+        },
+        "method": {
+            "foreground": "#3E8087"
+        },
+        "function.library": {
+            "foreground": "#804FB8"
+        },
+        "method.library": {
+            "foreground": "#804FB8"
+        },
+        "arithmetic": {
+            "foreground": "#804FB8"
+        },
+        "bitwise": {
+            "foreground": "#804FB8"
+        },
+        "logical": {
+            "foreground": "#804FB8"
+        },
+        "comparison": {
+            "foreground": "#804FB8"
+        },
+        "variable.constant": {
+            "foreground": "#3E8087"
+        },
+        "variable.static": {
+            "foreground": "#3E8087"
+        },
+        "enumMember": {
+            "foreground": "#3E8087"
+        },
+        "variable.constant.library": {
+            "foreground": "#804FB8"
+        },
+        "variable.static.library": {
+            "foreground": "#804FB8"
+        },
+        "enumMember.library": {
+            "foreground": "#804FB8"
+        },
+        "property": {
+            "foreground": "#3E8087"
+        },
+        "property.library": {
+            "foreground": "#804FB8"
+        },
+        "macro": {
+            "foreground": "#78492A"
+        },
+        "derive": {
+            "foreground": "#78492A"
+        },
+        "macro.library": {
+            "foreground": "#78492A"
+        },
+        "derive.library": {
+            "foreground": "#78492A"
+        }
+    },
+    "colors": {
+        "foreground": "#272727",
+        "focusBorder": "#8DB4FC",
+        "statusBar.foreground": "#808080",
+        "statusBar.background": "#FFFFFF",
+        "sideBar.background": "#E2E1E2",
+        "activityBar.background": "#E2E1E2",
+        "panel.background": "#EEEEEE",
+        "sideBar.foreground": "#363636",
+        "sideBar.border": "#DEDEDE",
+        "activityBar.border": "#DEDEDE",
+        "panel.border": "#DEDEDE",
+        "activityBar.inactiveForeground": "#636263",
+        "activityBar.foreground": "#0070F5",
+        "activityBar.activeBorder": "#00000000",
+        "titleBar.inactiveForeground": "#A8A8A8",
+        "titleBar.activeForeground": "#4A4A4A",
+        "titleBar.inactiveBackground": "#E8E8E8",
+        "titleBar.activeBackground": "#F5F4F4",
+        "titleBar.border": "#DEDEDE",
+        "tab.inactiveForeground": "#272727",
+        "breadcrumb.foreground": "#272727",
+        "breadcrumb.focusForeground": "#272727",
+        "tab.activeForeground": "#363636",
+        "tab.inactiveBackground": "#FFFFFF",
+        "editorGroupHeader.tabsBackground": "#FFFFFF",
+        "breadcrumb.background": "#FFFFFF",
+        "tab.activeBackground": "#D2E7FF",
+        "tab.border": "#E6E6E6",
+        "editorGroupHeader.border": "#E6E6E6",
+        "editorLineNumber.foreground": "#A6A6A6",
+        "editorLineNumber.activeForeground": "#232426",
+        "selection.background": "#B3D7FF",
+        "list.activeSelectionBackground": "#59A2FF",
+        "list.hoverBackground": "#00000000",
+        "list.highlightForeground": "#000000",
+        "list.focusHighlightForeground": "#FFFFFF",
+        "editorSuggestWidget.foreground": "#3F3F3F",
+        "editorSuggestWidget.selectedForeground": "#FFFFFFCC",
+        "editorWidget.background": "#E9E8E8",
+        "editorWidget.border": "#E6E6E6",
+        "input.background": "#FFFFFF",
+        "input.placeholderForeground": "#C0C0C0",
+        "input.border": "#E6E6E6",
+        "scrollbar.shadow": "#00000000",
+        "editor.foreground": "#000000",
+        "editor.background": "#FFFFFF",
+        "editor.selectionBackground": "#B2D7FF",
+        "editorCursor.foreground": "#000000",
+        "terminalCursor.foreground": "#000000",
+        "editorCursor.background": "#FFFFFF",
+        "terminalCursor.background": "#FFFFFF",
+        "editor.lineHighlightBackground": "#ECF5FF",
+        "editorWhitespace.foreground": "#D6D6D6"
+    }
+}
