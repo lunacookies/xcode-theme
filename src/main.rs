@@ -55,7 +55,7 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
         ],
         p.fg,
     );
-    t.w(["tab.activeForeground"], p.light_fg);
+    t.w(["tab.activeForeground"], p.active_tab_fg);
     t.w(
         [
             "tab.inactiveBackground",
@@ -230,6 +230,7 @@ struct UiPalette {
     active_titlebar_bg: u32,
     toolbar_bg: u32,
     active_tab_bg: u32,
+    active_tab_fg: u32,
     line_numbers: u32,
     active_line_number: u32,
     selection: u32,
@@ -262,6 +263,7 @@ impl UiPalette {
         active_titlebar_bg: 0x37383B,
         toolbar_bg: 0x202125,
         active_tab_bg: 0x335274,
+        active_tab_fg: 0xFFFFFF,
         line_numbers: 0x747478,
         active_line_number: 0xE0E0E1,
         selection: 0x3F638B,
@@ -293,6 +295,7 @@ impl UiPalette {
         active_titlebar_bg: 0xF5F4F4,
         toolbar_bg: 0xFFFFFF,
         active_tab_bg: 0xD2E7FF,
+        active_tab_fg: 0x007AFF,
         line_numbers: 0xA6A6A6,
         active_line_number: 0x232426,
         selection: 0xB3D7FF,

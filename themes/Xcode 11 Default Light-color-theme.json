@@ -203,7 +203,7 @@
         "tab.inactiveForeground": "#272727",
         "breadcrumb.foreground": "#272727",
         "breadcrumb.focusForeground": "#272727",
-        "tab.activeForeground": "#363636",
+        "tab.activeForeground": "#007AFF",
         "tab.inactiveBackground": "#FFFFFF",
         "editorGroupHeader.tabsBackground": "#FFFFFF",
         "breadcrumb.background": "#FFFFFF",
