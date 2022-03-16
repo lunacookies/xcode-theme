@@ -5,7 +5,7 @@
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "comment": {
-            "foreground": "#D6D6D6"
+            "foreground": "#707F8C"
         },
         "string": {
             "foreground": "#D12F1B"

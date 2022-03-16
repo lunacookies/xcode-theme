@@ -372,7 +372,7 @@ impl EditorPalette {
         cursor: 0x000000,
         current_line_bg: 0xECF5FF,
         invisibles: 0xD6D6D6,
-        comments: 0xD6D6D6,
+        comments: 0x707F8C,
         strings: 0xD12F1B,
         characters: 0x272AD8,
         numbers: 0x272AD8,
