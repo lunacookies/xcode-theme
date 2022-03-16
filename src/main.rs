@@ -65,6 +65,7 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
         p.toolbar_bg,
     );
     t.w(["tab.activeBackground"], p.active_tab_bg);
+    t.w(["tab.unfocusedActiveBackground"], p.unfocused_active_tab_bg);
     t.w(["tab.border", "editorGroupHeader.border"], p.light_border);
 
     t.w(["editorLineNumber.foreground"], p.line_numbers);
@@ -364,6 +365,7 @@ struct UiPalette {
     active_titlebar_bg: u32,
     toolbar_bg: u32,
     active_tab_bg: u32,
+    unfocused_active_tab_bg: u32,
     active_tab_fg: u32,
     line_numbers: u32,
     active_line_number: u32,
@@ -397,6 +399,7 @@ impl UiPalette {
         active_titlebar_bg: 0x37383B,
         toolbar_bg: 0x202125,
         active_tab_bg: 0x335274,
+        unfocused_active_tab_bg: 0x283F5A,
         active_tab_fg: 0xFFFFFF,
         line_numbers: 0x747478,
         active_line_number: 0xE0E0E1,
@@ -429,6 +432,7 @@ impl UiPalette {
         active_titlebar_bg: 0xF5F4F4,
         toolbar_bg: 0xFFFFFF,
         active_tab_bg: 0xD2E7FF,
+        unfocused_active_tab_bg: 0xE8F3FF,
         active_tab_fg: 0x007AFF,
         line_numbers: 0xA6A6A6,
         active_line_number: 0x232426,

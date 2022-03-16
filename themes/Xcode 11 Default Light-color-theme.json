@@ -476,6 +476,7 @@
         "editorGroupHeader.tabsBackground": "#FFFFFF",
         "breadcrumb.background": "#FFFFFF",
         "tab.activeBackground": "#D2E7FF",
+        "tab.unfocusedActiveBackground": "#E8F3FF",
         "tab.border": "#E6E6E6",
         "editorGroupHeader.border": "#E6E6E6",
         "editorLineNumber.foreground": "#A6A6A6",
