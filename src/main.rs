@@ -60,6 +60,7 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
         [
             "tab.inactiveBackground",
             "editorGroupHeader.tabsBackground",
+            "editorGroupHeader.noTabsBackground",
             "breadcrumb.background",
         ],
         p.toolbar_bg,

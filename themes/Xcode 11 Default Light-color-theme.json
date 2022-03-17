@@ -546,6 +546,7 @@
         "tab.activeForeground": "#007AFF",
         "tab.inactiveBackground": "#FFFFFF",
         "editorGroupHeader.tabsBackground": "#FFFFFF",
+        "editorGroupHeader.noTabsBackground": "#FFFFFF",
         "breadcrumb.background": "#FFFFFF",
         "tab.activeBackground": "#D2E7FF",
         "tab.unfocusedActiveBackground": "#E8F3FF",
