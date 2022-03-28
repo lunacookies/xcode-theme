@@ -330,6 +330,15 @@
         "parameter.declaration": {
             "foreground": "#057CB0"
         },
+        "variable.constant.declaration": {
+            "foreground": "#057CB0"
+        },
+        "variable.static.declaration": {
+            "foreground": "#057CB0"
+        },
+        "enumMember.declaration": {
+            "foreground": "#057CB0"
+        },
         "property.declaration": {
             "foreground": "#057CB0"
         },

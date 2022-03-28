@@ -182,6 +182,9 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         [
             s("variable.declaration"),
             s("parameter.declaration"),
+            s("variable.constant.declaration"),
+            s("variable.static.declaration"),
+            s("enumMember.declaration"),
             s("property.declaration"),
             s("function.declaration"),
             s("method.declaration"),
