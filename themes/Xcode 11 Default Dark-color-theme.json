@@ -60,7 +60,8 @@
                 "variable.parameter"
             ],
             "settings": {
-                "foreground": "#4EB0CC"
+                "foreground": "#4EB0CC",
+                "fontStyle": ""
             }
         },
         {
@@ -325,31 +326,64 @@
             "foreground": "#6BDFFF"
         },
         "variable.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "parameter.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "variable.constant.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "variable.static.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "enumMember.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
+        },
+        "lifetime.declaration": {
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "property.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "function.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "method.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "constParameter.declaration": {
-            "foreground": "#4EB0CC"
+            "foreground": "#4EB0CC",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "type": {
             "foreground": "#ACF2E4"
@@ -460,13 +494,28 @@
             "foreground": "#B281EB"
         },
         "variable.constant": {
-            "foreground": "#78C2B3"
+            "foreground": "#78C2B3",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "variable.static": {
-            "foreground": "#78C2B3"
+            "foreground": "#78C2B3",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "enumMember": {
-            "foreground": "#78C2B3"
+            "foreground": "#78C2B3",
+            "bold": false,
+            "italic": false,
+            "underline": false
+        },
+        "lifetime": {
+            "foreground": "#78C2B3",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "variable.constant.library": {
             "foreground": "#B281EB"

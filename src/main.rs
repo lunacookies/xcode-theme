@@ -160,8 +160,9 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         (p.preprocessor_statements, FontStyle::Clear),
     );
 
-    // Xcode doesn’t have specific styling for namespaces (it highlights them like types)
-    // and enum members (it highlights them like constants)
+    // Xcode doesn’t have specific styling for namespaces (it highlights them like types),
+    // enum members (it highlights them like constants),
+    // and lifetimes (we’ll just give them constant highlighting)
 
     t.a(
         [
@@ -185,13 +186,14 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.constant.declaration"),
             s("variable.static.declaration"),
             s("enumMember.declaration"),
+            s("lifetime.declaration"),
             s("property.declaration"),
             s("function.declaration"),
             s("method.declaration"),
             s("constParameter.declaration"),
             tm("variable.parameter"),
         ],
-        p.other_declarations,
+        (p.other_declarations, FontStyle::Clear),
     );
 
     t.a(
@@ -262,8 +264,9 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.constant"),
             s("variable.static"),
             s("enumMember"),
+            s("lifetime"),
         ],
-        p.project_constants,
+        (p.project_constants, FontStyle::Clear),
     );
     t.a(
         [
