@@ -197,7 +197,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("constParameter.declaration"),
             tm("variable.parameter"),
         ],
-        (p.other_declarations, FontStyle::Clear),
+        p.other_declarations,
     );
 
     t.a(
@@ -228,6 +228,11 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("typeAlias.library"),
             s("namespace"),
             s("builtinType"),
+        ],
+        p.library_types,
+    );
+    t.a(
+        [
             tm("keyword.type.cs"),
             tm("storage.type.numeric.go"),
             tm("storage.type.byte.go"),
@@ -268,10 +273,10 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.constant"),
             s("variable.static"),
             s("enumMember"),
-            s("lifetime"),
         ],
-        (p.project_constants, FontStyle::Clear),
+        p.project_constants,
     );
+    t.a([s("lifetime")], (p.project_constants, FontStyle::Clear));
     t.a(
         [
             s("variable.constant.library"),
@@ -349,7 +354,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             tm("constant.asciidoc"),
             tm("punctuation.definition.asciidoc"),
         ],
-        (p.project_functions, FontStyle::Clear),
+        p.project_functions,
     );
     t.a([tm("markup.heading")], FontStyle::Bold);
     t.a([tm("markup.bold")], FontStyle::Bold);
@@ -376,22 +381,20 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         p.removed,
     );
 
-    t.a([s("*.mutable")], FontStyle::Underline);
-
     // prevent TextMate highlighting from covering up unresolved references
     t.a([s("unresolvedReference")], (p.fg, FontStyle::Clear));
 
+    t.a([s("variable"), s("parameter"), s("macroBang")], p.fg);
     t.a(
         [
-            s("variable"),
-            s("parameter"),
-            s("macroBang"),
             tm("keyword.operator"),
             tm("punctuation"),
             tm("storage.modifier.pointer"),
         ],
         (p.fg, FontStyle::Clear),
     );
+
+    t.a([s("*.mutable")], FontStyle::Underline);
 }
 
 struct UiPalette {

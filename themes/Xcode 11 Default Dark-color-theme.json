@@ -60,8 +60,7 @@
                 "variable.parameter"
             ],
             "settings": {
-                "foreground": "#4EB0CC",
-                "fontStyle": ""
+                "foreground": "#4EB0CC"
             }
         },
         {
@@ -189,8 +188,7 @@
                 "punctuation.definition.asciidoc"
             ],
             "settings": {
-                "foreground": "#78C2B3",
-                "fontStyle": ""
+                "foreground": "#78C2B3"
             }
         },
         {
@@ -326,64 +324,34 @@
             "foreground": "#6BDFFF"
         },
         "variable.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "parameter.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "variable.constant.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "variable.static.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "enumMember.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "lifetime.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "property.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "function.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "method.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "constParameter.declaration": {
-            "foreground": "#4EB0CC",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#4EB0CC"
         },
         "type": {
             "foreground": "#ACF2E4"
@@ -410,64 +378,34 @@
             "foreground": "#ACF2E4"
         },
         "namespace": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "type.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "class.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "struct.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "enum.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "union.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "interface.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "typeParameter.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "typeAlias.library": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "builtinType": {
-            "foreground": "#DABAFF",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#DABAFF"
         },
         "function": {
             "foreground": "#78C2B3"
@@ -494,22 +432,13 @@
             "foreground": "#B281EB"
         },
         "variable.constant": {
-            "foreground": "#78C2B3",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#78C2B3"
         },
         "variable.static": {
-            "foreground": "#78C2B3",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#78C2B3"
         },
         "enumMember": {
-            "foreground": "#78C2B3",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#78C2B3"
         },
         "lifetime": {
             "foreground": "#78C2B3",
@@ -550,9 +479,6 @@
         "magit-remote-ref-name": {
             "foreground": "#ACF2E4"
         },
-        "*.mutable": {
-            "underline": true
-        },
         "unresolvedReference": {
             "foreground": "#FFFFFFD8",
             "bold": false,
@@ -560,22 +486,16 @@
             "underline": false
         },
         "variable": {
-            "foreground": "#FFFFFFD8",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#FFFFFFD8"
         },
         "parameter": {
-            "foreground": "#FFFFFFD8",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#FFFFFFD8"
         },
         "macroBang": {
-            "foreground": "#FFFFFFD8",
-            "bold": false,
-            "italic": false,
-            "underline": false
+            "foreground": "#FFFFFFD8"
+        },
+        "*.mutable": {
+            "underline": true
         }
     },
     "colors": {
