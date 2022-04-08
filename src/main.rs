@@ -226,7 +226,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("interface.library"),
             s("typeParameter.library"),
             s("typeAlias.library"),
-            s("namespace"),
+            s("namespace.library"),
             s("builtinType"),
         ],
         p.library_types,

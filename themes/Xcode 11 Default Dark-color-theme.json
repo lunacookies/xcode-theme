@@ -378,7 +378,7 @@
             "foreground": "#ACF2E4"
         },
         "namespace": {
-            "foreground": "#DABAFF"
+            "foreground": "#ACF2E4"
         },
         "type.library": {
             "foreground": "#DABAFF"
@@ -402,6 +402,9 @@
             "foreground": "#DABAFF"
         },
         "typeAlias.library": {
+            "foreground": "#DABAFF"
+        },
+        "namespace.library": {
             "foreground": "#DABAFF"
         },
         "builtinType": {
