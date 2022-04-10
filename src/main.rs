@@ -74,11 +74,7 @@ fn ui(t: &mut ThemeBuilder, p: &UiPalette) {
 
     t.w(["selection.background"], p.selection);
 
-    t.w(
-        ["list.activeSelectionBackground", "list.focusBackground"],
-        p.active_list_bg,
-    );
-    t.w(["list.focusOutline"], (0x000000, 0x00));
+    t.w(["list.activeSelectionBackground"], p.active_list_bg);
     t.w(["list.hoverBackground"], (0x000000, 0x00));
     t.w(["list.highlightForeground"], p.filtered_list_fg);
     t.w(["list.focusHighlightForeground"], p.active_filtered_list_fg);

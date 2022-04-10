@@ -537,8 +537,6 @@
         "editorLineNumber.activeForeground": "#E0E0E1",
         "selection.background": "#3F638B",
         "list.activeSelectionBackground": "#1658BE",
-        "list.focusBackground": "#1658BE",
-        "list.focusOutline": "#00000000",
         "list.hoverBackground": "#00000000",
         "list.highlightForeground": "#FFFFFF",
         "list.focusHighlightForeground": "#FFFFFF",
