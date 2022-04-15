@@ -209,6 +209,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("namespace"),
             tm("entity.name.type"),
             tm("entity.other.inherited-class"),
+            tm("storage.type.haskell"),
         ],
         p.project_types,
     );
