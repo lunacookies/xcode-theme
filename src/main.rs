@@ -378,8 +378,10 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         p.removed,
     );
 
-    // prevent TextMate highlighting from covering up unresolved references
-    t.a([s("unresolvedReference")], (p.fg, FontStyle::Clear));
+    t.a(
+        [s("unresolvedReference")],
+        (p.unresolved_reference, FontStyle::Clear),
+    );
 
     t.a([s("variable"), s("parameter"), s("macroBang")], p.fg);
     t.a(
@@ -522,6 +524,7 @@ struct EditorPalette {
     library_macros: u32,
     added: u32,
     removed: u32,
+    unresolved_reference: u32,
 }
 
 impl EditorPalette {
@@ -552,6 +555,7 @@ impl EditorPalette {
         library_macros: 0xFFA14F,
         added: 0xACF2E4,
         removed: 0xFF8170,
+        unresolved_reference: 0xF32C2C,
     };
 
     const XCODE_11_DEFAULT_LIGHT: Self = Self {
@@ -581,5 +585,6 @@ impl EditorPalette {
         library_macros: 0x78492A,
         added: 0x3E8087,
         removed: 0xD12F1B,
+        unresolved_reference: 0xE21615,
     };
 }

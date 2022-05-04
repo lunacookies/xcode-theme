@@ -484,7 +484,7 @@
             "foreground": "#23575C"
         },
         "unresolvedReference": {
-            "foreground": "#000000",
+            "foreground": "#E21615",
             "bold": false,
             "italic": false,
             "underline": false
