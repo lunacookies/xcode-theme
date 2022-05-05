@@ -32,6 +32,15 @@
         },
         {
             "scope": [
+                "constant.other.placeholder",
+                "constant.character.escape"
+            ],
+            "settings": {
+                "foreground": "#FFFFFFD8"
+            }
+        },
+        {
+            "scope": [
                 "keyword",
                 "keyword.operator.new",
                 "keyword.operator.wordlike",
@@ -292,6 +301,12 @@
         },
         "number": {
             "foreground": "#D9C97C"
+        },
+        "formatSpecifier": {
+            "foreground": "#FFFFFFD8"
+        },
+        "escapeSequence": {
+            "foreground": "#FFFFFFD8"
         },
         "keyword": {
             "foreground": "#FF7AB2",

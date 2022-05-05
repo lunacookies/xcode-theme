@@ -137,6 +137,15 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     );
     t.a([s("character")], p.characters);
     t.a([s("number"), tm("constant.numeric")], p.numbers);
+    t.a(
+        [
+            s("formatSpecifier"),
+            s("escapeSequence"),
+            tm("constant.other.placeholder"),
+            tm("constant.character.escape"),
+        ],
+        p.fg,
+    );
 
     t.a(
         [
