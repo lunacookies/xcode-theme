@@ -459,6 +459,9 @@
         "enumMember": {
             "foreground": "#3E8087"
         },
+        "constParameter": {
+            "foreground": "#3E8087"
+        },
         "lifetime": {
             "foreground": "#3E8087",
             "bold": false,

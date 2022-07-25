@@ -279,6 +279,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.constant"),
             s("variable.static"),
             s("enumMember"),
+            s("constParameter"),
         ],
         p.project_constants,
     );
