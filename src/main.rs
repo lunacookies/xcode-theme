@@ -420,7 +420,15 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         (p.unresolved_reference, FontStyle::Clear),
     );
 
-    t.a([s("variable"), s("parameter"), s("macroBang")], p.fg);
+    t.a(
+        [
+            s("variable"),
+            s("parameter"),
+            s("macroBang"),
+            tm("variable"),
+        ],
+        p.fg,
+    );
     t.a(
         [tm("keyword.operator"), tm("storage.modifier.pointer")],
         (p.fg, FontStyle::Clear),

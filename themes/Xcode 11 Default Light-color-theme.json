@@ -303,6 +303,14 @@
         },
         {
             "scope": [
+                "variable"
+            ],
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "scope": [
                 "keyword.operator",
                 "storage.modifier.pointer"
             ],
