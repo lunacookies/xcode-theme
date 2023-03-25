@@ -342,6 +342,9 @@
         "variable.declaration": {
             "foreground": "#057CB0"
         },
+        "variable.globalScope.declaration:c": {
+            "foreground": "#057CB0"
+        },
         "parameter.declaration": {
             "foreground": "#057CB0"
         },
@@ -361,6 +364,9 @@
             "foreground": "#057CB0"
         },
         "function.declaration": {
+            "foreground": "#057CB0"
+        },
+        "function.globalScope.declaration:c": {
             "foreground": "#057CB0"
         },
         "method.declaration": {
@@ -426,6 +432,18 @@
         "builtinType": {
             "foreground": "#4B21B0"
         },
+        "type:c": {
+            "foreground": "#4B21B0"
+        },
+        "class:c": {
+            "foreground": "#4B21B0"
+        },
+        "enum:c": {
+            "foreground": "#4B21B0"
+        },
+        "union:c": {
+            "foreground": "#4B21B0"
+        },
         "function": {
             "foreground": "#3E8087"
         },
@@ -436,6 +454,9 @@
             "foreground": "#804FB8"
         },
         "method.library": {
+            "foreground": "#804FB8"
+        },
+        "function.globalScope:c": {
             "foreground": "#804FB8"
         },
         "arithmetic": {
@@ -462,6 +483,9 @@
         "constParameter": {
             "foreground": "#3E8087"
         },
+        "variable.fileScope:c": {
+            "foreground": "#3E8087"
+        },
         "lifetime": {
             "foreground": "#3E8087",
             "bold": false,
@@ -477,10 +501,19 @@
         "enumMember.library": {
             "foreground": "#804FB8"
         },
+        "variable.globalScope:c": {
+            "foreground": "#804FB8"
+        },
+        "enumMember:c": {
+            "foreground": "#804FB8"
+        },
         "property": {
             "foreground": "#3E8087"
         },
         "property.library": {
+            "foreground": "#804FB8"
+        },
+        "property:c": {
             "foreground": "#804FB8"
         },
         "macro": {
@@ -493,6 +526,9 @@
             "foreground": "#78492A"
         },
         "derive.library": {
+            "foreground": "#78492A"
+        },
+        "macro.globalScope:c": {
             "foreground": "#78492A"
         },
         "magit-ref-name": {

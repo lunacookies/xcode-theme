@@ -191,6 +191,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
     t.a(
         [
             s("variable.declaration"),
+            s("variable.globalScope.declaration:c"),
             s("parameter.declaration"),
             s("variable.constant.declaration"),
             s("variable.static.declaration"),
@@ -198,6 +199,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("lifetime.declaration"),
             s("property.declaration"),
             s("function.declaration"),
+            s("function.globalScope.declaration:c"),
             s("method.declaration"),
             s("constParameter.declaration"),
             tm("variable.parameter"),
@@ -222,6 +224,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         ],
         p.project_types,
     );
+
     t.a(
         [
             s("type.library"),
@@ -234,9 +237,14 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("typeAlias.library"),
             s("namespace.library"),
             s("builtinType"),
+            s("type:c"),
+            s("class:c"),
+            s("enum:c"),
+            s("union:c"),
         ],
         p.library_types,
     );
+
     t.a(
         [
             tm("keyword.type.cs"),
@@ -260,10 +268,12 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         ],
         p.project_functions,
     );
+
     t.a(
         [
             s("function.library"),
             s("method.library"),
+            s("function.globalScope:c"),
             // Xcode highlights overloadable operators as library functions
             s("arithmetic"),
             s("bitwise"),
@@ -280,6 +290,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.static"),
             s("enumMember"),
             s("constParameter"),
+            s("variable.fileScope:c"),
         ],
         p.project_constants,
     );
@@ -289,6 +300,8 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("variable.constant.library"),
             s("variable.static.library"),
             s("enumMember.library"),
+            s("variable.globalScope:c"),
+            s("enumMember:c"),
         ],
         p.library_constants,
     );
@@ -302,7 +315,10 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         ],
         p.project_properties,
     );
-    t.a([s("property.library")], p.library_properties);
+    t.a(
+        [s("property.library"), s("property:c")],
+        p.library_properties,
+    );
 
     t.a(
         [
@@ -312,7 +328,14 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
         ],
         p.project_macros,
     );
-    t.a([s("macro.library"), s("derive.library")], p.library_macros);
+    t.a(
+        [
+            s("macro.library"),
+            s("derive.library"),
+            s("macro.globalScope:c"),
+        ],
+        p.library_macros,
+    );
 
     // what follows is some language-specific highlighting designed to look good,
     // but not necessarily follow what Xcode does or the logic of the theme
