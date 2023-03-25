@@ -154,6 +154,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             tm("keyword.operator.new"),
             tm("keyword.operator.wordlike"),
             tm("keyword.operator.logical.and"),
+            tm("keyword.operator.sizeof"),
             tm("storage"),
             tm("variable.language"),
             tm("constant.language"),

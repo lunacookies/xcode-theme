@@ -45,6 +45,7 @@
                 "keyword.operator.new",
                 "keyword.operator.wordlike",
                 "keyword.operator.logical.and",
+                "keyword.operator.sizeof",
                 "storage",
                 "variable.language",
                 "constant.language"
