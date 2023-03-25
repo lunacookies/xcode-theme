@@ -155,7 +155,8 @@
                 "entity.name.function.preprocessor"
             ],
             "settings": {
-                "foreground": "#FFA14F"
+                "foreground": "#FFA14F",
+                "fontStyle": ""
             }
         },
         {
@@ -549,19 +550,34 @@
             "foreground": "#B281EB"
         },
         "macro": {
-            "foreground": "#FFA14F"
+            "foreground": "#FFA14F",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "derive": {
-            "foreground": "#FFA14F"
+            "foreground": "#FFA14F",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "macro.library": {
-            "foreground": "#FFA14F"
+            "foreground": "#FFA14F",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "derive.library": {
-            "foreground": "#FFA14F"
+            "foreground": "#FFA14F",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "macro.globalScope:c": {
-            "foreground": "#FFA14F"
+            "foreground": "#FFA14F",
+            "bold": false,
+            "italic": false,
+            "underline": false
         },
         "magit-ref-name": {
             "foreground": "#78C2B3"

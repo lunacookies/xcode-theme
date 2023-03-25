@@ -330,7 +330,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("derive"),
             tm("entity.name.function.preprocessor"),
         ],
-        p.project_macros,
+        (p.project_macros, FontStyle::Clear),
     );
     t.a(
         [
@@ -338,7 +338,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("derive.library"),
             s("macro.globalScope:c"),
         ],
-        p.library_macros,
+        (p.library_macros, FontStyle::Clear),
     );
 
     // what follows is some language-specific highlighting designed to look good,
