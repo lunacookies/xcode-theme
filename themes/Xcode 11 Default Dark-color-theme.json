@@ -66,6 +66,14 @@
         },
         {
             "scope": [
+                "entity.name.type.class.php"
+            ],
+            "settings": {
+                "foreground": "#6BDFFF"
+            }
+        },
+        {
+            "scope": [
                 "variable.parameter"
             ],
             "settings": {
@@ -80,6 +88,15 @@
             ],
             "settings": {
                 "foreground": "#ACF2E4"
+            }
+        },
+        {
+            "scope": [
+                "support.class",
+                "entity.other.inherited-class.php"
+            ],
+            "settings": {
+                "foreground": "#DABAFF"
             }
         },
         {
@@ -109,7 +126,15 @@
         },
         {
             "scope": [
-                "support.function.builtin"
+                "support.function"
+            ],
+            "settings": {
+                "foreground": "#B281EB"
+            }
+        },
+        {
+            "scope": [
+                "constant.other"
             ],
             "settings": {
                 "foreground": "#B281EB"
@@ -279,7 +304,6 @@
         {
             "scope": [
                 "keyword.operator",
-                "punctuation",
                 "storage.modifier.pointer"
             ],
             "settings": {

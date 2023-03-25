@@ -184,6 +184,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("typeParameter.declaration"),
             s("typeAlias.declaration"),
             s("namespace.declaration"),
+            tm("entity.name.type.class.php"),
         ],
         p.type_declarations,
     );
@@ -241,6 +242,8 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("class:c"),
             s("enum:c"),
             s("union:c"),
+            tm("support.class"),
+            tm("entity.other.inherited-class.php"),
         ],
         p.library_types,
     );
@@ -279,7 +282,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("bitwise"),
             s("logical"),
             s("comparison"),
-            tm("support.function.builtin"),
+            tm("support.function"),
         ],
         p.library_functions,
     );
@@ -302,6 +305,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
             s("enumMember.library"),
             s("variable.globalScope:c"),
             s("enumMember:c"),
+            tm("constant.other"),
         ],
         p.library_constants,
     );
@@ -418,11 +422,7 @@ fn editor(t: &mut ThemeBuilder, p: &EditorPalette) {
 
     t.a([s("variable"), s("parameter"), s("macroBang")], p.fg);
     t.a(
-        [
-            tm("keyword.operator"),
-            tm("punctuation"),
-            tm("storage.modifier.pointer"),
-        ],
+        [tm("keyword.operator"), tm("storage.modifier.pointer")],
         (p.fg, FontStyle::Clear),
     );
 
